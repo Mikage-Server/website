@@ -1,15 +1,11 @@
-import Linking from '../../components/linking';
+import Icon from './icon';
+import Item from './item';
+import User from './user';
 import Command from './icons/command';
 import Newbie from './icons/newbie';
 import Others from './icons/others';
 import Psi from './icons/psi';
 import Wiki from './icons/wiki';
-
-interface ItemProps {
-  href: string;
-  name: string;
-  icon: JSX.Element;
-}
 
 const normals = [
   {
@@ -34,7 +30,7 @@ const normals = [
   },
   {
     href: 'http://wiki.mikage.click/',
-    name: 'Wiki',
+    name: 'Wiki (外部)',
     icon: <Wiki className="w-2/3" />
   }
 ];
@@ -61,52 +57,6 @@ const Menu = () => {
         <User />
       </div>
     </nav>
-  );
-};
-
-const Icon = () => {
-  return (
-    <Linking href="/">
-      <img
-        src="/icon.webp"
-        alt="アイコン"
-        className="w-full rounded-xl"
-      />
-    </Linking>
-  );
-};
-
-const Item = ({ href, name, icon }: ItemProps) => {
-  return (
-    <Linking href={href}>
-      <div className=" text-yellow-900 fill-yellow-900 flex flex-col items-center relative">
-        <div className="w-[7.5rem] h-full bg-yellow-200 rounded-r-xl absolute top-0 -left-4" />
-
-        <div className="w-24 flex flex-col items-center z-10">
-          {icon}
-        </div>
-
-        <div className="w-24 z-10">
-          {name}
-        </div>
-      </div>
-    </Linking>
-  );
-};
-
-const User = () => {
-  return (
-    <Linking href="/">
-      <div className="flex flex-col items-center">
-        <div className="w-20 h-20 bg-gray-300 rounded-full">
-
-        </div>
-
-        <div className="break-all">
-          Coming soon
-        </div>
-      </div>
-    </Linking>
   );
 };
 
