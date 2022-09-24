@@ -13,9 +13,9 @@ const Home: NextPage = () => {
       Hello world!
 
       <footer>
-        <small className="text-lg">
+        <small className="text-base">
           <a href="https://twitter.com/siojinja">
-            © 2021 御景サーバー
+            © 2022 御景サーバー
           </a>
         </small>
       </footer>
