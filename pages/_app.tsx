@@ -7,8 +7,6 @@ import Menu from '../lib/menu/menu';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
-  const url = `https://mikage.pages.dev${router.route}`;
-
   // スマホ表示の最適化、ユーザーのカラーテーマの適応をサポート
   useModern();
 
@@ -24,8 +22,20 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
         openGraph={{
           type: 'website',
           locale: 'ja_JP',
-          url,
-          description: '御景サーバーのウェブサイトです。'
+          url: `${process.env.NEXT_PUBLIC_SITE_URL}${router.route}`,
+          description: '御景サーバーのウェブサイトです。',
+          site_name: '御景サーバー ウェブサイト',
+          images: [{
+            url: `${process.env.NEXT_PUBLIC_SITE_URL}/ogp.webp`,
+            width: 512,
+            height: 512,
+            alt: '御景サーバーのロゴ',
+            type: 'image/webp'
+          }]
+        }}
+        twitter={{
+          site: '@siojinja',
+          cardType: 'summary'
         }}
       />
 
