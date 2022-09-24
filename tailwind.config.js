@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Blinker', 'Noto Sans JP', 'Meiryo', 'sans-serif']
+        'sans': ['Roboto', 'Noto Sans JP', 'Meiryo', 'sans-serif']
       }
     }
   }

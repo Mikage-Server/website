@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
 
 interface Props {
-  children: ReactNode
-  title: string
-  description: string
+  children: ReactNode;
+  title: string;
+  description: string;
 }
 
 const Main = ({ children, title, description }: Props) => {
@@ -27,6 +27,7 @@ const Main = ({ children, title, description }: Props) => {
           exit: { opacity: 0, x: 0, y: -100 },
         }}
         transition={{ type: 'linear' }}
+        className="p-5 pl-44 w-screen h-screen bg-white"
       >
         {children}
       </motion.main>

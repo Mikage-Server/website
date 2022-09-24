@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import { AnimatePresence } from 'framer-motion';
 import useModern from '../hooks/useModern';
+import Menu from '../lib/menu/menu';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
@@ -15,7 +16,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
     <>
       <Head>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.webp" />
       </Head>
 
       <DefaultSeo
@@ -35,6 +36,8 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
       >
         <Component {...pageProps} />
       </AnimatePresence>
+
+      <Menu />
     </>
   );
 };
