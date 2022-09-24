@@ -1,5 +1,8 @@
 import type { NextPage } from 'next';
+import { Headline1 } from '../components/headline';
 import Main from '../components/main';
+import Slide from '../lib/home/slide';
+import Welcome from '../lib/home/welcome';
 
 const title = 'ホーム';
 const description = 'ホームです';
@@ -10,15 +13,15 @@ const Home: NextPage = () => {
       title={title}
       description={description}
     >
-      Hello world!
+      <Slide />
+      <Welcome />
 
-      <footer>
-        <small className="text-base">
-          <a href="https://twitter.com/siojinja">
-            © 2022 御景サーバー
-          </a>
-        </small>
-      </footer>
+      <section className="mt-[calc(100vh+2rem)]">
+        <Headline1
+          label="ここは超能力の世界"
+        />
+        御景サーバーのワールドは超能力が当たり前となっている。
+      </section>
     </Main>
   );
 };

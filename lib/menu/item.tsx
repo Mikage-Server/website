@@ -19,7 +19,7 @@ const Item = ({ href, name, icon }: ItemProps) => {
       }>
         <div className={
           href === route
-            ? 'w-[7.5rem] h-full bg-yellow-200 rounded-r-xl transition ease-in-out duration-700 absolute top-0 -left-4'
+            ? 'w-[7.5rem] h-full bg-yellow-200 rounded-r-xl transition ease-in duration-100 absolute top-0 -left-4'
             : 'w-[7.5rem] h-full bg-none transition ease-linear duration-75 absolute top-0 -left-4'
         } />
 

@@ -37,7 +37,7 @@ const normals = [
 
 const Menu = () => {
   return (
-    <nav className="w-32 h-screen text-gray-600 bg-white shadow-right-md text-center flex flex-col items-center fixed left-0 top-0">
+    <nav className="w-32 h-screen text-gray-600 bg-white shadow-right-md text-center flex flex-col items-center fixed left-0 top-0 z-10">
       <div className="mt-5 mb-10 w-24">
         <Icon />
       </div>
