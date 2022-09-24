@@ -11,7 +11,7 @@ const normals = [
   {
     href: '/newbie',
     name: '初めてのプレイヤーへ',
-    icon: <Newbie className="w-2/3" />
+    icon: <Newbie className="w-1/2" />
   },
   {
     href: '/psi',
@@ -21,17 +21,17 @@ const normals = [
   {
     href: '/command',
     name: 'コマンド',
-    icon: <Command className="w-full" />
+    icon: <Command className="w-11/12" />
   },
   {
     href: '/#',
     name: 'その他',
-    icon: <Others className="w-2/3" />
+    icon: <Others className="w-1/2" />
   },
   {
     href: 'http://wiki.mikage.click/',
     name: 'Wiki (外部)',
-    icon: <Wiki className="w-2/3" />
+    icon: <Wiki className="w-1/2" />
   }
 ];
 
@@ -42,7 +42,7 @@ const Menu = () => {
         <Icon />
       </div>
 
-      <div className="h-[calc(100%-21rem)] flex flex-col items-center justify-between">
+      <div className="h-[calc(100%-19rem)] flex flex-col items-center justify-between">
         {normals.map((item) => (
           <Item
             href={item.href}

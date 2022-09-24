@@ -27,7 +27,7 @@ const Item = ({ href, name, icon }: ItemProps) => {
           {icon}
         </div>
 
-        <div className="w-24 z-10">
+        <div className="text-sm w-24 z-10">
           {name}
         </div>
       </div>
