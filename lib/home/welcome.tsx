@@ -48,7 +48,7 @@ const Welcome = () => {
       </div>
 
       <div>
-        <Linking href="/">
+        <Linking href="/newbie">
           <div className="px-12 py-2 text-white bg-sky-600 rounded-full shadow-lg">
             <h1 className="text-xl font-bold">
               今すぐ参加する！
