@@ -19,7 +19,7 @@ const Banner = () => {
           </strong>一緒に参加することができます！
         </div>
 
-        <div className="p-5 my-8 w-[calc(100%+2.5rem)] bg-stripe-green relative -left-5">
+        <div className="p-5 my-8 w-[calc(100%+2.5rem)] bg-stripe-newbie relative -left-5">
           <div>
             <h2 className="my-1 text-gray-600 font-medium">
               IPアドレス

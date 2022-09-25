@@ -1,8 +1,12 @@
 import type { NextPage } from 'next';
-import { Headline1 } from '../components/headline';
 import Main from '../components/main';
+import CrossPlay from '../lib/home/crossPlay';
+import Intro from '../lib/home/intro';
+import LetsJoin from '../lib/home/letsJoin';
 import Slide from '../lib/home/slide';
+import Version from '../lib/home/version';
 import Welcome from '../lib/home/welcome';
+import WhatsNew from '../lib/home/whatsNew';
 
 const title = 'ホーム';
 const description = 'ホームです';
@@ -15,13 +19,13 @@ const Home: NextPage = () => {
     >
       <Slide />
       <Welcome />
-
-      <section className="mt-[calc(100vh+2rem)]">
-        <Headline1
-          label="ここは超能力の世界"
-        />
-        御景サーバーのワールドは超能力が当たり前となっている。
-      </section>
+      <Intro />
+      <WhatsNew />
+      <div className="mt-20 w-full grid grid-cols-12 gap-6">
+        <CrossPlay />
+        <Version />
+      </div>
+      <LetsJoin />
     </Main>
   );
 };

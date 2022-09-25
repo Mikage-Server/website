@@ -80,10 +80,10 @@ const Button = ({ name, enName, icon, index, active, onClick }: ButtonProps) => 
         }
         onClick={() => { onClick(index); }}
       >
-        <div className="w-32 text-4xl text-purple-400 flex flex-col justify-center items-center">
+        <div className="w-32 h-full text-4xl text-purple-400 flex flex-col justify-center items-center">
           {icon}
         </div>
-        <div className="w-full text-left font-bold flex flex-col justify-center">
+        <div className="w-full h-full text-left font-bold flex flex-col justify-center">
           <h3 className="text-xl tracking-wide">
             {name}
           </h3>
@@ -100,10 +100,10 @@ const ComingSoon = () => {
   return (
     <li className="p-3 w-full h-24">
       <button className="w-full h-full text-gray-700 bg-gray-300 flex flex-row rounded-xl">
-        <div className="w-32 text-4xl text-gray-500 flex flex-col justify-center items-center">
+        <div className="w-32 h-full text-4xl text-gray-500 flex flex-col justify-center items-center">
           <TbQuestionMark />
         </div>
-        <h3 className="w-full text-left font-bold flex flex-col justify-center text-xl tracking-wide">
+        <h3 className="w-full h-full text-left font-bold flex flex-col justify-center text-xl tracking-wide">
           Coming soon
         </h3>
       </button>

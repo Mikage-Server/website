@@ -8,17 +8,17 @@ const contents = [
   {
     title: '御景サーバー',
     href: '/#',
-    image: '/slides/mikage.webp'
+    image: '/home/slides/mikage.webp'
   },
   {
     title: '本気になったら？',
     href: '/#',
-    image: '/slides/honki.webp'
+    image: '/home/slides/honki.webp'
   },
   {
     title: 'なんで今さら',
     href: '/#',
-    image: '/slides/imasara.webp'
+    image: '/home/slides/imasara.webp'
   }
 ];
 
