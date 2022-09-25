@@ -6,7 +6,7 @@ interface HeadlineProps {
 export const Headline1 = ({ label, id }: HeadlineProps) => {
   return (
     <h1
-      className="my-5 w-[calc(100%+6rem)] bg-yellow-500 text-4xl relative -left-[3rem]"
+      className="mt-5 mb-8 w-[calc(100%+6rem)] bg-yellow-500 text-4xl relative -left-[3rem]"
       id={id}
     >
       <span className="ml-20 px-5 font-bold bg-white">
