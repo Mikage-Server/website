@@ -1,3 +1,5 @@
+import { AiFillStar } from 'react-icons/ai';
+
 interface HeadlineProps {
   label: string;
   id?: string;
@@ -22,11 +24,23 @@ export const Headline2 = ({ label, id }: HeadlineProps) => {
       className="my-5 w-full text-4xl flex flex-row justify-center"
       id={id}
     >
-      <div className="w-2 h-10 bg-yellow-500 rotate-30" />
+      <Headline2Star />
+      <div className="w-2 h-10 bg-yellow-500" />
       <div className="mx-10 font-bold">
         {label}
       </div>
-      <div className="w-2 h-10 bg-yellow-500 -rotate-30" />
+      <div className="w-2 h-10 bg-yellow-500" />
+      <Headline2Star />
     </h2>
+  );
+};
+
+const Headline2Star = () => {
+  return (
+    <div className="px-5 w-28 text-gray-200 flex flex-row justify-around">
+      <AiFillStar />
+      <AiFillStar />
+      <AiFillStar />
+    </div>
   );
 };
