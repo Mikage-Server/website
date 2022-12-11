@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import Main from '../components/main';
 import CrossPlay from '../lib/home/crossPlay';
 import Intro from '../lib/home/intro';
@@ -11,13 +10,14 @@ import WhatsNew from '../lib/home/whatsNew';
 const title = 'ホーム';
 const description = 'ホームです';
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <Main
       title={title}
       description={description}
     >
-      <Slide />
+      こんにちは！
+      {/* <Slide />
       <Welcome />
       <Intro />
       <WhatsNew />
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
         <CrossPlay />
         <Version />
       </div>
-      <LetsJoin />
+      <LetsJoin /> */}
     </Main>
   );
 };

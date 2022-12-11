@@ -1,3 +1,5 @@
+'use client';
+
 import type { ReactNode } from 'react';
 import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';

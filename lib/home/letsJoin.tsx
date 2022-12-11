@@ -1,4 +1,4 @@
-import Linking from "../../components/linking";
+import Link from 'next/link';
 
 const LetsJoin = () => {
   return (
@@ -10,7 +10,7 @@ const LetsJoin = () => {
         さあ、参加しましょう！
       </p>
 
-      <Linking href="/newbie">
+      <Link href="/newbie">
         <div className="w-[28rem] py-2 text-white bg-yellow-600 rounded-full shadow-lg">
           <h1 className="font-bold">
             今すぐ参加する！
@@ -19,7 +19,7 @@ const LetsJoin = () => {
             1.18.2 - 1.19.3 | play.mikage.click
           </span>
         </div>
-      </Linking>
+      </Link>
     </section>
   );
 };

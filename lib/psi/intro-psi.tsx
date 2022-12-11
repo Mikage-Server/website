@@ -1,3 +1,5 @@
+'use client';
+
 import { useCallback, useState } from 'react';
 import type { ReactNode } from 'react';
 import { SiCodemagic } from 'react-icons/si';

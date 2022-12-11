@@ -1,10 +1,9 @@
-import type { NextPage } from 'next';
-import Main from '../components/main';
+import Main from '../../components/main';
 
 const title = 'コマンド一覧';
 const description = 'コマンドを活用して便利に生活しましょう！';
 
-const Command: NextPage = () => {
+const Page = () => {
   return (
     <Main
       title={title}
@@ -15,4 +14,4 @@ const Command: NextPage = () => {
   );
 };
 
-export default Command;
+export default Page;

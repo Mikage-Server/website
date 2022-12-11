@@ -1,4 +1,4 @@
-import Linking from "../../components/linking";
+import Link from 'next/link';
 import Wave from "./wave";
 
 const Welcome = () => {
@@ -48,22 +48,22 @@ const Welcome = () => {
       </div>
 
       <div>
-        <Linking href="/newbie">
+        <Link href="/newbie">
           <div className="px-12 py-2 text-white bg-sky-600 rounded-full shadow-lg">
             <h1 className="text-xl font-bold">
               今すぐ参加する！
             </h1>
             play.mikage.click
           </div>
-        </Linking>
+        </Link>
       </div>
 
       <div>
-        <Linking href="https://monocraft.net/servers/tRkOlmkTq0r0lOX4Ir9c/vote">
+        <Link href="https://monocraft.net/servers/tRkOlmkTq0r0lOX4Ir9c/vote">
           <div className="px-5 mt-3 text-green-700 bg-green-200 font-medium rounded-lg">
             monocraftで投票する！
           </div>
-        </Linking>
+        </Link>
       </div>
     </section>
   );

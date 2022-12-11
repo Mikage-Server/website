@@ -1,8 +1,8 @@
-import Linking from '../../components/linking';
+import Link from 'next/link';
 
 const User = () => {
   return (
-    <Linking href="/">
+    <Link href="/">
       <div className="flex flex-col items-center">
         <div className="w-16 h-16 bg-gray-300 rounded-full" />
 
@@ -10,7 +10,7 @@ const User = () => {
           Coming soon
         </div>
       </div>
-    </Linking>
+    </Link>
   );
 };
 

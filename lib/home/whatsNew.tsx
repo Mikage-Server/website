@@ -1,5 +1,5 @@
 import { Headline2 } from '../../components/headline';
-import Linking from '../../components/linking';
+import Link from 'next/link';
 
 const WhatsNew = () => {
   return (
@@ -25,7 +25,7 @@ const WhatsNew = () => {
 const Item = () => {
   return (
     <li className="mx-5 w-64 h-full bg-gray-100 rounded-xl overflow-hidden">
-      <Linking href="/#">
+      <Link href="/#">
         <div className="w-full h-48 bg-orange-200" />
 
         <div className="p-5">
@@ -39,7 +39,7 @@ const Item = () => {
             本当にテストニュースです。
           </div>
         </div>
-      </Linking>
+      </Link>
     </li>
   );
 };

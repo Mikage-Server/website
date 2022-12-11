@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import Linking from '../../components/linking';
+import Link from 'next/link';
 
 const contents = [
   {
@@ -40,13 +40,13 @@ const Slide = () => {
       >
         {contents.map((content) => (
           <SwiperSlide key={content.title}>
-            <Linking href={content.href}>
+            <Link href={content.href}>
               <img
                 src={content.image}
                 alt={content.title}
                 className="h-full object-cover"
               />
-            </Linking>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

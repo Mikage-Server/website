@@ -1,14 +1,14 @@
-import Linking from '../../components/linking';
+import Link from 'next/link';
 
 const Icon = () => {
   return (
-    <Linking href="/">
+    <Link href="/">
       <img
         src="/icon.webp"
         alt="アイコン"
         className="w-full rounded-xl"
       />
-    </Linking>
+    </Link>
   );
 };
 

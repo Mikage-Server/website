@@ -1,4 +1,4 @@
-import Linking from '../../components/linking';
+import Link from 'next/link';
 import useHeadRoute from '../../hooks/useHeadRoute';
 
 interface ItemProps {
@@ -11,7 +11,7 @@ const Item = ({ href, name, icon }: ItemProps) => {
   const route = useHeadRoute();
 
   return (
-    <Linking href={href}>
+    <Link href={href}>
       <div className={
         href === route
           ? 'text-yellow-900 fill-yellow-900 flex flex-col items-center relative'
@@ -31,7 +31,7 @@ const Item = ({ href, name, icon }: ItemProps) => {
           {name}
         </div>
       </div>
-    </Linking>
+    </Link>
   );
 };
 
