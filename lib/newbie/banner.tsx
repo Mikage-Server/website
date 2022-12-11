@@ -38,7 +38,7 @@ const Banner = () => {
                 <span className="mr-3 px-2 py-1 font-bold text-orange-800 bg-orange-300 rounded-lg">
                   Java
                 </span>
-                1.18.2 - 1.19.2
+                1.18.2 - 1.19.3
               </div>
               <div className="w-1/2">
                 <span className="mr-3 px-2 py-1 font-bold text-lime-800 bg-lime-300 rounded-lg">

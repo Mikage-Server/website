@@ -16,7 +16,7 @@ const LetsJoin = () => {
             今すぐ参加する！
           </h1>
           <span className="font-medium text-xl">
-            1.18.2 - 1.19.2 | play.mikage.click
+            1.18.2 - 1.19.3 | play.mikage.click
           </span>
         </div>
       </Linking>
