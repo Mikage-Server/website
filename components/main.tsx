@@ -1,25 +1,11 @@
 'use client';
 
-import type { ReactNode } from 'react';
-import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
 import Footer from '../lib/footer';
 
-interface Props {
-  children: ReactNode;
-  title: string;
-  description: string;
-}
-
-const Main = ({ children, title, description }: Props) => {
+const Main = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <NextSeo
-        title={title}
-        description={description}
-        openGraph={{ title, description }}
-      />
-
       <motion.main
         initial="hidden"
         animate="enter"

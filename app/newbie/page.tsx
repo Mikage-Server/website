@@ -6,15 +6,9 @@ import Rule from '../../lib/newbie/rule';
 import WhatToDo from '../../lib/newbie/whatToDo';
 import WhenTrouble from '../../lib/newbie/whenTrouble';
 
-const title = '初めてのプレイヤーへ';
-const description = 'サーバーに参加しましょう！';
-
 const Page = () => {
   return (
-    <Main
-      title={title}
-      description={description}
-    >
+    <Main>
       <Banner />
       <Intro />
       <Rule />
