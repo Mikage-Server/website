@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import useHeadRoute from '../../hooks/useHeadRoute';
+import { usePathname } from 'next/navigation';
 
 interface ItemProps {
   href: string;
@@ -8,17 +8,17 @@ interface ItemProps {
 }
 
 const Item = ({ href, name, icon }: ItemProps) => {
-  const route = useHeadRoute();
+  const pathname = usePathname();
 
   return (
     <Link href={href}>
       <div className={
-        href === route
+        href === pathname
           ? 'text-yellow-900 fill-yellow-900 flex flex-col items-center relative'
           : 'text-gray-500 fill-gray-500 flex flex-col items-center relative'
       }>
         <div className={
-          href === route
+          href === pathname
             ? 'w-[7.5rem] h-full bg-yellow-200 rounded-r-xl transition ease-in duration-100 absolute top-0 -left-4'
             : 'w-[7.5rem] h-full bg-none transition ease-linear duration-75 absolute top-0 -left-4'
         } />
