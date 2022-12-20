@@ -17,23 +17,31 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-main {
-    scrollbar-width: thin;
-    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-}
+@media (min-width: 768px) {
 
-main::-webkit-scrollbar {
-    width: 1rem;
-}
+    main,
+    div {
+        scrollbar-width: thin;
+        scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    }
 
-main::-webkit-scrollbar-track {
-    background: var(--scrollbarBG);
-}
+    main::-webkit-scrollbar,
+    div::-webkit-scrollbar {
+        width: 1rem;
+    }
 
-main::-webkit-scrollbar-thumb {
-    background-color: var(--thumbBG);
-    border-radius: 9999px;
-    border: 0.225rem solid var(--scrollbarBG);
+    main::-webkit-scrollbar-track,
+    div::-webkit-scrollbar-track {
+        background: var(--scrollbarBG);
+    }
+
+    main::-webkit-scrollbar-thumb,
+    div::-webkit-scrollbar-thumb {
+        background-color: var(--thumbBG);
+        border-radius: 9999px;
+        border: 0.225rem solid var(--scrollbarBG);
+    }
+
 }
 
 a {
