@@ -89,3 +89,12 @@ p {
     background-image: linear-gradient(135deg, #e8f7c3 25%, #ffffff 25%, #ffffff 50%, #e8f7c3 50%, #e8f7c3 75%, #ffffff 75%, #ffffff 100%);
     background-size: 2rem 2rem;
 }
+
+.bg-stripe-not-found {
+    background-image: linear-gradient(135deg, #f09078 25%, #ffffff 25%, #ffffff 50%, #f09078 50%, #f09078 75%, #ffffff 75%, #ffffff 100%);
+    background-size: 2rem 2rem;
+}
+
+.text-not-found {
+    text-shadow: 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
