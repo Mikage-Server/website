@@ -1,11 +1,14 @@
 'use client';
 
+import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import useModern from '../hooks/useModern';
 import Menu from '../lib/menu/menu';
 import './globals.css';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  const [enabledSubmenu, setEnabledSubmenu] = useState<boolean>(false);
+
   // スマホ表示の最適化、ユーザーのカラーテーマの適応をサポート
   useModern();
 
@@ -25,7 +28,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           {children}
         </AnimatePresence>
 
-        <Menu />
+        <Menu
+          enabledSubmenu={enabledSubmenu}
+          setEnabledSubmenu={setEnabledSubmenu}
+        />
       </body>
     </html>
   );
