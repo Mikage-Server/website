@@ -11,14 +11,14 @@ const psis = [
     name: '瞬間移動',
     enName: 'Teleport',
     description: '瞬間移動、その名の通り空間を移動する。3次元空間を更に複雑な階層に変換し事物の位置を変更するため、度々既存の事物に割り込んで移動することがある。',
-    wiki: 'http://wiki.mikage.click/d/%bd%d6%b4%d6%b0%dc%c6%b0%20%28Teleport%29',
+    wiki: 'https://wiki.mikage.click/d/%bd%d6%b4%d6%b0%dc%c6%b0%20%28Teleport%29',
     icon: <SiCodemagic />
   },
   {
     name: '重力操作',
     enName: 'Gravity',
     description: '重力操作、触れた存在や自身の重力場を操作を行い重力反転や増量が可能になる能力。ただし能力の発動条件は触れる必要があるため弓矢などの投げる物には能力が発動しない。',
-    wiki: 'http://wiki.mikage.click/d/%bd%c5%ce%cf%c1%e0%ba%ee%20%28Gravity%29',
+    wiki: 'https://wiki.mikage.click/d/%bd%c5%ce%cf%c1%e0%ba%ee%20%28Gravity%29',
     icon: <SiCodemagic />
   }
 ];

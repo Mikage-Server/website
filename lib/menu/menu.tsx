@@ -29,7 +29,7 @@ const normals = [
     icon: <Others className="w-1/2" />
   },
   {
-    href: 'http://wiki.mikage.click/',
+    href: 'https://wiki.mikage.click/',
     name: 'Wiki (外部)',
     icon: <Wiki className="w-1/2" />
   }
