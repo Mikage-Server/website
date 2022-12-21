@@ -7,6 +7,9 @@
 html {
     --scrollbarBG: rgb(255, 255, 255);
     --thumbBG: rgb(144, 164, 174);
+    --swiper-theme-color: rgb(234, 179, 8);
+    --swiper-navigation-color: rgb(234, 179, 8);
+    --swiper-pagination-color: rgb(234, 179, 8);
 }
 
 body {

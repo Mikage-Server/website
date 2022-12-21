@@ -2,8 +2,7 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import 'swiper/swiper-bundle.css';
 import Link from 'next/link';
 
 const contents = [
