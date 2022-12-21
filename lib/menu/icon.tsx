@@ -1,17 +1,13 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 const Icon = () => {
   return (
     <Link href="/">
-      <div className="w-24 h-24 relative">
-        <Image
-          src="/icon.webp"
-          alt="アイコン"
-          fill={true}
-          className="w-full rounded-xl object-cover"
-        />
-      </div>
+      <img
+        src="/icon.webp"
+        alt="アイコン"
+        className="w-full rounded-xl"
+      />
     </Link>
   );
 };

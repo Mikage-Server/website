@@ -1,12 +1,9 @@
-import Image from 'next/image';
-
 const Banner = () => {
   return (
-    <section className="w-[calc(100%+6rem)] h-[38rem] bg-neutral-800 relative -top-[3rem] -left-[3rem] overflow-hidden">
-      <Image
+    <section className="w-[calc(100%+6rem)] h-[40rem] bg-neutral-800 relative -top-[3rem] -left-[3rem] overflow-hidden">
+      <img
         src="/newbie/banner.webp"
         alt="バナー"
-        fill={true}
         className="w-full object-cover blur-sm"
       />
 
