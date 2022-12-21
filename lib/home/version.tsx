@@ -1,9 +1,13 @@
+import Image from 'next/image';
+
 const Version = () => {
   return (
     <section className="col-span-5">
-      <img
+      <Image
         src="/home/version.webp"
         alt="バージョン"
+        width={1280}
+        height={720}
         className="w-full rounded-xl"
       />
 

@@ -1,9 +1,10 @@
 'use client';
 
+import Link from 'next/link';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import 'swiper/swiper-bundle.css';
-import Link from 'next/link';
 
 const contents = [
   {
@@ -42,9 +43,10 @@ const Slide = () => {
         {contents.map((content) => (
           <SwiperSlide key={content.title}>
             <Link href={content.href}>
-              <img
+              <Image
                 src={content.image}
                 alt={content.title}
+                fill={true}
                 className="h-full object-cover"
               />
             </Link>
