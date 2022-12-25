@@ -1,25 +1,31 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 
 interface ItemProps {
   href: string;
   name: string;
   icon: JSX.Element;
-  enabledSubmenu: boolean;
-  setEnabledSubmenu: (enabled: boolean) => void;
+  submenu: JSX.Element | null;
+  submenuName: string;
+  setSubmenuName: (name: string) => void;
 }
 
-const Item = ({ href, name, icon, enabledSubmenu, setEnabledSubmenu }: ItemProps) => {
+const Item = ({ href, name, icon, submenu, submenuName, setSubmenuName }: ItemProps) => {
   const pathname = usePathname();
 
   const handleMouseOver = useCallback(() => {
-    setEnabledSubmenu(true);
-  }, [setEnabledSubmenu]);
+    setSubmenuName(name);
+  }, [name, setSubmenuName]);
 
   const handleMouseOut = useCallback(() => {
-    setEnabledSubmenu(false);
-  }, [setEnabledSubmenu]);
+    setSubmenuName('');
+  }, [setSubmenuName]);
+
+  useEffect(() => {
+    console.log('hey!');
+    console.log(icon);
+  }, [icon]);
 
   return (
     <Link
@@ -46,7 +52,11 @@ const Item = ({ href, name, icon, enabledSubmenu, setEnabledSubmenu }: ItemProps
           {name}
         </div>
 
-        {enabledSubmenu && <div className="w-32 h-32 bg-red-500 fixed top-0 left-0" />}
+        {(submenuName === name && submenu) && (
+          <>
+            {submenu}
+          </>
+        )}
       </div>
     </Link>
   );

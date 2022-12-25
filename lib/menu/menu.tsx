@@ -6,41 +6,47 @@ import Newbie from './icons/newbie';
 import Others from './icons/others';
 import Psi from './icons/psi';
 import Wiki from './icons/wiki';
+import SubmenuOthers from './submenu/others';
 
 const normals = [
   {
     href: '/newbie',
     name: '初めてのプレイヤーへ',
-    icon: <Newbie className="w-1/2" />
+    icon: <Newbie className="w-1/2" />,
+    submenu: null
   },
   {
     href: '/psi',
     name: '超能力',
-    icon: <Psi className="w-1/2 my-2" />
+    icon: <Psi className="w-1/2 my-2" />,
+    submenu: null
   },
   {
     href: '/guide',
     name: '遊び方ガイド',
-    icon: <Guide className="w-5/12 my-2" />
+    icon: <Guide className="w-5/12 my-2" />,
+    submenu: null
   },
   {
     href: '/#',
     name: 'その他',
-    icon: <Others className="w-1/2" />
+    icon: <Others className="w-1/2" />,
+    submenu: <SubmenuOthers />
   },
   {
     href: 'https://wiki.mikage.click/',
     name: 'Wiki (外部)',
-    icon: <Wiki className="w-1/2" />
+    icon: <Wiki className="w-1/2" />,
+    submenu: null
   }
 ];
 
 interface Props {
-  enabledSubmenu: boolean;
-  setEnabledSubmenu: (enabled: boolean) => void;
+  submenuName: string;
+  setSubmenuName: (name: string) => void;
 }
 
-const Menu = ({ enabledSubmenu, setEnabledSubmenu }: Props) => {
+const Menu = ({ submenuName, setSubmenuName }: Props) => {
   return (
     <nav className="w-32 h-screen text-gray-600 bg-white shadow-right-md text-center flex flex-col items-center fixed left-0 top-0 z-10">
       <div className="mt-5 mb-10 w-24">
@@ -53,8 +59,9 @@ const Menu = ({ enabledSubmenu, setEnabledSubmenu }: Props) => {
             href={item.href}
             name={item.name}
             icon={item.icon}
-            enabledSubmenu={enabledSubmenu}
-            setEnabledSubmenu={setEnabledSubmenu}
+            submenu={item.submenu}
+            submenuName={submenuName}
+            setSubmenuName={setSubmenuName}
             key={item.href}
           />
         ))}

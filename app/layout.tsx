@@ -7,7 +7,7 @@ import Menu from '../lib/menu/menu';
 import './globals.css';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
-  const [enabledSubmenu, setEnabledSubmenu] = useState<boolean>(false);
+  const [submenuName, setSubmenuName] = useState<string>('');
 
   // スマホ表示の最適化、ユーザーのカラーテーマの適応をサポート
   useModern();
@@ -29,8 +29,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         </AnimatePresence>
 
         <Menu
-          enabledSubmenu={enabledSubmenu}
-          setEnabledSubmenu={setEnabledSubmenu}
+          submenuName={submenuName}
+          setSubmenuName={setSubmenuName}
         />
       </body>
     </html>
