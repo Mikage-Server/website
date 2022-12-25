@@ -14,8 +14,8 @@ const Page = () => {
   const status = use(fetchStatus());
 
   return (
-    <main className="text-gray-900 w-screen h-screen bg-gray-50 flex flex-col items-center">
-      <div className="p-5 mt-16 md:mt-32 w-full md:w-1/2 text-center">
+    <main className="text-gray-900 w-full h-screen bg-gray-50 flex flex-col items-center">
+      <div className="p-5 mt-16 md:mt-24 w-full md:w-1/2 text-center">
         <h1 className="mb-10 text-3xl font-bold">
           御景サーバー サーバーステータス
         </h1>
@@ -34,9 +34,8 @@ const Page = () => {
       </ul>
 
       <div>
-        最終確認: {dayjs(status.fetch_at).format('YYYY年M月D分 H時m分s秒')}
+        最終確認: {dayjs(status.fetch_at).format('YYYY年M月D日 H時m分s秒')}
       </div>
-
 
       <small className="mt-8 md:mt-20 text-xl font-medium">
         <a href="https://twitter.com/siojinja">
