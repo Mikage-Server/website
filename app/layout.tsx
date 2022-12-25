@@ -1,5 +1,6 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import useModern from '../hooks/useModern';
@@ -8,6 +9,7 @@ import './globals.css';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const [submenuName, setSubmenuName] = useState<string>('');
+  const pathname = usePathname();
 
   // スマホ表示の最適化、ユーザーのカラーテーマの適応をサポート
   useModern();
@@ -21,17 +23,25 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       </head>
 
       <body>
-        <AnimatePresence
-          initial={false}
-          onExitComplete={() => window.scrollTo(0, 0)}
-        >
-          {children}
-        </AnimatePresence>
+        {pathname !== '/status' ? (
+          <>
+            <AnimatePresence
+              initial={false}
+              onExitComplete={() => window.scrollTo(0, 0)}
+            >
+              {children}
+            </AnimatePresence>
 
-        <Menu
-          submenuName={submenuName}
-          setSubmenuName={setSubmenuName}
-        />
+            <Menu
+              submenuName={submenuName}
+              setSubmenuName={setSubmenuName}
+            />
+          </>
+        ) : (
+          <>
+            {children}
+          </>
+        )}
       </body>
     </html>
   );
