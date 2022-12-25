@@ -4,7 +4,7 @@ import { NEXT_SEO_DEFAULT } from '../../next-seo.config';
 const Head = () => {
   const updateMeta: NextSeoProps = {
     ...NEXT_SEO_DEFAULT,
-    title: 'コマンド一覧',
+    title: 'コマンド',
     description: 'コマンドを活用して便利に生活しましょう！'
   };
 
