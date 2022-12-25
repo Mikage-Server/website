@@ -1,9 +1,8 @@
-'use client';
-
-import { use, useEffect, useState } from 'react';
-import { MdDone, MdOutlineReport } from 'react-icons/md';
+import { use } from 'react';
 import dayjs from 'dayjs';
-import Status, { OverallProps, ItemProps } from './types';
+import type Status from './types';
+import Overall from './overall';
+import Item from './item';
 
 const fetchStatus: () => Promise<Status> = async () => {
   const res = await fetch('https://api.mikage.click/v1/status');
@@ -43,49 +42,6 @@ const Page = () => {
         </a>
       </small>
     </main>
-  );
-};
-
-const Overall = ({ okJE, okBE, okVote }: OverallProps) => {
-  const [allOk, setAllOk] = useState<boolean>(true);
-
-  useEffect(() => {
-    setAllOk(okJE && okBE && okVote);
-  }, [okJE, okBE, okVote]);
-
-  return (
-    <section className={
-      allOk
-        ? 'px-5 md:px-10 py-5 text-white text-xl font-medium bg-emerald-500 rounded-xl flex flex-row'
-        : 'px-5 md:px-10 py-5 text-white text-xl font-medium bg-orange-500 rounded-xl flex flex-row'
-    }>
-      <div className="text-5xl mr-5">
-        {allOk ? <MdDone /> : <MdOutlineReport />}
-      </div>
-      <div className="flex flex-col justify-center">
-        {allOk ? '全て正常に稼働しています' : '一部のサーバーが正常に稼働していません'}
-      </div>
-    </section>
-  );
-};
-
-const Item = ({ name, available }: ItemProps) => {
-  return (
-    <li className="p-6 mb-5 w-full border-2 border-gray-300 rounded-xl">
-      <h2 className="mb-1 text-xl font-medium">
-        {name}
-      </h2>
-
-      {available ? (
-        <span className="text-emerald-500">
-          接続できました
-        </span>
-      ) : (
-        <span className="text-red-500">
-          接続できませんでした
-        </span>
-      )}
-    </li>
   );
 };
 
