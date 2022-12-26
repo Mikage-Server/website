@@ -1,13 +1,8 @@
 import { use } from 'react';
 import dayjs from '../../lib/dayjs';
-import type Status from './types';
+import fetchStatus from '../../lib/fetchStatus';
 import Overall from './overall';
 import Item from './item';
-
-const fetchStatus: () => Promise<Status> = async () => {
-  const res = await fetch('https://api.mikage.click/v1/status', { cache: 'no-store' });
-  return res.json();
-};
 
 const Page = () => {
   const status = use(fetchStatus());

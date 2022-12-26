@@ -1,7 +1,11 @@
 import Link from 'next/link';
+import { use } from 'react';
 import Wave from "./wave";
+import fetchStatus from '../../lib/fetchStatus';
 
 const Welcome = () => {
+  const status = use(fetchStatus());
+
   return (
     <section className="w-[22rem] h-[28rem] bg-gray-100 text-center rounded-2xl shadow-xl flex flex-col items-center absolute top-[calc(100vh-30rem)] overflow-hidden left-10 z-10">
       <div className="w-full p-5 pb-2 bg-yellow-500">
@@ -37,15 +41,17 @@ const Welcome = () => {
           </div>
         </div>
       </div>
-      <Wave className="-mt-1 w-full h-20 fill-yellow-500" />
+      <Wave className="-mt-1 mb-20 w-full h-20 fill-yellow-500" />
 
-      <div className="text-base mt-20">
-        今は
-        <strong className="mx-2">
-          12
-        </strong>
-        人がオンライン！
-      </div>
+      {status.players.online > 0 && (
+        <div className="text-base">
+          今は
+          <strong className="mx-2">
+            {status.players.online}
+          </strong>
+          人がオンライン！
+        </div>
+      )}
 
       <div>
         <Link href="/newbie">
