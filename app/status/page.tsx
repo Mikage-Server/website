@@ -1,5 +1,5 @@
 import { use } from 'react';
-import dayjs from 'dayjs';
+import dayjs from '../../lib/dayjs';
 import type Status from './types';
 import Overall from './overall';
 import Item from './item';
@@ -33,7 +33,7 @@ const Page = () => {
       </ul>
 
       <div>
-        最終確認: {dayjs(status.fetch_at).format('YYYY年M月D日 H時m分s秒')}
+        最終確認: {dayjs(status.fetch_at).tz().format('YYYY年M月D日 H時m分s秒')}
       </div>
 
       <small className="my-8 md:mt-20 text-xl font-medium">
