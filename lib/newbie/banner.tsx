@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <section className="w-[calc(100%+6rem)] h-[40rem] bg-neutral-800 relative -top-[3rem] -left-[3rem] overflow-hidden">
+    <section className="w-[calc(100%+6rem)] h-[40rem] bg-neutral-800 relative -top-[3rem] -left-[1rem] md:-left-[3rem] overflow-hidden">
       <img
         src="/newbie/banner.webp"
         alt="バナー"
