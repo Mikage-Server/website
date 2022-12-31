@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 
 interface ItemProps {
   href: string;
@@ -21,11 +21,6 @@ const Item = ({ href, name, icon, submenu, submenuName, setSubmenuName }: ItemPr
   const handleMouseOut = useCallback(() => {
     setSubmenuName('');
   }, [setSubmenuName]);
-
-  useEffect(() => {
-    console.log('hey!');
-    console.log(icon);
-  }, [icon]);
 
   return (
     <Link
