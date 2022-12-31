@@ -16,7 +16,7 @@ const Main = ({ children }: { children: React.ReactNode }) => {
           exit: { opacity: 0, x: 0, y: -100 },
         }}
         transition={{ type: 'linear' }}
-        className="p-4 md:p-12 text-lg w-screen md:w-[calc(100vw-8rem)] h-screen bg-white fixed md:left-32 top-0 overflow-x-hidden overflow-y-auto"
+        className="text-lg w-screen md:w-[calc(100vw-8rem)] h-screen bg-white fixed md:left-32 top-0 overflow-x-hidden overflow-y-auto"
       >
         {children}
 
