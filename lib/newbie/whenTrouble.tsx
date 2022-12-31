@@ -8,7 +8,9 @@ const WhenTrouble = () => {
         id="when-trouble"
       />
 
-      生活が困窮したとき、荒らされたときなどの対処法を書く
+      <article className="px-6 md:px-12">
+        生活が困窮したとき、荒らされたときなどの対処法を書く
+      </article>
     </section>
   );
 };

@@ -46,8 +46,8 @@ const IntroPsi = () => {
         id="intro-psi"
       />
 
-      <div className="w-full h-[40rem] grid grid-cols-4 gap-4">
-        <ul className="w-full h-full bg-purple-100 rounded-xl">
+      <div className="md:px-12 w-full md:h-[40rem] block md:grid md:grid-cols-4 md:gap-4">
+        <ul className="p-2 md:p-0 w-full h-full bg-purple-100 rounded-xl grid grid-cols-2 gap-1 md:gap-4 md:block">
           {psis.map((item, index) => (
             <Button
               name={item.name}
@@ -77,15 +77,15 @@ const Button = ({ name, enName, icon, index, active, onClick }: ButtonProps) => 
       <button
         className={
           active
-            ? 'w-full h-full text-white bg-purple-600 outline outline-4 outline-offset-4 outline-purple-400 flex flex-row rounded-xl transition-all ease-in duration-100'
-            : 'w-full h-full text-white bg-purple-600 outline outline-4 outline-offset-4 outline-none flex flex-row rounded-xl transition-all ease-in duration-100'
+            ? 'w-full h-full text-white bg-purple-600 outline outline-4 outline-offset-4 outline-purple-400 flex flex-row rounded-xl transition-all ease-in duration-100 relative'
+            : 'w-full h-full text-white bg-purple-600 outline outline-4 outline-offset-4 outline-none flex flex-row rounded-xl transition-all ease-in duration-100 relative'
         }
         onClick={() => { onClick(index); }}
       >
-        <div className="w-32 h-full text-4xl text-purple-400 flex flex-col justify-center items-center">
+        <div className="w-32 h-full text-4xl text-purple-400 flex flex-col justify-center items-center absolute md:static top-0 -left-10 md:inset-auto">
           {icon}
         </div>
-        <div className="w-full h-full text-left font-bold flex flex-col justify-center">
+        <div className="w-full h-full text-left font-bold flex flex-col justify-center absolute md:static left-7 md:inset-auto">
           <h3 className="text-xl tracking-wide">
             {name}
           </h3>
@@ -101,11 +101,11 @@ const Button = ({ name, enName, icon, index, active, onClick }: ButtonProps) => 
 const ComingSoon = () => {
   return (
     <li className="p-3 w-full h-24">
-      <button className="w-full h-full text-gray-700 bg-gray-300 flex flex-row rounded-xl">
-        <div className="w-32 h-full text-4xl text-gray-500 flex flex-col justify-center items-center">
+      <button className="w-full h-full text-gray-700 bg-gray-300 flex flex-row rounded-xl relative">
+        <div className="w-32 h-full text-4xl text-gray-500 absolute md:static flex flex-col justify-center items-center top-0 -left-12 md:inset-auto">
           <TbQuestionMark />
         </div>
-        <h3 className="w-full h-full text-left font-bold flex flex-col justify-center text-xl tracking-wide">
+        <h3 className="w-full h-full text-left font-bold flex flex-col justify-center text-lg xl:text-xl tracking-wide absolute md:static left-8 md:inset-auto">
           Coming soon
         </h3>
       </button>
@@ -117,8 +117,8 @@ const Intro = ({ selecting }: { selecting: number }) => {
   const psi = psis[selecting];
 
   return (
-    <div className="w-full h-full bg-gray-100 rounded-xl col-span-3 overflow-hidden">
-      <div className="w-full h-[60%] bg-neutral-700" />
+    <div className="mt-5 md:mt-0 w-full md:h-full bg-gray-100 md:rounded-xl col-span-3 overflow-hidden">
+      <div className="w-full h-96 md:h-[60%] bg-neutral-700" />
 
       <div className="p-6 w-full h-[40%] overflow-y-auto">
         <h3 className="text-3xl flex flex-row">

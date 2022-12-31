@@ -49,27 +49,29 @@ const Rule = () => {
         id="rule"
       />
 
-      楽しく遊ぶために、以下の4つを守りましょう。
+      <article className="px-6 md:px-12">
+        楽しく遊ぶために、以下の4つを守りましょう。
 
-      <ol className="my-5 w-full text-center grid grid-cols-4 gap-4">
-        {rules.map((rule, index) => (
-          <Item
-            title={rule.title}
-            details={rule.details}
-            index={index}
-            key={rule.title}
-          />
-        ))}
-      </ol>
+        <ol className="my-5 w-full text-center block md:grid md:grid-cols-4 md:gap-4">
+          {rules.map((rule, index) => (
+            <Item
+              title={rule.title}
+              details={rule.details}
+              index={index}
+              key={rule.title}
+            />
+          ))}
+        </ol>
 
-      その他、運営が不適切だと判断した行為を禁止します。
+        その他、運営が不適切だと判断した行為を禁止します。
+      </article>
     </section>
   );
 };
 
 const Item = ({ title, details, index }: RuleProps) => {
   return (
-    <li className="p-4 w-full bg-yellow-100 rounded-xl">
+    <li className="p-4 mb-10 md:mb-0 w-full bg-yellow-100 rounded-xl">
       <div className="text-4xl text-yellow-500 font-bold">
         {index + 1}
       </div>

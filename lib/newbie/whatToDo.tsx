@@ -8,7 +8,9 @@ const WhatToDo = () => {
         id="what-to-do"
       />
 
-      遊び方ガイドを書く
+      <article className="px-6 md:px-12">
+        遊び方ガイドを書く
+      </article>
     </section>
   );
 };
