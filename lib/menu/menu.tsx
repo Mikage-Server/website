@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import fetchStatus, { Status } from '../fetchStatus';
 import Icon from './icon';
 import Item from './item';
@@ -17,6 +17,7 @@ interface Props {
 
 const Menu = ({ submenuName, setSubmenuName }: Props) => {
   const [status, setStatus] = useState<Status | null>(null);
+  const [isMenuOpenMobile, setIsMenuOpenMobile] = useState<boolean>(false);
 
   useEffect(() => {
     fetchStatus().then((status) => setStatus(status));
@@ -55,30 +56,67 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
     }
   ];
 
+  const handleHamBtnClick = useCallback(() => {
+    setIsMenuOpenMobile(!isMenuOpenMobile);
+  }, [isMenuOpenMobile]);
+
   return (
-    <nav className="w-32 h-screen text-gray-600 bg-white shadow-right-md text-center hidden md:flex flex-col items-center fixed left-0 top-0 z-10">
-      <div className="mt-5 mb-10 w-24">
-        <Icon />
-      </div>
+    <>
+      <nav className={
+        `w-32 h-screen text-gray-600 bg-white shadow-right-md text-center ${isMenuOpenMobile ? 'flex' : 'hidden md:flex'} flex-col items-center fixed left-0 top-0 z-10`
+      }>
+        <div className="mt-5 mb-10 w-24 invisible md:visible">
+          <Icon />
+        </div>
 
-      <div className="h-[calc(100%-18rem)] flex flex-col items-center justify-between">
-        {normals.map((item) => (
-          <Item
-            href={item.href}
-            name={item.name}
-            icon={item.icon}
-            submenu={item.submenu}
-            submenuName={submenuName}
-            setSubmenuName={setSubmenuName}
-            key={item.href}
-          />
-        ))}
-      </div>
+        <div className="h-[calc(100%-18rem)] flex flex-col items-center justify-between">
+          {normals.map((item) => (
+            <Item
+              href={item.href}
+              name={item.name}
+              icon={item.icon}
+              submenu={item.submenu}
+              submenuName={submenuName}
+              setSubmenuName={setSubmenuName}
+              key={item.href}
+            />
+          ))}
+        </div>
 
-      <div className="m-auto w-24 absolute inset-x-0 bottom-5">
-        <User />
-      </div>
-    </nav>
+        <div className="m-auto w-24 absolute inset-x-0 bottom-5">
+          <User />
+        </div>
+      </nav>
+
+      <HamburgerButton
+        isOpened={isMenuOpenMobile}
+        onClick={handleHamBtnClick}
+      />
+
+      {isMenuOpenMobile && (
+        <div
+          className="w-[100vw] h-[100vh] bg-black bg-opacity-50 fixed top-0 left-0 z-0"
+          onClick={handleHamBtnClick}
+        />
+      )}
+    </>
+  );
+};
+
+const HamburgerButton = ({ isOpened, onClick }: { isOpened: boolean, onClick: () => void }) => {
+  return (
+    <button
+      className={
+        isOpened
+          ? 'md:hidden p-5 bg-white fixed top-0 left-0 z-10'
+          : 'md:hidden p-5 bg-white shadow-xl fixed top-0 left-0 z-10'
+      }
+      onClick={onClick}
+    >
+      <div className="mb-2 w-10 h-2 bg-yellow-700" />
+      <div className="mb-2 w-10 h-2 bg-yellow-800" />
+      <div className="w-10 h-2 bg-yellow-900" />
+    </button>
   );
 };
 

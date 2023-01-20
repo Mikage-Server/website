@@ -13,7 +13,7 @@ const Banner = ({ label, bannerImage }: Props) => {
       />
 
       <div className="pl-10 md:pl-20 w-full h-full flex flex-col justify-center absolute inset-0">
-        <h1 className="text-white text-2xl md:text-5xl font-bold tracking-wider">
+        <h1 className="mt-16 md:mt-0 text-white text-3xl md:text-5xl font-bold tracking-wider">
           {label}
         </h1>
       </div>
