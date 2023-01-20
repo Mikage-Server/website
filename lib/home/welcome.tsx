@@ -65,7 +65,7 @@ const Welcome = () => {
       </div>
 
       <div>
-        <Link href="https://monocraft.net/servers/tRkOlmkTq0r0lOX4Ir9c/vote">
+        <Link href={process.env.NEXT_PUBLIC_MONOCRAFT_VOTE_URL ?? ''}>
           <div className="px-5 mt-3 text-green-700 bg-green-200 font-medium rounded-lg">
             monocraftで投票する！
           </div>
