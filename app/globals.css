@@ -13,9 +13,8 @@ html {
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    width: 100svw;
+    height: 100svh;
     background-color: rgb(255, 255, 255);
     -webkit-tap-highlight-color: transparent;
 }

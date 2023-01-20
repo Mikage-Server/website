@@ -9,15 +9,17 @@ const WhatsNew = () => {
         id="whats-new"
       />
 
-      <div className="w-full h-96 overflow-x-auto">
-        <ul className="w-[100rem] h-full flex flex-row">
-          <Item />
-          <Item />
-          <Item />
-          <Item />
-          <Item />
-        </ul>
-      </div>
+      <article className="px-5 md:px-12">
+        <div className="w-full h-96 overflow-x-auto">
+          <ul className="w-[100rem] h-full flex flex-row">
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+          </ul>
+        </div>
+      </article>
     </section>
   );
 };

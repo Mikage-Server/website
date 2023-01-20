@@ -1,5 +1,4 @@
 import { Headline1 } from '../../components/headline';
-import { Underline1 } from '../../components/underline';
 
 const IntroGuide = () => {
   return (
@@ -9,7 +8,9 @@ const IntroGuide = () => {
         id="intro-guide"
       />
 
-      御景特有の遊び方をご紹介します。
+      <article className="px-6 md:px-12">
+        御景特有の遊び方をご紹介します。
+      </article>
     </section>
   );
 };

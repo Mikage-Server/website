@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import useModern from '../hooks/useModern';
+import useColorTheme from '../hooks/useColorTheme';
 import Menu from '../lib/menu/menu';
 import './globals.css';
 
@@ -11,8 +11,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const [submenuName, setSubmenuName] = useState<string>('');
   const pathname = usePathname();
 
-  // スマホ表示の最適化、ユーザーのカラーテーマの適応をサポート
-  useModern();
+  // ユーザーのカラーテーマの適応をサポート
+  useColorTheme();
 
   return (
     <html lang="ja">

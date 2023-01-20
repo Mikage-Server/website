@@ -8,7 +8,9 @@ const HowToConnect = () => {
         id="how-to-connect"
       />
 
-      細かく書く
+      <article className="px-6 md:px-12">
+        細かく書く
+      </article>
     </section>
   );
 };
