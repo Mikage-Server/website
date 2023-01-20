@@ -7,7 +7,7 @@ const Welcome = () => {
   const status = use(fetchStatus());
 
   return (
-    <section className="w-[22rem] h-[28rem] bg-gray-100 text-center rounded-2xl shadow-xl flex flex-col items-center absolute top-[calc(100vh-5rem)] md:top-[calc(100vh-30rem)] overflow-hidden m-auto md:m-0 inset-0 md:left-10 z-10">
+    <section className="w-[22rem] h-[28rem] bg-gray-100 text-center rounded-2xl shadow-xl flex flex-col items-center absolute top-[calc(100svh-5rem)] md:top-[calc(100svh-30rem)] overflow-hidden m-auto md:m-0 inset-0 md:left-10 z-10">
       <div className="w-full p-5 pb-2 bg-yellow-500">
         <div className="text-xl text-yellow-800 font-medium">
           あなたの帰る場所がある

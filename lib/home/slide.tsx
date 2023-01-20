@@ -25,7 +25,7 @@ const contents = [
 
 const Slide = () => {
   return (
-    <section className="w-full h-[calc(100vh-8rem)] bg-neutral-800">
+    <section className="w-full h-[calc(100svh-8rem)] bg-neutral-800">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
