@@ -4,7 +4,7 @@ const Icon = () => {
   return (
     <Link href="/">
       <img
-        src="/icon.webp"
+        src="https://eu.mc-api.net/v3/server/favicon/play.mikage.click"
         alt="アイコン"
         className="w-full rounded-xl"
       />
