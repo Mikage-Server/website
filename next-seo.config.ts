@@ -13,7 +13,7 @@ export const NEXT_SEO_DEFAULT: NextSeoProps = {
     title: siteName,
     description: description,
     images: [{
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/ogp.webp`,
+      url: "https://eu.mc-api.net/v3/server/favicon/play.mikage.click",
       width: 512,
       height: 512,
       alt: '御景サーバーのロゴ',
