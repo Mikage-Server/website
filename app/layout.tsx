@@ -18,7 +18,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="ja">
       <head>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <link rel="icon" href="/favicon.webp" />
+        <link rel="icon" href="https://eu.mc-api.net/v3/server/favicon/play.mikage.click" />
         <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL} />
       </head>
 
