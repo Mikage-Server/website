@@ -5,6 +5,7 @@ const vars = require('minimist')(process.argv.slice(2));
 delete vars._;
 
 // 環境変数ファイルに書き込む内容を作成
+let content = '';
 Object.keys(vars).forEach((key) => {
   content += `${key}=${vars[key]}\n`;
 });
