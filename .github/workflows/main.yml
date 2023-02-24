@@ -23,9 +23,10 @@ jobs:
       run: npm install
 
     - name: Create .env.local (Environment variables file)
-      run: node .github/createEnviron.js \
-            --NEXT_PUBLIC_API_URL https://api.mikage.click/v1 \
-            --NEXT_PUBLIC_MONOCRAFT_VOTE_URL https://monocraft.net/servers/tRkOlmkTq0r0lOX4Ir9c/vote
+      run: >
+        node .github/createEnviron.js
+        --NEXT_PUBLIC_API_URL https://api.mikage.click/v1
+        --NEXT_PUBLIC_MONOCRAFT_VOTE_URL https://monocraft.net/servers/tRkOlmkTq0r0lOX4Ir9c/vote
 
     - name: Build app
       run: npm run build
