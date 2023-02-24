@@ -8,7 +8,7 @@ const nextConfig = {
     return [
       {
         source: '/monocraft',
-        destination: process.env.NEXT_PUBLIC_MONOCRAFT_VOTE_URL,
+        destination: process.env.NEXT_PUBLIC_MONOCRAFT_VOTE_URL ?? 'https://example.com/',
         permanent: true
       },
     ];
