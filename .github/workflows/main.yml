@@ -14,13 +14,19 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Setup Deno
-      uses: denoland/setup-deno@v1
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
       with:
-        deno-version: v1.31.0
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build app
+      run: npm run build
 
     - name: Create environ.yaml
-      run: deno run --allow-write=. .github/createEnviron.ts \
+      run: node .github/createEnviron.js \
             --NEXT_PUBLIC_API_URL https://api.mikage.click/v1 \
             --NEXT_PUBLIC_MONOCRAFT_VOTE_URL https://monocraft.net/servers/tRkOlmkTq0r0lOX4Ir9c/vote
 
