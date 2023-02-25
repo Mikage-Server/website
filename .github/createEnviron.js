@@ -1,7 +1,8 @@
 const fs = require('fs');
 
 // 環境変数をコマンドラインから取得
-const vars = require('minimist')(process.argv.slice(2));
+// DISCORD_CLIENT_IDはstringとしてパース (整数型にキャストされると不具合を起こすため)
+const vars = require('minimist')(process.argv.slice(2), { string: ['DISCORD_CLIENT_ID'] });
 delete vars._;
 
 // 環境変数ファイルに書き込む内容を作成
