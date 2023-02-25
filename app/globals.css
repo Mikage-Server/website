@@ -5,45 +5,14 @@
 @tailwind utilities;
 
 html {
-    --scrollbarBG: rgb(255, 255, 255);
-    --thumbBG: rgb(144, 164, 174);
     --swiper-theme-color: rgb(234, 179, 8);
     --swiper-navigation-color: rgb(234, 179, 8);
     --swiper-pagination-color: rgb(234, 179, 8);
 }
 
 body {
-    width: 100svw;
-    height: 100svh;
-    background-color: rgb(255, 255, 255);
     -webkit-tap-highlight-color: transparent;
-}
-
-@media (min-width: 768px) {
-
-    main,
-    div {
-        scrollbar-width: thin;
-        scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-    }
-
-    main::-webkit-scrollbar,
-    div::-webkit-scrollbar {
-        width: 1rem;
-    }
-
-    main::-webkit-scrollbar-track,
-    div::-webkit-scrollbar-track {
-        background: var(--scrollbarBG);
-    }
-
-    main::-webkit-scrollbar-thumb,
-    div::-webkit-scrollbar-thumb {
-        background-color: var(--thumbBG);
-        border-radius: 9999px;
-        border: 0.225rem solid var(--scrollbarBG);
-    }
-
+    @apply w-[100vw] bg-white overflow-x-hidden;
 }
 
 a {

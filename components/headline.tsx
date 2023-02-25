@@ -8,7 +8,7 @@ interface HeadlineProps {
 export const Headline1 = ({ label, id }: HeadlineProps) => {
   return (
     <h1
-      className="mt-5 mb-8 w-full bg-yellow-500 text-2xl md:text-4xl"
+      className="mt-5 mb-8 w-full bg-blue-900 text-2xl md:text-4xl"
       id={id}
     >
       <span className="ml-5 md:ml-20 px-5 py-1 font-bold bg-white">

@@ -1,8 +1,8 @@
+import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
+import { FiUser } from 'react-icons/fi';
 import fetchStatus, { Status } from '../fetchStatus';
-import Icon from './icon';
 import Item from './item';
-import User from './user';
 import Guide from './icons/guide';
 import Newbie from './icons/newbie';
 import Others from './icons/others';
@@ -27,31 +27,31 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
     {
       href: '/newbie',
       name: '初めてのプレイヤーへ',
-      icon: <Newbie className="w-1/2" />,
+      icon: <Newbie className="w-10/12" />,
       submenu: null
     },
     {
       href: '/psi',
       name: '超能力',
-      icon: <Psi className="w-1/2 my-2" />,
+      icon: <Psi className="w-8/12" />,
       submenu: null
     },
     {
       href: '/guide',
       name: '遊び方ガイド',
-      icon: <Guide className="w-5/12 my-2" />,
+      icon: <Guide className="w-7/12" />,
       submenu: null
     },
     {
       href: '/#',
       name: 'その他',
-      icon: <Others className="w-1/2" />,
+      icon: <Others className="w-9/12" />,
       submenu: <SubmenuOthers status={status} />
     },
     {
       href: 'https://wiki.mikage.click/',
       name: 'Wiki (外部)',
-      icon: <Wiki className="w-1/2" />,
+      icon: <Wiki className="w-8/12" />,
       submenu: null
     }
   ];
@@ -63,11 +63,9 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
   return (
     <>
       <nav className={
-        `w-32 h-screen text-gray-600 bg-white shadow-right-md text-center ${isMenuOpenMobile ? 'flex' : 'hidden md:flex'} flex-col items-center fixed left-0 top-0 z-10`
+        `w-20 h-screen text-black bg-yellow-500 text-center ${isMenuOpenMobile ? 'flex' : 'hidden md:flex'} flex-col items-center fixed left-0 top-0 z-10`
       }>
-        <div className="mt-5 mb-10 w-24 invisible md:visible">
-          <Icon />
-        </div>
+        <Icon />
 
         <div className="h-[calc(100%-18rem)] flex flex-col items-center justify-between">
           {normals.map((item) => (
@@ -83,9 +81,7 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
           ))}
         </div>
 
-        <div className="m-auto w-24 absolute inset-x-0 bottom-5">
-          <User />
-        </div>
+        <User />
       </nav>
 
       <HamburgerButton
@@ -100,6 +96,32 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
         />
       )}
     </>
+  );
+};
+
+const Icon = () => {
+  return (
+    <div className="mb-10 w-full invisible md:visible">
+      <Link href="/">
+        <img
+          src="https://eu.mc-api.net/v3/server/favicon/play.mikage.click"
+          alt="アイコン"
+          className="w-full"
+        />
+      </Link>
+    </div>
+  );
+};
+
+const User = () => {
+  return (
+    <div className="m-auto w-16 absolute inset-x-0 bottom-8">
+      <Link href="/">
+        <div className="w-16 h-16 text-blue-900 text-5xl bg-yellow-200 flex flex-col justify-end items-center rounded-xl">
+          <FiUser />
+        </div>
+      </Link>
+    </div>
   );
 };
 

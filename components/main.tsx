@@ -6,7 +6,7 @@ import Footer from '../lib/footer';
 const Main = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <motion.main
+      {/* <motion.main
         initial="hidden"
         animate="enter"
         exit="exit"
@@ -16,12 +16,18 @@ const Main = ({ children }: { children: React.ReactNode }) => {
           exit: { opacity: 0, x: 0, y: -100 },
         }}
         transition={{ type: 'linear' }}
-        className="text-lg w-[100svw] md:w-[calc(100svw-8rem)] h-[100svh] bg-white fixed md:left-32 top-0 overflow-x-hidden overflow-y-auto"
+        className="text-lg w-[100svw] md:w-[calc(100svw-8rem)] min-h-[100svh] bg-white fixed md:left-32 top-0 overflow-x-hidden"
       >
         {children}
 
         <Footer />
-      </motion.main>
+      </motion.main> */}
+
+      <main className="pl-20">
+        {children}
+
+        <Footer />
+      </main>
     </>
   );
 };
