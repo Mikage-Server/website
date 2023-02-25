@@ -10,6 +10,9 @@ Object.keys(vars).forEach((key) => {
   content += `${key}=${vars[key]}\n`;
 });
 
+console.log('.env.local');
+console.log(content);
+
 // 環境変数ファイルを作成
 fs.writeFile('./.env.local', content, (err) => {
   if (err) {
