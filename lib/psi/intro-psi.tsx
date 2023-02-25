@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useCallback, useState } from 'react';
 import type { ReactNode } from 'react';
 import { SiCodemagic } from 'react-icons/si';
@@ -47,7 +48,7 @@ const IntroPsi = () => {
       />
 
       <div className="md:px-12 w-full md:h-[40rem] block md:grid md:grid-cols-4 md:gap-4">
-        <ul className="p-2 md:p-0 w-full h-full bg-purple-100 rounded-xl grid grid-cols-2 gap-1 md:gap-4 md:block">
+        <ul className="p-2 md:p-0 w-full h-full bg-blue-100 rounded-xl grid grid-cols-2 gap-1 md:gap-4 md:block">
           {psis.map((item, index) => (
             <Button
               name={item.name}
@@ -77,12 +78,12 @@ const Button = ({ name, enName, icon, index, active, onClick }: ButtonProps) => 
       <button
         className={
           active
-            ? 'w-full h-full text-white bg-purple-600 outline outline-4 outline-offset-4 outline-purple-400 flex flex-row rounded-xl transition-all ease-in duration-100 relative'
-            : 'w-full h-full text-white bg-purple-600 outline outline-4 outline-offset-4 outline-none flex flex-row rounded-xl transition-all ease-in duration-100 relative'
+            ? 'w-full h-full text-white bg-blue-900 outline outline-4 outline-offset-4 outline-blue-400 flex flex-row rounded-xl transition-all ease-in duration-100 relative'
+            : 'w-full h-full text-white bg-blue-900 outline outline-4 outline-offset-4 outline-none flex flex-row rounded-xl transition-all ease-in duration-100 relative'
         }
         onClick={() => { onClick(index); }}
       >
-        <div className="w-32 h-full text-4xl text-purple-400 flex flex-col justify-center items-center absolute md:static top-0 -left-10 md:inset-auto">
+        <div className="w-32 h-full text-4xl text-blue-500 flex flex-col justify-center items-center absolute md:static top-0 -left-10 md:inset-auto">
           {icon}
         </div>
         <div className="w-full h-full text-left font-bold flex flex-col justify-center absolute md:static left-7 md:inset-auto">
@@ -122,10 +123,10 @@ const Intro = ({ selecting }: { selecting: number }) => {
 
       <div className="p-6 w-full h-[40%] overflow-y-auto">
         <h3 className="text-3xl flex flex-row">
-          <div className="text-purple-300">
+          <div className="text-blue-500">
             {psi.icon}
           </div>
-          <div className="pl-5 text-purple-800 font-bold">
+          <div className="pl-5 text-blue-900 font-bold">
             {psi.name}
             <span className="pl-10 text-gray-500 font-medium">
               {psi.enName}
@@ -133,18 +134,18 @@ const Intro = ({ selecting }: { selecting: number }) => {
           </div>
         </h3>
 
-        <div className="my-3 w-full h-2 bg-purple-500 rounded-full" />
+        <div className="my-3 w-full h-2 bg-blue-900 rounded-full" />
 
         <p>
           {psi.description}
         </p>
         <p className="mt-3 text-right">
-          <a
+          <Link
             href={psi.wiki}
-            className="px-5 py-1 text-purple-600 bg-purple-200 font-medium rounded-lg"
+            className="px-5 py-1 text-blue-900 bg-blue-200 font-medium rounded-lg"
           >
             詳しくはWikiで確認しよう
-          </a>
+          </Link>
         </p>
       </div>
     </div>
