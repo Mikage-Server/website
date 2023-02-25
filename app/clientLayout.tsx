@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { Provider } from 'jotai';
 import { AnimatePresence } from 'framer-motion';
 import useColorTheme from '../hooks/useColorTheme';
 import Menu from '../lib/menu/menu';
@@ -17,7 +18,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   // 通常時はメニューを表示
   if (pathname !== '/status') {
     return (
-      <>
+      <Provider>
         <AnimatePresence
           initial={false}
           onExitComplete={() => window.scrollTo(0, 0)}
@@ -29,15 +30,15 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
           submenuName={submenuName}
           setSubmenuName={setSubmenuName}
         />
-      </>
+      </Provider>
     );
   }
 
   // ステータスページではメニューを非表示
   return (
-    <>
+    <Provider>
       {children}
-    </>
+    </Provider>
   );
 };
 

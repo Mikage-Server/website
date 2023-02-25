@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import AuthContext from './authContext';
 import ClientLayout from './clientLayout';
 
 const siteName = '御景サーバー / 超能力の世界のMinecraft生活サーバー';
@@ -29,18 +30,20 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="ja">
-      <head>
-        <link rel="icon" href="https://eu.mc-api.net/v3/server/favicon/play.mikage.click" />
-        <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL} />
-      </head>
+    <AuthContext>
+      <html lang="ja">
+        <head>
+          <link rel="icon" href="https://eu.mc-api.net/v3/server/favicon/play.mikage.click" />
+          <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL} />
+        </head>
 
-      <body>
-        <ClientLayout>
-          {children}
-        </ClientLayout>
-      </body>
-    </html>
+        <body>
+          <ClientLayout>
+            {children}
+          </ClientLayout>
+        </body>
+      </html>
+    </AuthContext>
   );
 };
 

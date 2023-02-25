@@ -1,9 +1,16 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
+import { useAtom } from 'jotai';
 import { motion } from 'framer-motion';
 import Footer from '../lib/footer';
+import LoginModal from '../lib/login/modal';
+import { isShowLoginModalAtom } from '../app/atoms';
 
 const Main = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname();
+  const [isShowLoginModal] = useAtom(isShowLoginModalAtom);
+
   return (
     <>
       {/* <motion.main
@@ -23,10 +30,12 @@ const Main = ({ children }: { children: React.ReactNode }) => {
         <Footer />
       </motion.main> */}
 
-      <main className="pl-20">
+      <main className="pl-20 relative">
         {children}
 
         <Footer />
+
+        {isShowLoginModal && <LoginModal />}
       </main>
     </>
   );

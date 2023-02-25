@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
-import { FiUser } from 'react-icons/fi';
 import fetchStatus, { Status } from '../fetchStatus';
 import Item from './item';
+import User from './user';
 import Guide from './icons/guide';
 import Newbie from './icons/newbie';
 import Others from './icons/others';
@@ -108,18 +108,6 @@ const Icon = () => {
           alt="アイコン"
           className="w-full"
         />
-      </Link>
-    </div>
-  );
-};
-
-const User = () => {
-  return (
-    <div className="m-auto w-16 absolute inset-x-0 bottom-8">
-      <Link href="/">
-        <div className="w-16 h-16 text-blue-900 text-5xl bg-yellow-200 flex flex-col justify-end items-center rounded-xl">
-          <FiUser />
-        </div>
       </Link>
     </div>
   );
