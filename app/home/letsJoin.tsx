@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const LetsJoin = () => {
   return (
-    <section className="px-5 md:px-12 mt-32 w-full h-64 text-yellow-700 text-xl md:text-2xl font-bold text-center tracking-wider bg-stripe-home flex flex-col justify-center items-center overflow-hidden">
+    <section className="px-5 md:px-12 mt-48 w-full h-64 text-yellow-700 text-xl md:text-2xl font-bold text-center tracking-wider bg-stripe-home perfect-center overflow-hidden">
       <p>
         不安があっても、鯖民が優しくあなたを迎えてくれます。
       </p>

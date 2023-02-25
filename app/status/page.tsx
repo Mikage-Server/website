@@ -31,7 +31,7 @@ const Page = () => {
         最終確認: {dayjs(status.fetch_at).tz().format('YYYY年M月D日 H時m分s秒')}
       </div>
 
-      <small className="my-8 2xl:mt-20 text-xl font-medium">
+      <small className="my-8 2xl:mt-48 text-xl font-medium">
         <a href="https://twitter.com/siojinja">
           © 2022 御景サーバー
         </a>

@@ -20,7 +20,7 @@ const Home = () => {
       <Intro />
       <WhatsNew />
 
-      <div className="mt-20 w-full md:grid md:grid-cols-12 md:gap-6">
+      <div className="mt-48 w-full md:grid md:grid-cols-12 md:gap-6">
         <CrossPlay />
         <Version />
       </div>

@@ -63,7 +63,7 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
   return (
     <>
       <nav className={
-        `w-20 h-screen text-black bg-yellow-500 text-center ${isMenuOpenMobile ? 'flex' : 'hidden md:flex'} flex-col items-center fixed left-0 top-0 z-10`
+        `w-20 h-screen text-black bg-yellow-500 text-center ${isMenuOpenMobile ? 'flex' : 'hidden md:flex'} flex-col items-center fixed left-0 top-0 z-40`
       }>
         <Icon />
 

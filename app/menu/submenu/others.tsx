@@ -34,7 +34,7 @@ const items = [
 const Others = ({ status }: { status: Status | null }) => {
   return (
     <nav>
-      <div className="p-5 w-72 font-medium bg-white shadow-xl rounded-xl absolute -top-40 left-32">
+      <div className="p-5 w-72 font-medium bg-white shadow-xl rounded-xl absolute -top-40 left-20">
         <ul className="mb-8 text-yellow-800 text-lg">
           {items.map((item) => (
             <Item
