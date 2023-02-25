@@ -1,6 +1,6 @@
-import Main from '../../components/main';
-import Banner from '../../lib/banner';
-import IntroGuide from '../../lib/guide/intro-guide';
+import Main from '../main';
+import Banner from '../banner';
+import IntroGuide from './intro-guide';
 
 const Page = () => {
   return (

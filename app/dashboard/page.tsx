@@ -1,5 +1,5 @@
-import Main from '../../components/main';
-import Welcome from '../../lib/dashboard/welcome';
+import Main from '../main';
+import Welcome from './welcome';
 
 const Page = () => {
   return (

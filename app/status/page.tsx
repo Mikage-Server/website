@@ -1,6 +1,6 @@
 import { use } from 'react';
-import dayjs from '../../lib/dayjs';
-import fetchStatus from '../../lib/fetchStatus';
+import dayjs from '../dayjs';
+import fetchStatus from '../fetchStatus';
 import Overall from './overall';
 import Item from './item';
 

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { use } from 'react';
 import Wave from "./wave";
-import fetchStatus from '../../lib/fetchStatus';
+import fetchStatus from '../fetchStatus';
 
 const Welcome = () => {
   const status = use(fetchStatus());

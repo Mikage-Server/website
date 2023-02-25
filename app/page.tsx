@@ -1,11 +1,11 @@
-import Main from '../components/main';
-import CrossPlay from '../lib/home/crossPlay';
-import Intro from '../lib/home/intro';
-import LetsJoin from '../lib/home/letsJoin';
-import Slide from '../lib/home/slide';
-import Version from '../lib/home/version';
-import Welcome from '../lib/home/welcome';
-import WhatsNew from '../lib/home/whatsNew';
+import Main from './main';
+import CrossPlay from './home/crossPlay';
+import Intro from './home/intro';
+import LetsJoin from './home/letsJoin';
+import Slide from './home/slide';
+import Version from './home/version';
+import Welcome from './home/welcome';
+import WhatsNew from './home/whatsNew';
 
 const Home = () => {
   return (
