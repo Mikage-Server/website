@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const WhatsNew = () => {
   return (
-    <section className="mt-20">
+    <section className="mt-48">
       <Headline2
         label="最近のニュース"
         id="whats-new"

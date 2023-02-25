@@ -26,9 +26,7 @@ const Item = ({ href, name, icon, submenu, submenuName, setSubmenuName }: ItemPr
       onMouseOut={handleMouseOut}
     >
       <div className="flex flex-col items-center relative">
-        <div className="w-[7.5rem] h-full bg-none transition ease-linear duration-75 absolute top-0 -left-4" />
-
-        <div className="text-blue-900 bg-white w-12 h-12 flex flex-col justify-center items-center rounded-xl">
+        <div className="text-blue-900 bg-white w-12 h-12 perfect-center rounded-xl">
           {icon}
         </div>
 

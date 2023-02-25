@@ -18,7 +18,7 @@ const Modal = () => {
   }, [setIsShowLoginModal]);
 
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center fixed top-0 left-20 z-40">
+    <div className="w-full h-screen perfect-center fixed top-0 left-20 z-40">
       <div
         onClick={closeModal}
         className="w-full h-full bg-black bg-opacity-50 absolute top-0 left-0"
@@ -38,7 +38,7 @@ const Modal = () => {
         <div className="mt-16">
           <button
             onClick={handleClickLogin}
-            className="px-10 py-2 text-white text-xl font-bold bg-purple-900 shadow-xl rounded-xl"
+            className="px-10 py-2 text-white text-xl font-bold bg-purple-900 shadow-lg rounded-xl"
           >
             Discordでログインする
           </button>

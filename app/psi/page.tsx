@@ -1,7 +1,7 @@
-import Main from '../../components/main';
-import Banner from '../../lib/banner';
-import IntroPsi from '../../lib/psi/intro-psi';
-import WhatPsi from '../../lib/psi/what-psi';
+import Main from '../main';
+import Banner from '../banner';
+import IntroPsi from './intro-psi';
+import WhatPsi from './what-psi';
 
 const Page = () => {
   return (

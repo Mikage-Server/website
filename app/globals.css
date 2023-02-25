@@ -4,12 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    --swiper-theme-color: rgb(234, 179, 8);
-    --swiper-navigation-color: rgb(234, 179, 8);
-    --swiper-pagination-color: rgb(234, 179, 8);
-}
-
 body {
     -webkit-tap-highlight-color: transparent;
     @apply w-[100vw] bg-white overflow-x-hidden;
@@ -23,6 +17,10 @@ p {
     @apply leading-8
 }
 
+.perfect-center {
+    @apply flex flex-col justify-center items-center
+}
+
 .shadow-right-md {
     box-shadow: 4px 0 6px -1px rgb(0 0 0 / 0.1), 2px 0 4px -2px rgb(0 0 0 / 0.1);
 }
@@ -31,32 +29,32 @@ p {
     box-shadow: 10px 0 15px -3px rgb(0 0 0 / 0.1), 4px 0 6px -4px rgb(0 0 0 / 0.1);
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
+.text-shadow-base {
+    text-shadow: 0px 2px 3px darkgrey
 }
 
-.swiper-slide {
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+.text-shadow-sm {
+    text-shadow: 0px 1px 3px darkgrey
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.text-shadow-md {
+    text-shadow: 0px 3px 3px darkgrey
+}
+
+.text-shadow-lg {
+    text-shadow: 0px 5px 3px darkgrey
+}
+
+.text-shadow-xl {
+    text-shadow: 0px 7px 3px darkgrey
+}
+
+.text-shadow-2xl {
+    text-shadow: 0px 10px 3px darkgrey
+}
+
+.text-shadow-none {
+    text-shadow: none
 }
 
 .bg-stripe-home {
@@ -76,4 +74,20 @@ p {
 
 .text-not-found {
     text-shadow: 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.fadeIn {
+    animation: fadeIn 300ms linear both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

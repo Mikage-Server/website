@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import Link from 'next/link';
+import './slide.css';
 
 const contents = [
   {

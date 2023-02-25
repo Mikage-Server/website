@@ -4,7 +4,7 @@ import '../app/globals.css';
 const NotFound = () => {
   return (
     <div className="w-screen h-screen bg-stripe-not-found">
-      <main className="text-white text-not-found w-screen h-screen bg-[rgba(255,0,0,0.5)] flex flex-col justify-center items-center">
+      <main className="text-white text-not-found w-screen h-screen bg-[rgba(255,0,0,0.5)] perfect-center">
         <div className="mb-16 text-center">
           <h1 className="text-3xl font-bold">
             あなたは未知のアクセスを試みた

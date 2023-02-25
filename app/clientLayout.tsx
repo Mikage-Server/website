@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Provider } from 'jotai';
 import { AnimatePresence } from 'framer-motion';
 import useColorTheme from '../hooks/useColorTheme';
-import Menu from '../lib/menu/menu';
+import Menu from './menu/menu';
 import './globals.css';
 
 const ClientLayout = ({ children }: { children: React.ReactNode }) => {

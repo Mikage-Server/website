@@ -14,10 +14,10 @@ const Logout = () => {
   }, [router]);
 
   return (
-    <section className="mt-10">
+    <section className="m-auto w-48 absolute inset-x-0 bottom-8">
       <button
         onClick={handleClickLogout}
-        className="px-5 py-2 text-white font-bold bg-red-600 rounded-xl"
+        className="px-5 py-2 text-gray-800 font-bold bg-gray-300 rounded-xl"
       >
         ログアウトする
       </button>

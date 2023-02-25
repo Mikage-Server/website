@@ -41,7 +41,7 @@ const IntroPsi = () => {
   }, []);
 
   return (
-    <section className="mt-20">
+    <section className="mt-48">
       <Headline2
         label="超能力の紹介"
         id="intro-psi"
@@ -83,7 +83,7 @@ const Button = ({ name, enName, icon, index, active, onClick }: ButtonProps) => 
         }
         onClick={() => { onClick(index); }}
       >
-        <div className="w-32 h-full text-4xl text-blue-500 flex flex-col justify-center items-center absolute md:static top-0 -left-10 md:inset-auto">
+        <div className="w-32 h-full text-4xl text-blue-500 perfect-center absolute md:static top-0 -left-10 md:inset-auto">
           {icon}
         </div>
         <div className="w-full h-full text-left font-bold flex flex-col justify-center absolute md:static left-7 md:inset-auto">
@@ -103,7 +103,7 @@ const ComingSoon = () => {
   return (
     <li className="p-3 w-full h-24">
       <button className="w-full h-full text-gray-700 bg-gray-300 flex flex-row rounded-xl relative">
-        <div className="w-32 h-full text-4xl text-gray-500 absolute md:static flex flex-col justify-center items-center top-0 -left-12 md:inset-auto">
+        <div className="w-32 h-full text-4xl text-gray-500 absolute md:static perfect-center top-0 -left-12 md:inset-auto">
           <TbQuestionMark />
         </div>
         <h3 className="w-full h-full text-left font-bold flex flex-col justify-center text-lg xl:text-xl tracking-wide absolute md:static left-8 md:inset-auto">
