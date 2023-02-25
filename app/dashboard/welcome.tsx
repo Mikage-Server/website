@@ -3,7 +3,6 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useSession } from 'next-auth/react';
-import Logout from './logout';
 
 const Welcome = () => {
   const { data: session, status } = useSession();
@@ -30,7 +29,7 @@ const Welcome = () => {
   }, []);
 
   return (
-    <section className="p-5">
+    <section className="pt-10 px-12 w-[calc(100vw-17rem)]">
       {status === 'loading' && <p>読み込み中...</p>}
 
       {session && (
@@ -38,8 +37,6 @@ const Welcome = () => {
           <h1 className="text-xl font-medium">
             {greeting}！ {session.user.name} さん！
           </h1>
-
-          <Logout />
         </>
       )}
     </section>

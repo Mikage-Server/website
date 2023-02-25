@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { use } from 'react';
-import Wave from './wave';
 import fetchStatus from '../fetchStatus';
 import Psi from '../menu/icons/psi';
 
