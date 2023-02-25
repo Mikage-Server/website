@@ -4,12 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    --swiper-theme-color: rgb(234, 179, 8);
-    --swiper-navigation-color: rgb(234, 179, 8);
-    --swiper-pagination-color: rgb(234, 179, 8);
-}
-
 body {
     -webkit-tap-highlight-color: transparent;
     @apply w-[100vw] bg-white overflow-x-hidden;
@@ -31,34 +25,6 @@ p {
     box-shadow: 10px 0 15px -3px rgb(0 0 0 / 0.1), 4px 0 6px -4px rgb(0 0 0 / 0.1);
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .bg-stripe-home {
     background-image: linear-gradient(135deg, #ffffff 25%, #fff7ba 25%, #fff7ba 50%, #ffffff 50%, #ffffff 75%, #fff7ba 75%, #fff7ba 100%);
     background-size: 5rem 5rem;
@@ -76,4 +42,20 @@ p {
 
 .text-not-found {
     text-shadow: 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.fadeIn {
+    animation: fadeIn 300ms linear both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
