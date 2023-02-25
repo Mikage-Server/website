@@ -1,0 +1,5 @@
+cron:
+- description: "every 10 minutes job"
+  url: /
+  schedule: every 10 minutes
+  timezone: Asia/Tokyo
