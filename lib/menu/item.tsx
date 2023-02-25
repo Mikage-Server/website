@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { useCallback } from 'react';
 
 interface ItemProps {
@@ -12,8 +11,6 @@ interface ItemProps {
 }
 
 const Item = ({ href, name, icon, submenu, submenuName, setSubmenuName }: ItemProps) => {
-  const pathname = usePathname();
-
   const handleMouseOver = useCallback(() => {
     setSubmenuName(name);
   }, [name, setSubmenuName]);
@@ -28,22 +25,14 @@ const Item = ({ href, name, icon, submenu, submenuName, setSubmenuName }: ItemPr
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
-      <div className={
-        href === pathname
-          ? 'text-yellow-900 fill-yellow-900 flex flex-col items-center relative'
-          : 'text-gray-500 fill-gray-500 flex flex-col items-center relative'
-      }>
-        <div className={
-          href === pathname
-            ? 'w-[7.5rem] h-full bg-yellow-200 rounded-r-xl transition ease-in duration-100 absolute top-0 -left-4'
-            : 'w-[7.5rem] h-full bg-none transition ease-linear duration-75 absolute top-0 -left-4'
-        } />
+      <div className="flex flex-col items-center relative">
+        <div className="w-[7.5rem] h-full bg-none transition ease-linear duration-75 absolute top-0 -left-4" />
 
-        <div className="w-24 flex flex-col items-center z-10">
+        <div className="text-blue-900 bg-white w-12 h-12 flex flex-col justify-center items-center rounded-xl">
           {icon}
         </div>
 
-        <div className="text-sm w-24 z-10">
+        <div className="mt-2 px-2 w-full text-xs font-medium">
           {name}
         </div>
 

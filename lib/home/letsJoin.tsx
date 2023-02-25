@@ -11,7 +11,7 @@ const LetsJoin = () => {
       </p>
 
       <Link href="/newbie">
-        <div className="px-5 md:px-10 py-2 text-white bg-yellow-600 rounded-full shadow-lg">
+        <div className="px-5 md:px-10 py-2 text-white bg-blue-900 rounded-full shadow-lg">
           <h1 className="font-bold">
             今すぐ参加する！
           </h1>
