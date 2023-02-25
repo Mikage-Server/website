@@ -10,7 +10,8 @@ Object.keys(vars).forEach((key) => {
   content += `${key}=${vars[key]}\n`;
 });
 
-console.log('.env.local');
+// .env.local ファイルに書き込む内容をコンソールに出力
+console.log('[.env.local]');
 console.log(content);
 
 // 環境変数ファイルを作成
