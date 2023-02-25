@@ -28,6 +28,11 @@ jobs:
         --NEXT_PUBLIC_API_URL https://api.mikage.click/v1
         --NEXT_PUBLIC_JMS_VOTE_URL https://minecraft.jp/servers/play.mikage.click
         --NEXT_PUBLIC_MONOCRAFT_VOTE_URL https://monocraft.net/servers/tRkOlmkTq0r0lOX4Ir9c/vote
+        --NEXTAUTH_URL https://mikage.click
+        --NEXTAUTH_URL_INTERNAL https://localhost:3000
+        --NEXTAUTH_SECRET ${{ secrets.NEXTAUTH_SECRET }}
+        --DISCORD_CLIENT_ID ${{ secrets.DISCORD_CLIENT_ID }}
+        --DISCORD_CLIENT_SECRET ${{ secrets.DISCORD_CLIENT_SECRET }}
 
     - name: Build app
       run: npm run build
