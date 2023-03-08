@@ -44,8 +44,8 @@ const Others = ({ status }: { status: Status | null }) => {
             />
           ))}
         </ul>
-
-        <NetworkStatus status={status} />
+        
+        {status !== null && <NetworkStatus status={status} /> }
       </div>
 
       <div className="w-40 h-72 absolute -top-24 z-10" />
@@ -53,15 +53,19 @@ const Others = ({ status }: { status: Status | null }) => {
   );
 };
 
-const NetworkStatus = ({ status }: { status: Status | null }) => {
+const NetworkStatus = ({ status }: { status: Status }) => {
+  const networks = status.networks;
+
+  const total = 3;
+  const okNum = (networks.java.available ? 1 : 0) + (networks.bedrock.available ? 1 : 0) + (networks.vote.available ? 1 : 0);
+
   return (
     <section className="pt-2 text-gray-500 border-t-2 border-gray-300">
       {status !== null && (
         <h2>
-          {status.networks.java.available && status.networks.bedrock.available && status.networks.vote.available
-            ? '全て正常に稼働しています'
-            : '一部が正常に稼働していません'
-          }
+          {okNum === total && '全て正常に稼働しています'}
+          {(okNum !== total && okNum > 0) && '一部のサーバーが正常に稼働していません'}
+          {okNum === 0 && '全てのサーバーが正常に稼働していません'}
         </h2>
       )}
 
@@ -69,15 +73,15 @@ const NetworkStatus = ({ status }: { status: Status | null }) => {
         <ul className="mt-1 text-gray-400 flex flex-row justify-around">
           <li>
             <h3>Java版</h3>
-            <StatusIcon available={status.networks.java.available} />
+            <StatusIcon available={networks.java.available} />
           </li>
           <li>
             <h3>統合版</h3>
-            <StatusIcon available={status.networks.bedrock.available} />
+            <StatusIcon available={networks.bedrock.available} />
           </li>
           <li>
             <h3>投票</h3>
-            <StatusIcon available={status.networks.vote.available} />
+            <StatusIcon available={networks.vote.available} />
           </li>
         </ul>
       ) : (

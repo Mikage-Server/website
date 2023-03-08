@@ -106,7 +106,7 @@ const Icon = () => {
         <img
           src="https://eu.mc-api.net/v3/server/favicon/play.mikage.click"
           alt="アイコン"
-          className="w-full"
+          className="w-full aspect-square bg-yellow-300"
         />
       </Link>
     </div>
