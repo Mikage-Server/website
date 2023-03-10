@@ -8,14 +8,11 @@ const Welcome = () => {
   const status = use(fetchStatus());
   const networks = status.networks;
 
-  const total = 3;
   const okNum = (networks.java.available ? 1 : 0) + (networks.bedrock.available ? 1 : 0) + (networks.vote.available ? 1 : 0);
 
   return (
     <div className="-mt-10 w-full h-20 flex flex-row justify-center absolute z-20">
-      {okNum === total && <WelcomeBoard status={status} />}
-      {(okNum !== total && okNum > 0) && <WarningBoard />}
-      {okNum === 0 && <ClosedBoard />}
+      {okNum !== 0 ? <WelcomeBoard status={status} /> : <ClosedBoard />}
     </div>
   );
 };
@@ -23,7 +20,7 @@ const Welcome = () => {
 const WelcomeBoard = ({ status }: { status: Status }) => {
   return (
     <section className="w-2/3 h-full text-xl text-white font-medium bg-emerald-500 shadow-lg flex flex-row justify-between rounded-full">
-      <div className="w-20 h-20 perfect-center">
+      <div className="px-2 w-20 h-20 perfect-center">
         <div className="w-16 h-16 bg-white perfect-center rounded-full">
           <Psi className="w-1/2 text-blue-900" />
         </div>
@@ -62,41 +59,10 @@ const WelcomeBoard = ({ status }: { status: Status }) => {
   );
 };
 
-const WarningBoard = () => {
-  return (
-    <section className="w-2/3 h-full text-xl text-white font-medium bg-orange-500 shadow-lg flex flex-row justify-between rounded-full">
-      <div className="w-20 h-20 perfect-center">
-        <div className="w-16 h-16 bg-white perfect-center rounded-full">
-          <div className="text-4xl text-blue-900">
-            <MdOutlineReport />
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col justify-center">
-        <p>
-          現在一部のサーバーで障害が発生しています。
-        </p>
-        <p>
-          復旧までお待ちください。
-        </p>
-      </div>
-
-      <div className="px-2 h-full perfect-center">
-        <Link href="/status">
-          <button className="px-10 w-full h-16 font-bold bg-blue-900 rounded-full shadow-lg">
-            ステータスを見る
-          </button>
-        </Link>
-      </div>
-    </section>
-  );
-};
-
 const ClosedBoard = () => {
   return (
     <section className="w-2/3 h-full text-xl text-white font-medium bg-orange-500 shadow-lg flex flex-row justify-between rounded-full">
-      <div className="w-20 h-20 perfect-center">
+      <div className="px-2 w-20 h-20 perfect-center">
         <div className="w-16 h-16 bg-white perfect-center rounded-full">
           <div className="text-4xl text-blue-900">
             <MdOutlineReport />

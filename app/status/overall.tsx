@@ -1,24 +1,19 @@
-'use client';
-
-import { useEffect, useState } from 'react';
 import { MdDone, MdOutlineReport } from 'react-icons/md';
 import type { OverallProps } from './types';
 
 const Overall = ({ okJE, okBE, okVote }: OverallProps) => {
   const total = 3;
-  const [status, setStatus] = useState<string>('normal');
+  let status = '';
 
-  useEffect(() => {
-    const okNum = (okJE ? 1 : 0) + (okBE ? 1 : 0) + (okVote ? 1 : 0);
+  const okNum = (okJE ? 1 : 0) + (okBE ? 1 : 0) + (okVote ? 1 : 0);
 
-    if (okNum === total) {
-      setStatus('normal');
-    } else if (okNum > 0) {
-      setStatus('warning');
-    } else {
-      setStatus('closed');
-    }
-  }, [okJE, okBE, okVote]);
+  if (okNum === total) {
+    status = 'normal';
+  } else if (okNum > 0) {
+    status = 'warning';
+  } else {
+    status = 'closed';
+  }
 
   return (
     <section className={
