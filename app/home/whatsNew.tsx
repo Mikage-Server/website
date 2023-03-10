@@ -1,5 +1,6 @@
-import { Headline2 } from '../../components/headline';
 import Link from 'next/link';
+import { AiFillPicture } from 'react-icons/ai';
+import { Headline2 } from '../../components/headline';
 
 const WhatsNew = () => {
   return (
@@ -11,7 +12,7 @@ const WhatsNew = () => {
 
       <article className="px-5 md:px-12">
         <div className="w-full h-96 overflow-x-auto">
-          <ul className="w-[100rem] h-full flex flex-row">
+          <ul className="h-[calc(100%-0.5rem)] grid grid-flow-col gap-1">
             <Item />
             <Item />
             <Item />
@@ -26,9 +27,11 @@ const WhatsNew = () => {
 
 const Item = () => {
   return (
-    <li className="mx-5 w-64 h-full bg-gray-100 rounded-xl overflow-hidden">
+    <li className="mx-5 w-72 h-full rounded-lg overflow-hidden shadow-lg">
       <Link href="/#">
-        <div className="w-full h-48 bg-orange-200" />
+        <div className="w-full aspect-video text-5xl text-orange-700 bg-orange-200 flex flex-col items-center justify-center">
+          <AiFillPicture />
+        </div>
 
         <div className="p-5">
           2022-09-25

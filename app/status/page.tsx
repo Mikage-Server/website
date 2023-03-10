@@ -31,12 +31,34 @@ const Page = () => {
         最終確認: {dayjs(status.fetch_at).tz().format('YYYY年M月D日 H時m分s秒')}
       </div>
 
-      <small className="my-8 2xl:mt-48 text-xl font-medium">
-        <a href="https://twitter.com/siojinja">
-          © 2022 御景サーバー
-        </a>
-      </small>
+      <Footer />
     </main>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer className="mt-10 px-5 py-3 w-full text-center text-gray-500 border-t-2 border-gray-300 flex flex-col md:flex-row">
+      <div>
+        <small className="text-base">
+          © 2022 御景サーバー
+        </small>
+      </div>
+
+      <div className="mt-1 md:mt-auto md:ml-10">
+        <a href={process.env.NEXT_PUBLIC_TWITTER_URL} className="px-2">
+          Twitter
+        </a>
+        /
+        <a href={process.env.NEXT_PUBLIC_JMS_VOTE_URL} className="px-2">
+          Japan Minecraft Servers
+        </a>
+        /
+        <a href={process.env.NEXT_PUBLIC_MONOCRAFT_VOTE_URL} className="px-2">
+          monocraft
+        </a>
+      </div>
+    </footer>
   );
 };
 

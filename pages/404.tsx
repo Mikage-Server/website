@@ -22,13 +22,35 @@ const NotFound = () => {
           </div>
         </Link>
 
-        <small className="mt-10 text-xl font-medium">
-          <a href="https://twitter.com/siojinja">
-            © 2022 御景サーバー
-          </a>
-        </small>
+        <Footer />
       </main>
     </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer className="mt-10 text-xl text-center font-medium">
+      <div>
+        <small className="text-xl">
+          © 2022 御景サーバー
+        </small>
+      </div>
+
+      <div className="mt-1">
+        <a href={process.env.NEXT_PUBLIC_TWITTER_URL} className="px-2">
+          Twitter
+        </a>
+        /
+        <a href={process.env.NEXT_PUBLIC_JMS_VOTE_URL} className="px-2">
+          Japan Minecraft Servers
+        </a>
+        /
+        <a href={process.env.NEXT_PUBLIC_MONOCRAFT_VOTE_URL} className="px-2">
+          monocraft
+        </a>
+      </div>
+    </footer>
   );
 };
 
