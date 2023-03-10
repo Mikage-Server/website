@@ -38,14 +38,14 @@ const Page = () => {
 
 const Footer = () => {
   return (
-    <footer className="mt-10 px-5 py-3 w-full text-center text-gray-500 border-t-2 border-gray-300 flex flex-row">
+    <footer className="mt-10 px-5 py-3 w-full text-center text-gray-500 border-t-2 border-gray-300 flex flex-col md:flex-row">
       <div>
         <small className="text-base">
           © 2022 御景サーバー
         </small>
       </div>
 
-      <div className="ml-10">
+      <div className="mt-1 md:mt-auto md:ml-10">
         <a href={process.env.NEXT_PUBLIC_TWITTER_URL} className="px-2">
           Twitter
         </a>
