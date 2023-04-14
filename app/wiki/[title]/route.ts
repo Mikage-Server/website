@@ -9,6 +9,10 @@ export const GET = async (request: Request, { params }: {
   const title = params.title;
   const escaped = encodeEucJP(title);
 
+  console.log('received:', title);
+  console.log('received encoding:', Encoding.detect(title));
+  console.log('redirect to:', `https://wiki.mikage.click/d/${escaped}`);
+
   redirect(`https://wiki.mikage.click/d/${escaped}`);
 };
 
@@ -21,5 +25,5 @@ const encodeEucJP = (str: string) => {
     Encoding.detect(str) as Encoding.Encoding
   );
 
-  return Encoding.codeToString(actual);
+  return Encoding.urlEncode(actual);
 };
