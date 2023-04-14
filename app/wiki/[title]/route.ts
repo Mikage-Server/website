@@ -7,15 +7,19 @@ export const GET = async (request: Request, { params }: {
 
   // タイトルを取得し、EUC-JPに変換
   const title = params.title;
-  console.log('title:', title);
-  const escaped = decodeUTF8ToEUCJP(title);
-  console.log('escaped:', escaped);
+  const escaped = encodeEucJP(title);
 
   redirect(`https://wiki.mikage.click/d/${escaped}`);
 };
 
-const decodeUTF8ToEUCJP = (str: string) => {
+const encodeEucJP = (str: string) => {
   const arr = Encoding.stringToCode(str);
-  const actual = Encoding.convert(arr, 'EUCJP', 'UNICODE');
+
+  const actual = Encoding.convert(
+    arr,
+    'EUCJP',
+    Encoding.detect(str) as Encoding.Encoding
+  );
+
   return Encoding.codeToString(actual);
 };
