@@ -7,7 +7,9 @@ export const GET = async (request: Request, { params }: {
 
   // タイトルを取得し、EUC-JPに変換
   const title = params.title;
+  console.log('title:', title);
   const escaped = decodeUTF8ToEUCJP(title);
+  console.log('escaped:', escaped);
 
   redirect(`https://wiki.mikage.click/d/${escaped}`);
 };
