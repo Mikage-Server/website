@@ -23,7 +23,7 @@ jobs:
 
     - name: Create .env.local (Environment variables file)
       run: >
-        ts-node .github/createEnviron.ts
+        npx ts-node .github/createEnviron.ts
         --NEXT_PUBLIC_API_URL https://api.mikage.click/v1
         --NEXT_PUBLIC_TWITTER_URL https://twitter.com/siojinja
         --NEXT_PUBLIC_JMS_VOTE_URL https://minecraft.jp/servers/play.mikage.click
