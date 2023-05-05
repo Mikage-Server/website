@@ -33,7 +33,7 @@ const items = [
 
 const Others = ({ status }: { status: Status | null }) => {
   return (
-    <nav>
+    <nav className="hidden md:block">
       <div className="p-5 w-72 font-medium bg-white shadow-xl rounded-xl absolute -top-40 left-20">
         <ul className="mb-8 text-yellow-800 text-lg">
           {items.map((item) => (
@@ -44,8 +44,8 @@ const Others = ({ status }: { status: Status | null }) => {
             />
           ))}
         </ul>
-        
-        {status !== null && <NetworkStatus status={status} /> }
+
+        {status !== null && <NetworkStatus status={status} />}
       </div>
 
       <div className="w-40 h-72 absolute -top-24 z-10" />
