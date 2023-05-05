@@ -17,7 +17,6 @@ interface Props {
 
 const Menu = ({ submenuName, setSubmenuName }: Props) => {
   const [status, setStatus] = useState<Status | null>(null);
-  const [isMenuOpenMobile, setIsMenuOpenMobile] = useState<boolean>(false);
 
   useEffect(() => {
     fetchStatus().then((status) => setStatus(status));
@@ -27,51 +26,56 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
     {
       href: '/newbie',
       name: '初めてのプレイヤーへ',
+      nameSp: 'お初へ',
       icon: <Newbie className="w-10/12" />,
       submenu: null
     },
     {
       href: '/psi',
       name: '超能力',
+      nameSp: '超能力',
       icon: <Psi className="w-8/12" />,
       submenu: null
     },
     {
       href: '/guide',
       name: '遊び方ガイド',
+      nameSp: '遊び方',
       icon: <Guide className="w-7/12" />,
       submenu: null
     },
     {
       href: '/#',
       name: 'その他',
+      nameSp: 'その他',
       icon: <Others className="w-9/12" />,
       submenu: <SubmenuOthers status={status} />
     },
     {
       href: 'https://wiki.mikage.click/',
       name: 'Wiki (外部)',
+      nameSp: 'Wiki',
       icon: <Wiki className="w-8/12" />,
       submenu: null
     }
   ];
 
-  const handleHamBtnClick = useCallback(() => {
-    setIsMenuOpenMobile(!isMenuOpenMobile);
-  }, [isMenuOpenMobile]);
-
   return (
     <>
-      <nav className={
-        `w-20 h-screen text-black bg-yellow-500 text-center ${isMenuOpenMobile ? 'flex' : 'hidden md:flex'} flex-col items-center fixed left-0 top-0 z-40`
-      }>
+      <nav className="w-full h-12 text-black bg-yellow-500 text-center flex flex-row justify-center items-center shadow-lg fixed left-0 top-0 md:bottom-auto z-40 md:hidden">
+        <User className="absolute left-5" />
         <Icon />
+      </nav>
 
-        <div className="h-[calc(100%-18rem)] flex flex-col items-center justify-between">
+      <nav className="w-full md:w-20 h-20 md:h-screen text-black bg-yellow-500 text-center flex flex-row md:flex-col items-center fixed left-0 top-auto md:top-0 bottom-0 md:bottom-auto z-40">
+        <Icon className="hidden md:block" />
+
+        <div className="w-full h-20 md:h-[calc(100%-18rem)] flex flex-row md:flex-col items-center justify-around md:justify-between overflow-hidden">
           {normals.map((item) => (
             <Item
               href={item.href}
               name={item.name}
+              nameSp={item.nameSp}
               icon={item.icon}
               submenu={item.submenu}
               submenuName={submenuName}
@@ -81,27 +85,15 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
           ))}
         </div>
 
-        <User />
+        <User className="md:m-auto md:absolute md:inset-x-0 md:bottom-8 hidden md:block" />
       </nav>
-
-      <HamburgerButton
-        isOpened={isMenuOpenMobile}
-        onClick={handleHamBtnClick}
-      />
-
-      {isMenuOpenMobile && (
-        <div
-          className="w-[100vw] h-[100vh] bg-black bg-opacity-50 fixed top-0 left-0 z-0"
-          onClick={handleHamBtnClick}
-        />
-      )}
     </>
   );
 };
 
-const Icon = () => {
+const Icon = ({ className }: { className?: string }) => {
   return (
-    <div className="mb-10 w-full invisible md:visible">
+    <div className={`md:mb-10 w-12 md:w-20 h-12 md:h-20 ${className}`}>
       <Link href="/">
         <img
           src="https://eu.mc-api.net/v3/server/favicon/play.mikage.click"
@@ -110,23 +102,6 @@ const Icon = () => {
         />
       </Link>
     </div>
-  );
-};
-
-const HamburgerButton = ({ isOpened, onClick }: { isOpened: boolean, onClick: () => void }) => {
-  return (
-    <button
-      className={
-        isOpened
-          ? 'md:hidden p-5 bg-white fixed top-0 left-0 z-10'
-          : 'md:hidden p-5 bg-white shadow-xl fixed top-0 left-0 z-10'
-      }
-      onClick={onClick}
-    >
-      <div className="mb-2 w-10 h-2 bg-yellow-700" />
-      <div className="mb-2 w-10 h-2 bg-yellow-800" />
-      <div className="w-10 h-2 bg-yellow-900" />
-    </button>
   );
 };
 

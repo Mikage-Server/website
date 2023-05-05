@@ -2,7 +2,7 @@ import { Headline1 } from '../../components/headline';
 
 const Intro = () => {
   return (
-    <section className="mt-96 md:mt-40">
+    <section className="mt-20 md:mt-40">
       <Headline1
         label="ここは超能力の世界"
       />

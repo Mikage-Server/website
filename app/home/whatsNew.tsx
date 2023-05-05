@@ -4,7 +4,7 @@ import { Headline2 } from '../../components/headline';
 
 const WhatsNew = () => {
   return (
-    <section className="mt-48">
+    <section className="mt-32 md:mt-48">
       <Headline2
         label="最近のニュース"
         id="whats-new"
