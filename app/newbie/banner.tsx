@@ -45,7 +45,7 @@ const ServerInfo = () => {
               <span className="mr-7 md:mr-3 px-2 py-1 font-bold text-orange-800 bg-orange-300 rounded-lg">
                 Java
               </span>
-              1.18.2 - 1.19.3
+              1.18.2 - 最新版
             </div>
             <div className="mt-2 md:mt-0 w-full md:w-1/2">
               <span className="mr-3 px-2 py-1 font-bold text-lime-800 bg-lime-300 rounded-lg">

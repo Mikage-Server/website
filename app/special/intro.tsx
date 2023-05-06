@@ -33,7 +33,7 @@ interface ButtonProps {
   onClick: (index: number) => void;
 };
 
-const IntroPsi = () => {
+const Intro = () => {
   const [selecting, setSelecting] = useState<number>(0);
 
   const handleChange = useCallback((index: number) => {
@@ -41,14 +41,14 @@ const IntroPsi = () => {
   }, []);
 
   return (
-    <section className="mt-48">
+    <section className="mt-32 md:mt-48">
       <Headline2
         label="超能力の紹介"
         id="intro-psi"
       />
 
       <div className="md:px-12 w-full md:h-[40rem] block md:grid md:grid-cols-4 md:gap-4">
-        <ul className="p-2 md:p-0 w-full h-full bg-blue-100 rounded-xl grid grid-cols-2 gap-1 md:gap-4 md:block">
+        <ul className="p-2 md:p-0 w-full h-full bg-blue-100 rounded-xl grid grid-cols-2 gap-1 md:gap-4 md:block overflow-hidden">
           {psis.map((item, index) => (
             <Button
               name={item.name}
@@ -66,7 +66,7 @@ const IntroPsi = () => {
           <ComingSoon />
         </ul>
 
-        <Intro selecting={selecting} />
+        <Detail selecting={selecting} />
       </div>
     </section>
   );
@@ -114,7 +114,7 @@ const ComingSoon = () => {
   );
 };
 
-const Intro = ({ selecting }: { selecting: number }) => {
+const Detail = ({ selecting }: { selecting: number }) => {
   const psi = psis[selecting];
 
   return (
@@ -152,4 +152,4 @@ const Intro = ({ selecting }: { selecting: number }) => {
   );
 };
 
-export default IntroPsi;
+export default Intro;
