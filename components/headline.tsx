@@ -1,5 +1,4 @@
 import { AiFillStar } from 'react-icons/ai';
-import { BudouX } from './budouX';
 
 interface HeadlineProps {
   label: string;
@@ -28,7 +27,7 @@ export const Headline2 = ({ label, id }: HeadlineProps) => {
       <Headline2Star className="pr-5" />
       <div className="w-2 h-7 md:h-10  bg-yellow-500" />
       <div className="mx-5 md:mx-10 font-bold">
-        <BudouX text={label} />
+        {label}
       </div>
       <div className="w-2 h-7 md:h-10 bg-yellow-500" />
       <Headline2Star className="pl-5" />

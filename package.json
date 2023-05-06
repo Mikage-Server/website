@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "budoux": "^0.5.1",
     "dayjs": "^1.11.7",
     "encoding-japanese": "^2.0.0",
     "framer-motion": "^10.12.7",
