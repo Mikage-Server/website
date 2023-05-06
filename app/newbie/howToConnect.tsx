@@ -2,7 +2,7 @@ import { Headline2 } from '../../components/headline';
 
 const HowToConnect = () => {
   return (
-    <section className="mt-48">
+    <section className="mt-32 md:mt-48">
       <Headline2
         label="接続する方法"
         id="how-to-connect"

@@ -41,14 +41,14 @@ const IntroPsi = () => {
   }, []);
 
   return (
-    <section className="mt-48">
+    <section className="mt-32 md:mt-48">
       <Headline2
         label="超能力の紹介"
         id="intro-psi"
       />
 
       <div className="md:px-12 w-full md:h-[40rem] block md:grid md:grid-cols-4 md:gap-4">
-        <ul className="p-2 md:p-0 w-full h-full bg-blue-100 rounded-xl grid grid-cols-2 gap-1 md:gap-4 md:block">
+        <ul className="p-2 md:p-0 w-full h-full bg-blue-100 rounded-xl grid grid-cols-2 gap-1 md:gap-4 md:block overflow-hidden">
           {psis.map((item, index) => (
             <Button
               name={item.name}

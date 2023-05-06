@@ -21,7 +21,7 @@ const Main = ({ children }: { children: React.ReactNode }) => {
           exit: { opacity: 0, x: 0, y: -100 },
         }}
         transition={{ type: 'linear' }}
-        className="pt-12 md:pt-auto md:pl-20 pb-20 md:pb-auto relative"
+        className="pt-12 md:pt-0 md:pl-20 pb-20 md:pb-0 relative"
       >
         {children}
 
