@@ -1,17 +1,17 @@
 import Main from '../main';
 import Banner from '../banner';
-import IntroPsi from './intro-psi';
-import WhatPsi from './what-psi';
+import Intro from './intro';
+import Summary from './summary';
 
 const Page = () => {
   return (
     <Main>
       <Banner
-        label="超能力"
+        label="特殊要素"
         bannerImage="/psi/banner.webp"
       />
-      <WhatPsi />
-      <IntroPsi />
+      <Summary />
+      <Intro />
     </Main>
   );
 };

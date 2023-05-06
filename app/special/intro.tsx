@@ -33,7 +33,7 @@ interface ButtonProps {
   onClick: (index: number) => void;
 };
 
-const IntroPsi = () => {
+const Intro = () => {
   const [selecting, setSelecting] = useState<number>(0);
 
   const handleChange = useCallback((index: number) => {
@@ -66,7 +66,7 @@ const IntroPsi = () => {
           <ComingSoon />
         </ul>
 
-        <Intro selecting={selecting} />
+        <Detail selecting={selecting} />
       </div>
     </section>
   );
@@ -114,7 +114,7 @@ const ComingSoon = () => {
   );
 };
 
-const Intro = ({ selecting }: { selecting: number }) => {
+const Detail = ({ selecting }: { selecting: number }) => {
   const psi = psis[selecting];
 
   return (
@@ -152,4 +152,4 @@ const Intro = ({ selecting }: { selecting: number }) => {
   );
 };
 
-export default IntroPsi;
+export default Intro;

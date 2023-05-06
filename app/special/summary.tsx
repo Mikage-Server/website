@@ -1,11 +1,11 @@
 import { Headline1 } from '../../components/headline';
 import { Underline1 } from '../../components/underline';
 
-const WhatPsi = () => {
+const Summary = () => {
   return (
     <section>
       <Headline1
-        label="御景の世界の超能力"
+        label="御景の世界の特殊機能"
         id="what-psi"
       />
 
@@ -35,4 +35,4 @@ const WhatPsi = () => {
   );
 };
 
-export default WhatPsi;
+export default Summary;
