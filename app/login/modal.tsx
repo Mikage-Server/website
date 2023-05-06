@@ -18,13 +18,13 @@ const Modal = () => {
   }, [setIsShowLoginModal]);
 
   return (
-    <div className="w-full h-screen perfect-center fixed top-0 left-20 z-40">
+    <div className="w-full h-screen perfect-center fixed top-0 md:left-20 z-40">
       <div
         onClick={closeModal}
         className="w-full h-full bg-black bg-opacity-50 absolute top-0 left-0"
       />
 
-      <section className="p-10 w-1/2 text-black text-center bg-white rounded-2xl z-50">
+      <section className="p-10 w-11/12 md:w-1/2 text-black text-center bg-white rounded-2xl z-50">
         <h1 className="mb-2 text-2xl text-purple-900 font-bold">
           ログイン
 

@@ -23,7 +23,8 @@ export interface PlayerNum {
 
 const fetchStatus: () => Promise<Status> = async () => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/status`
+    `${process.env.NEXT_PUBLIC_API_URL}/status`,
+    { 'cache': 'no-cache' }
   );
   return res.json();
 };
