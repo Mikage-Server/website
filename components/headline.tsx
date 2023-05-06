@@ -21,7 +21,7 @@ export const Headline1 = ({ label, id }: HeadlineProps) => {
 export const Headline2 = ({ label, id }: HeadlineProps) => {
   return (
     <h2
-      className="my-5 w-full text-2xl md:text-4xl flex flex-row justify-center"
+      className="my-5 w-full text-2xl md:text-4xl flex flex-row justify-center overflow-hidden"
       id={id}
     >
       <Headline2Star className="pr-5" />
