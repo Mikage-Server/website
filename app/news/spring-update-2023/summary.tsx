@@ -11,7 +11,8 @@ const Summary = () => {
 
       <article className="px-6 md:px-12">
         <p>
-          概要
+          御景の新しい季節がやってきました！
+          ロビーが新しくなり、生活を楽しくする新要素が多数追加されました。
         </p>
       </article>
     </section>

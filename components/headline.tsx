@@ -70,10 +70,10 @@ export const Headline3WithIndex = ({ label, index, id }: HeadlinePropsWithIndex)
       id={id}
     >
       <div className="h-12 border-b-4 border-blue-900 flex flex-row">
-        <div className="w-12 h-full text-white text-center text-3xl font-bold bg-blue-900 rounded-t-xl flex flex-col justify-end">
+        <div className="px-3 h-full text-white text-center text-3xl font-bold bg-blue-900 rounded-t-xl flex flex-col justify-end">
           {index}
         </div>
-        <div className="px-8 flex flex-col justify-end">
+        <div className="pl-8 pr-3 flex flex-col justify-end">
           {label}
         </div>
       </div>
