@@ -24,13 +24,6 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
 
   const normals = [
     {
-      href: '/special',
-      name: '特殊要素',
-      nameSp: '特殊要素',
-      icon: <Psi className="w-8/12" />,
-      submenu: null
-    },
-    {
       href: '/newbie',
       name: '初めてのプレイヤーへ',
       nameSp: 'お初へ',
@@ -42,6 +35,13 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
       name: '遊び方ガイド',
       nameSp: '遊び方',
       icon: <Guide className="w-7/12" />,
+      submenu: null
+    },
+    {
+      href: '/special',
+      name: '特殊要素',
+      nameSp: '特殊要素',
+      icon: <Psi className="w-8/12" />,
       submenu: null
     },
     {

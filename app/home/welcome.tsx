@@ -11,7 +11,7 @@ const Welcome = () => {
   const okNum = (networks.java.available ? 1 : 0) + (networks.bedrock.available ? 1 : 0) + (networks.vote.available ? 1 : 0);
 
   return (
-    <div className="-mt-10 w-full h-20 flex flex-row justify-center absolute z-20 hidden md:block">
+    <div className="-mt-10 w-full h-20 hidden md:flex md:flex-row justify-center absolute z-20">
       {okNum !== 0 ? <WelcomeBoard status={status} /> : <ClosedBoard />}
     </div>
   );

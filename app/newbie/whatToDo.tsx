@@ -4,8 +4,8 @@ const WhatToDo = () => {
   return (
     <section className="mt-32 md:mt-48">
       <Headline2
-        label="入ってから何すればいいの？"
-        id="what-to-do"
+        label="遊び方ガイド"
+        id="how-to-play"
       />
 
       <article className="px-6 md:px-12">
