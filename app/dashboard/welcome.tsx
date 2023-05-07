@@ -29,7 +29,7 @@ const Welcome = () => {
   }, []);
 
   return (
-    <section className="pt-10 px-12 w-[calc(100vw-17rem)]">
+    <section className="pt-10 px-12 w-screen md:w-[calc(100vw-17rem)] min-h-[calc(100vh-20rem)] md:min-h-[calc(100vh-12rem)]">
       {status === 'loading' && <p>読み込み中...</p>}
 
       {session && (
@@ -37,6 +37,15 @@ const Welcome = () => {
           <h1 className="text-xl font-medium">
             {greeting}！ {session.user.name} さん！
           </h1>
+
+          <div className="mt-5">
+            <p>
+              申し訳ございませんが、現在のエリアは工事中です。
+            </p>
+            <p>
+              今後のアップデートで、御景ワールドと連携した機能を追加していく予定です。
+            </p>
+          </div>
         </>
       )}
     </section>

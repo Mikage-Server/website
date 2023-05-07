@@ -5,7 +5,7 @@ import Status from './status';
 
 const Menu = () => {
   return (
-    <div className="w-48 h-screen text-center bg-gray-100 border-r-2 border-gray-300 flex flex-col items-center relative left-20">
+    <div className="w-48 h-screen text-center bg-gray-100 border-r-2 border-gray-300 hidden md:flex flex-col items-center relative left-20">
       <Profile />
       <Status />
       <Services />
