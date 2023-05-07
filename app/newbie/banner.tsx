@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <section className="mb-[20rem] md:mb-20 w-full h-[40rem] bg-neutral-800 relative md:overflow-hidden">
+    <section className="mb-[35rem] md:mb-20 w-full md:h-[40rem] bg-neutral-800 relative md:overflow-hidden">
       <img
         src="/newbie/banner.webp"
         alt="バナー"
@@ -14,7 +14,7 @@ const Banner = () => {
 
 const ServerInfo = () => {
   return (
-    <div className="p-5 h-[34rem] w-11/12 md:w-[30rem] bg-white shadow-xl rounded-xl m-auto absolute inset-0 md:inset-auto top-[35rem] md:top-20 md:right-20">
+    <div className="p-5 h-[34rem] md:h-[30rem] w-11/12 md:w-[30rem] bg-white shadow-xl rounded-xl m-auto absolute inset-0 md:inset-auto top-[25rem] md:top-20 md:right-20">
       <h1 className="text-2xl text-center text-lime-700 font-bold tracking-wide">
         サーバー情報
       </h1>
@@ -63,6 +63,7 @@ const ServerInfo = () => {
           サバイバル生活サーバー
         </strong>
         です。
+        スクロールした場所に書いてある、
         <a
           href="#rule"
           className="px-2 py-1 text-white bg-lime-500 rounded-lg"

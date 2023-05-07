@@ -1,6 +1,6 @@
 import Main from '../main';
 import Banner from './banner';
-import HowToConnect from './howToConnect';
+import HowToParticipate from './howToParticipate';
 import Intro from './intro';
 import Rule from './rule';
 import WhatToDo from './whatToDo';
@@ -12,7 +12,7 @@ const Page = () => {
       <Banner />
       <Intro />
       <Rule />
-      <HowToConnect />
+      <HowToParticipate />
       <WhatToDo />
       <WhenTrouble />
     </Main>

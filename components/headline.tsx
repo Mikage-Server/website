@@ -5,6 +5,12 @@ interface HeadlineProps {
   id?: string;
 }
 
+interface HeadlinePropsWithIndex {
+  label: string;
+  index: number;
+  id?: string;
+}
+
 export const Headline1 = ({ label, id }: HeadlineProps) => {
   return (
     <h1
@@ -54,5 +60,23 @@ const CenterStar = ({ className }: { className?: string }) => {
     }>
       <AiFillStar />
     </div>
+  );
+};
+
+export const Headline3WithIndex = ({ label, index, id }: HeadlinePropsWithIndex) => {
+  return (
+    <h3
+      className="my-5 w-full text-lg md:text-xl flex flex-row justify-left"
+      id={id}
+    >
+      <div className="h-12 border-b-4 border-blue-900 flex flex-row">
+        <div className="w-12 h-full text-white text-center text-3xl font-bold bg-blue-900 rounded-t-xl flex flex-col justify-end">
+          {index}
+        </div>
+        <div className="px-8 flex flex-col justify-end">
+          {label}
+        </div>
+      </div>
+    </h3>
   );
 };
