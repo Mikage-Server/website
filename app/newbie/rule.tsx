@@ -14,7 +14,7 @@ const rules = [
     details: [
       'ハックの使用',
       'バグを利用する',
-      'ワールドを不正にダウンロードする'
+      '許可されていないMODを使用する'
     ]
   },
   {
@@ -71,16 +71,16 @@ const Rule = () => {
 
 const Item = ({ title, details, index }: RuleProps) => {
   return (
-    <li className="p-4 mb-10 md:mb-0 w-full bg-yellow-100 rounded-xl">
-      <div className="text-4xl text-yellow-500 font-bold">
+    <li className="p-4 mb-10 md:mb-0 w-full border-2 border-gray-300 rounded-xl">
+      <div className="text-4xl text-blue-900 font-bold">
         {index + 1}
       </div>
 
-      <h3 className="h-16 text-yellow-800 font-medium tracking-wider">
+      <h3 className="h-16 font-medium tracking-wider">
         {title}
       </h3>
 
-      <div className="w-full h-2 bg-yellow-500 rounded-full" />
+      <div className="w-full h-2 bg-blue-900 rounded-full" />
 
       <ul className="mt-5 pl-5 text-left list-disc">
         {details.map((detail) => (
