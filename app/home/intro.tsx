@@ -1,21 +1,43 @@
 import { Headline1 } from '../../components/headline';
+import { Underline1 } from '../../components/underline';
 
 const Intro = () => {
   return (
     <section className="mt-20 md:mt-40">
       <Headline1
-        label="ここは超能力の世界"
+        label="御景サーバーのサバイバル"
       />
 
       <article className="px-6 md:px-12">
         <p>
-          御景サーバーのワールドは超能力が当たり前となっている。
+          普段のサバイバルで「こうなったらいいな」と思うことがありますよね。
         </p>
         <p>
-          瞬間移動、重力操作... など経験したことがないサバイバルができる。
+          例えば、
+          <Underline1>
+            建築は飛びながら行いたい
+          </Underline1>
+          とか
+          <Underline1>
+            ダイナミックなツールを使って採掘したい
+          </Underline1>
+          、
+          <Underline1>
+            いつでも好きな場所にテレポートしたい
+          </Underline1>
+          とか。
         </p>
+
+        <p className="my-10">
+          それ、御景の特殊機能を使えば、全て叶います。
+        </p>
+
         <p>
-          それでは、あなたも超能力を手に入れて、この世界を楽しもう！
+          御景サーバーは、
+          <Underline1>
+            まるでクリエイティブなサバイバルを行える場
+          </Underline1>
+          を提供しています。
         </p>
       </article>
     </section>

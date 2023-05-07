@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import AuthContext from './authContext';
 import ClientLayout from './clientLayout';
 
-const siteName = '御景サーバー / 超能力の世界のMinecraft生活サーバー';
-const description = '超能力の世界のMinecraft生活サーバー「御景サーバー」のウェブサイトです。';
+const siteName = '御景サーバー / まるでクリエイティブなサバイバルができるMinecraft生活サーバー';
+const description = 'まるでクリエイティブなサバイバルができるMinecraft生活サーバー「御景（みかげ）サーバー」のウェブサイトです。';
 
 export const metadata: Metadata = {
   title: siteName,

@@ -29,12 +29,10 @@ const WelcomeBoard = ({ status }: { status: Status }) => {
       <div className="flex flex-col justify-center">
         <p>
           キミも、
-          <StrongText>超能力</StrongText>
-          でちょっぴり
-          <StrongText>サイエンス</StrongText>
-          ・
-          <StrongText>ファンタジー</StrongText>
-          なマイクラライフを送ろう。
+          <StrongText>クリエイティブなサバイバル</StrongText>
+          を実現する
+          <StrongText>特殊機能</StrongText>
+          を使って、新しい生活を送ろう。
         </p>
 
         {status.players.online > 0 && (

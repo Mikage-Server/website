@@ -1,7 +1,7 @@
 import Main from '../main';
 import Banner from '../banner';
-import Intro from './intro';
 import Summary from './summary';
+import Psi from './psi';
 
 const Page = () => {
   return (
@@ -11,7 +11,7 @@ const Page = () => {
         bannerImage="/psi/banner.webp"
       />
       <Summary />
-      <Intro />
+      <Psi />
     </Main>
   );
 };

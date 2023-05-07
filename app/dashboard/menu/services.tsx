@@ -12,7 +12,7 @@ const services = [
 const Services = () => {
   return (
     <ul className="px-4 my-10 w-full">
-      {services.map((service) => (
+      {/* {services.map((service) => (
         <li
           key={service.label}
           className="w-full mb-5"
@@ -23,7 +23,7 @@ const Services = () => {
             </button>
           </Link>
         </li>
-      ))}
+      ))} */}
     </ul>
   );
 };

@@ -38,7 +38,7 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
       submenu: null
     },
     {
-      href: '/special',
+      href: '/specials',
       name: '特殊要素',
       nameSp: '特殊要素',
       icon: <Psi className="w-8/12" />,
