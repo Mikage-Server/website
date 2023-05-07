@@ -1,6 +1,6 @@
 import Main from '../main';
 import Banner from '../banner';
-import IntroGuide from './intro-guide';
+import Intro from './intro';
 
 const Page = () => {
   return (
@@ -9,7 +9,7 @@ const Page = () => {
         label="遊び方ガイド"
         bannerImage="/guide/banner.webp"
       />
-      <IntroGuide />
+      <Intro />
     </Main>
   );
 };
