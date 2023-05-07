@@ -18,7 +18,7 @@ const WhenTrouble = () => {
 
             <div className="w-full h-2 bg-blue-900 rounded-full" />
 
-            <div className="mt-5 pl-5">
+            <div className="mt-5 px-3">
               <p>
                 <Underline1>
                   苦しんでいる内容をチャットで言ってみましょう！
@@ -49,7 +49,7 @@ const WhenTrouble = () => {
 
             <div className="w-full h-2 bg-blue-900 rounded-full" />
 
-            <div className="mt-5 pl-5">
+            <div className="mt-5 px-3">
               <p>
                 <Underline1>
                   /report コマンドを実行し、詳しく状況を教えてください。
@@ -75,7 +75,7 @@ const WhenTrouble = () => {
 
             <div className="w-full h-2 bg-blue-900 rounded-full" />
 
-            <div className="mt-5 pl-5">
+            <div className="mt-5 px-3">
               <p>
                 ご不便おかけして申し訳ございません。
                 <Underline1>
