@@ -58,7 +58,7 @@ const ItemSpringUpdate2023 = () => {
         </div>
 
         <div className="p-5">
-          2023-05-28
+          2023-05-07
           <h3 className="text-yellow-700 text-xl font-medium">
             春の大型アップデートが行われました！
           </h3>

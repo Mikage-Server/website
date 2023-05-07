@@ -99,27 +99,8 @@ const Updated = () => {
 
         <div className="mt-32">
           <Headline3WithIndex
-            label="ハード資源ワールドの追加"
-            index={6}
-          />
-
-          <ul className="pl-5 list-disc">
-            <li>
-              高レベルプレイヤー向け。鉱石の採集量や成長速度が上昇したワールドです。
-            </li>
-            <li className="mt-3">
-              あなたの行く手を阻むモンスターが出現します。
-            </li>
-            <li className="mt-3">
-              このワールドで死んだユーザーは、24時間後までこのワールドに再アクセスできません。要準備！
-            </li>
-          </ul>
-        </div>
-
-        <div className="mt-32">
-          <Headline3WithIndex
             label="圧縮丸石の追加"
-            index={7}
+            index={6}
           />
 
           <ul className="pl-5 list-disc">
@@ -132,7 +113,7 @@ const Updated = () => {
         <div className="mt-32">
           <Headline3WithIndex
             label="剣の特性に「本塁打王」「重力変換」を追加"
-            index={8}
+            index={7}
           />
 
           <ul className="pl-5 list-disc">
@@ -145,7 +126,7 @@ const Updated = () => {
         <div className="mt-32">
           <Headline3WithIndex
             label="弓に「重力変換」のみ追加"
-            index={9}
+            index={8}
           />
 
           <ul className="pl-5 list-disc">
@@ -158,7 +139,7 @@ const Updated = () => {
         <div className="mt-32">
           <Headline3WithIndex
             label="特性「即時錬成」、全ての鉱石系に対応"
-            index={10}
+            index={9}
           />
 
           <ul className="pl-5 list-disc">
@@ -171,7 +152,7 @@ const Updated = () => {
         <div className="mt-32">
           <Headline3WithIndex
             label="特性「瞬間燃焼」の追加（ツルハシ、シャベル）"
-            index={11}
+            index={10}
           />
 
           <ul className="pl-5 list-disc">
@@ -180,6 +161,25 @@ const Updated = () => {
             </li>
             <li className="mt-3">
               鉱石錬成もできますが、特性「幸せのツル」との互換性はありません。
+            </li>
+          </ul>
+        </div>
+
+        <div className="mt-32">
+          <Headline3WithIndex
+            label="ハード資源ワールドの追加（5月中旬実装予定！）"
+            index={11}
+          />
+
+          <ul className="pl-5 list-disc">
+            <li>
+              高レベルプレイヤー向け。鉱石の採集量や成長速度が上昇したワールドです。
+            </li>
+            <li className="mt-3">
+              あなたの行く手を阻むモンスターが出現します。
+            </li>
+            <li className="mt-3">
+              このワールドで死んだユーザーは、24時間後までこのワールドに再アクセスできません。要準備！
             </li>
           </ul>
         </div>

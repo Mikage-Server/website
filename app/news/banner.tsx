@@ -2,9 +2,10 @@ interface Props {
   label: string;
   bannerImage: string;
   published: string;
+  author: string;
 }
 
-const Banner = ({ label, bannerImage, published }: Props) => {
+const Banner = ({ label, bannerImage, published, author }: Props) => {
   return (
     <section className="mb-10 md:mb-20 w-full h-[20rem] bg-neutral-800 justify-end relative overflow-hidden">
       <img
@@ -24,7 +25,7 @@ const Banner = ({ label, bannerImage, published }: Props) => {
           {label}
         </h1>
         <time className="mt-5 text-white text-xl">
-          {published}
+          {published}・{author}
         </time>
       </div>
     </section>
