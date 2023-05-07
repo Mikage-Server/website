@@ -25,3 +25,9 @@ export const metadata: Metadata = {
     site: '@siojinja'
   }
 };
+
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  return children;
+};
+
+export default Layout;
