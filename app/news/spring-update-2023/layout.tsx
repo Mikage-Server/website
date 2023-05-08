@@ -13,9 +13,9 @@ export const metadata: Metadata = {
     title: siteName,
     description: description,
     images: [{
-      url: '/newbie/lobby.webp',
-      width: 1920,
-      height: 1080,
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/newbie/lobby.webp`,
+      width: 1280,
+      height: 720,
       alt: 'ロビー',
       type: 'image/webp'
     }],
