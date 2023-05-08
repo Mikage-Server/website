@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: siteName,
     description: description,
     images: [{
-      url: "https://eu.mc-api.net/v3/server/favicon/play.mikage.click",
+      url: 'https://eu.mc-api.net/v3/server/favicon/play.mikage.click',
       width: 512,
       height: 512,
       alt: '御景サーバーのロゴ',
