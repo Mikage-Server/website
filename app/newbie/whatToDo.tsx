@@ -36,7 +36,7 @@ const WhatToDo = () => {
 
         <div className="mt-10 w-full flex flex-row justify-center">
           <Link
-            href="/specialss"
+            href="/guide"
             className="px-5 md:px-10 py-5 text-white text-xl font-medium tracking-wider bg-blue-900 rounded-full shadow-lg"
           >
             遊び方の一例を見てみる！
