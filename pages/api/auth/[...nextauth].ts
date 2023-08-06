@@ -1,6 +1,8 @@
 import NextAuth from 'next-auth';
 import Discord from 'next-auth/providers/discord';
 
+export const runtime = 'edge';
+
 export default NextAuth({
   providers: [
     Discord({

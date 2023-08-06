@@ -1,6 +1,8 @@
 import { redirect } from 'next/navigation';
 import Encoding from 'encoding-japanese';
 
+export const runtime = 'edge';
+
 export const GET = async (request: Request, { params }: {
   params: { title: string }
 }) => {
