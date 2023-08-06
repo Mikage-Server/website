@@ -4,6 +4,8 @@ import fetchStatus from '../fetchStatus';
 import Overall from './overall';
 import Item from './item';
 
+export const runtime = 'edge';
+
 const Page = () => {
   const status = use(fetchStatus());
 
