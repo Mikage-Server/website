@@ -1,9 +1,9 @@
-import NextAuth from 'next-auth';
+import NextAuth, { NextAuthConfig } from "next-auth";
 import Discord from 'next-auth/providers/discord';
 
 export const runtime = 'edge';
 
-export default NextAuth({
+const authOptions: NextAuthConfig = {
   providers: [
     Discord({
       clientId: process.env.DISCORD_CLIENT_ID!,
@@ -16,4 +16,8 @@ export default NextAuth({
       return session;
     }
   }
-});
+};
+
+const handler = NextAuth(authOptions);
+export const GET = handler.handlers.GET;
+export const POST = handler.handlers.POST;
