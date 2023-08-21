@@ -4,6 +4,7 @@ import Health from './health';
 import Improved from './improved';
 import Summary from './summary';
 import Updated from './updated';
+import UpdatedAboutTokuse from './updatedAboutTokuse';
 
 const Page = () => {
   return (
@@ -16,6 +17,7 @@ const Page = () => {
       />
       <Summary />
       <Updated />
+      <UpdatedAboutTokuse />
       <Health />
       <Improved />
     </Main>

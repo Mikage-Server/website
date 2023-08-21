@@ -74,8 +74,21 @@ const Improved = () => {
 
         <div className="mt-32">
           <Headline3WithIndex
-            label="主要プラグインの日本語化"
+            label="生命力バーが時折表示されない不具合を修正"
             index={5}
+          />
+
+          <ul className="pl-5 list-disc">
+            <li>
+              生命力バーは大事だね。
+            </li>
+          </ul>
+        </div>
+
+        <div className="mt-32">
+          <Headline3WithIndex
+            label="主要プラグインの日本語化"
+            index={6}
           />
 
           <ul className="pl-5 list-disc">

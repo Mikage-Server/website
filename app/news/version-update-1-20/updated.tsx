@@ -66,6 +66,54 @@ const Updated = () => {
             </li>
           </ul>
         </div>
+
+        <div className="mt-32">
+          <Headline3WithIndex
+            label="カンフーロッドの仕様変更"
+            index={4}
+          />
+
+          <ul className="pl-5 list-disc">
+            <li>
+              我がサーバーのホコリのカンフーロッドは...少しその力を封じられるようです...
+            </li>
+            <li className="mt-3">
+              推進力がほんの少し減少。
+            </li>
+            <li className="mt-3">
+              使用するたびに生命力を消費。
+            </li>
+          </ul>
+        </div>
+
+        <div className="mt-32">
+          <Headline3WithIndex
+            label="生命力バーの表示切り替えコマンドを変更"
+            index={5}
+          />
+
+          <ul className="pl-5 list-disc">
+            <li>
+              表示は <Underline1>/setup</Underline1> 非表示は <Underline1>/hide</Underline1> 。簡単だね。
+            </li>
+          </ul>
+        </div>
+
+        <div className="mt-32">
+          <Headline3WithIndex
+            label="ランダムネーミング機能を停止"
+            index={6}
+          />
+
+          <ul className="pl-5 list-disc">
+            <li>
+              以前までは特性付きのアイテムには自動で命名がされていたけど、それは大人の事情により停止したよ...
+            </li>
+            <li className="mt-3">
+              一時的に、特性の付いたアイテムは「ふしぎなツール」と命名されます。
+            </li>
+          </ul>
+        </div>
       </article>
     </section>
   );
