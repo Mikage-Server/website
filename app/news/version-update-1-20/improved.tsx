@@ -93,7 +93,7 @@ const Improved = () => {
 
           <ul className="pl-5 list-disc">
             <li>
-              保護機能やポータルなど、<Underline1>皆さんが目に触れる部分を中心に日本語化</Underline1>しました。
+              保護機能やポータルなど、<Underline1>皆さんの目に触れる部分を中心に日本語化</Underline1>しました。
             </li>
           </ul>
         </div>
