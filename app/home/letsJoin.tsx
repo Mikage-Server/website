@@ -16,7 +16,7 @@ const LetsJoin = () => {
             今すぐ参加する！
           </h1>
           <span className="font-medium text-lg md:text-xl">
-            1.18.2 - 最新版 | play.mikage.click
+            1.20 - 最新版 | play.mikage.click
           </span>
         </div>
       </Link>

@@ -48,7 +48,7 @@ const HowToConnect = () => {
                   <span className="mr-7 md:mr-3 px-2 py-1 font-bold text-yellow-800 bg-yellow-300 rounded-lg">
                     Java
                   </span>
-                  1.18.2 - 最新版
+                  1.20 - 最新版
                 </div>
                 <div className="mt-2 md:mt-0 w-full md:w-1/2">
                   <span className="mr-3 px-2 py-1 font-bold text-yellow-800 bg-yellow-300 rounded-lg">
