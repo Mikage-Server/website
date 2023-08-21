@@ -1,0 +1,49 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  backend-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Create .env.local (Environment variables file)
+      run: >
+        npx ts-node .github/createEnviron.ts
+        --NEXT_PUBLIC_API_URL https://api.mikage.click/v1
+        --NEXT_PUBLIC_TWITTER_URL https://twitter.com/siojinja
+        --NEXT_PUBLIC_JMS_VOTE_URL https://minecraft.jp/servers/play.mikage.click
+        --NEXT_PUBLIC_MONOCRAFT_VOTE_URL https://monocraft.net/servers/tRkOlmkTq0r0lOX4Ir9c/vote
+        --NEXT_PUBLIC_SITE_URL https://mikage.click
+        --NEXTAUTH_URL https://mikage.click
+        --NEXTAUTH_URL_INTERNAL https://localhost:3000
+        --NEXTAUTH_SECRET ${{ secrets.NEXTAUTH_SECRET }}
+        --DISCORD_CLIENT_ID ${{ secrets.DISCORD_CLIENT_ID }}
+        --DISCORD_CLIENT_SECRET ${{ secrets.DISCORD_CLIENT_SECRET }}
+    - name: Build app
+      run: npm run build
+
+    - id: auth
+      uses: google-github-actions/auth@v1
+      with:
+        credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+    - name: Deploy to App Engine
+      uses: google-github-actions/deploy-appengine@v1
+      with:
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+        deliverables: app.yaml
