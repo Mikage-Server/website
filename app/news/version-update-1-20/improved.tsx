@@ -67,7 +67,7 @@ const Improved = () => {
 
           <ul className="pl-5 list-disc">
             <li>
-              プレイデータの保管方法を改善した結果、<Underline1>ラグが少し軽減</Underline1>されました。
+              プレイデータの保管方法を改善した結果、<Underline1>ラグを軽減</Underline1>できました。
             </li>
           </ul>
         </div>
