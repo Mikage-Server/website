@@ -9,3 +9,7 @@ takara2314
 
 ## URL
 https://mikage.click/
+
+## 初期準備
+1. `npm install` で依存関係をインストールしてください
+2. `npx lefthook install` で Git Hooks の設定を適応してください
