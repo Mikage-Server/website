@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import '../app/globals.css';
+import './globals.css';
 
 const NotFound = () => {
   return (
