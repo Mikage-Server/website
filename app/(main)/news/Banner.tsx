@@ -25,7 +25,7 @@ export default function Banner({
         className="h-full aspect-none md:aspect-video object-cover md:object-none absolute top-0 right-0"
       />
 
-      <div className="pl-10 md:pl-20 w-full h-full flex flex-col justify-center absolute inset-0">
+      <div className="pl-10 md:pl-20 w-full h-full text-shadow-md flex flex-col justify-center absolute inset-0">
         <h1 className="mt-16 md:mt-0 text-white text-3xl md:text-5xl font-bold tracking-wider">
           {label}
         </h1>
