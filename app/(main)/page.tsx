@@ -8,6 +8,8 @@ import Welcome from './home/welcome';
 import WhatsNew from './home/whatsNew';
 import Main from './main';
 
+export const runtime = 'edge';
+
 const Home = () => {
   return (
     <Main>
