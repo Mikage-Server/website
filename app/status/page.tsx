@@ -1,12 +1,12 @@
 import dayjs from '../dayjs';
-import fetchStatus from '../lib/fetchServerStatus';
+import fetchServerStatus from '../lib/fetchServerStatus';
 import Item from './Item';
 import Overall from './Overall';
 
 export const runtime = 'edge';
 
 export default async function Page() {
-  const status = await fetchStatus();
+  const status = await fetchServerStatus();
 
   return (
     <main className="text-gray-900 w-[100svw] h-[100svh] bg-gray-50 flex flex-col items-center fixed top-0 overflow-x-hidden overflow-y-auto">
