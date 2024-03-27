@@ -56,7 +56,7 @@ export default function Fixed() {
 
         <div className="mt-32">
           <Headline3WithIndex
-            label="投票ガチャ（今までのもの）中にシュルカーボックスやGUIが開ける現象を修正"
+            label="投票ガチャ（今までのもの）中にシュルカーボックスやGUIが開けるバグを修正"
             index={6}
           />
 
