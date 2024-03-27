@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import AuthContext from './authContext';
 import ClientLayout from './clientLayout';
 
-const siteName = '御景サーバー / まるでクリエイティブなサバイバルができるMinecraft生活サーバー';
-const description = 'まるでクリエイティブなサバイバルができるMinecraft生活サーバー「御景（みかげ）サーバー」のウェブサイトです。';
+const siteName =
+  '御景サーバー / まるでクリエイティブなサバイバルができるMinecraft生活サーバー';
+const description =
+  'まるでクリエイティブなサバイバルができるMinecraft生活サーバー「御景（みかげ）サーバー」のウェブサイトです。';
 
 export const metadata: Metadata = {
   title: siteName,
@@ -14,36 +15,42 @@ export const metadata: Metadata = {
     url: process.env.NEXT_PUBLIC_SITE_URL,
     title: siteName,
     description: description,
-    images: [{
-      url: 'https://eu.mc-api.net/v3/server/favicon/play.mikage.click',
-      width: 512,
-      height: 512,
-      alt: '御景サーバーのロゴ',
-      type: 'image/webp'
-    }],
-    siteName: siteName
+    images: [
+      {
+        url: 'https://eu.mc-api.net/v3/server/favicon/play.mikage.click',
+        width: 512,
+        height: 512,
+        alt: '御景サーバーのロゴ',
+        type: 'image/webp',
+      },
+    ],
+    siteName: siteName,
   },
   twitter: {
-    site: '@siojinja'
-  }
+    site: '@siojinja',
+  },
 };
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+const RootLayout = ({
+  children,
+}: { children: React.ReactNode }) => {
   return (
-    <AuthContext>
-      <html lang="ja">
-        <head>
-          <link rel="icon" href="https://eu.mc-api.net/v3/server/favicon/play.mikage.click" />
-          <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL} />
-        </head>
+    <html lang="ja">
+      <head>
+        <link
+          rel="icon"
+          href="https://eu.mc-api.net/v3/server/favicon/play.mikage.click"
+        />
+        <link
+          rel="canonical"
+          href={process.env.NEXT_PUBLIC_SITE_URL}
+        />
+      </head>
 
-        <body>
-          <ClientLayout>
-            {children}
-          </ClientLayout>
-        </body>
-      </html>
-    </AuthContext>
+      <body>
+        <ClientLayout>{children}</ClientLayout>
+      </body>
+    </html>
   );
 };
 
