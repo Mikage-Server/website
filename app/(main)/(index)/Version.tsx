@@ -8,7 +8,7 @@ export default function Version() {
       />
 
       <div className="mt-2 text-gray-500 text-center font-medium">
-        α版として公開中です！
+        正式版v0.1として公開中です！
       </div>
     </section>
   );
