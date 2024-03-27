@@ -1,4 +1,4 @@
-const Banner = () => {
+export default function Banner() {
   return (
     <section className="mb-[35rem] md:mb-20 w-full md:h-[40rem] bg-neutral-800 relative md:overflow-hidden">
       <img
@@ -10,9 +10,9 @@ const Banner = () => {
       <ServerInfo />
     </section>
   );
-};
+}
 
-const ServerInfo = () => {
+function ServerInfo() {
   return (
     <div className="p-5 h-[34rem] md:h-[30rem] w-11/12 md:w-[30rem] bg-white shadow-xl rounded-xl m-auto absolute inset-0 md:inset-auto top-[25rem] md:top-20 md:right-20">
       <h1 className="text-2xl text-center text-lime-700 font-bold tracking-wide">
@@ -23,7 +23,8 @@ const ServerInfo = () => {
         Java版はもちろん、
         <strong className="px-1 text-lime-600">
           統合版(スマホ、Switchなど)のプレイヤーも
-        </strong>一緒に参加することができます！
+        </strong>
+        一緒に参加することができます！
       </div>
 
       <div className="p-5 my-8 w-[calc(100%+2.5rem)] bg-stripe-newbie relative -left-5">
@@ -62,8 +63,7 @@ const ServerInfo = () => {
         <strong className="px-1">
           サバイバル生活サーバー
         </strong>
-        です。
-        スクロールした場所に書いてある、
+        です。 スクロールした場所に書いてある、
         <a
           href="#rule"
           className="px-2 py-1 text-white bg-lime-500 rounded-lg"
@@ -74,6 +74,4 @@ const ServerInfo = () => {
       </div>
     </div>
   );
-};
-
-export default Banner;
+}

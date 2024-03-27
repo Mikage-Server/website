@@ -1,11 +1,7 @@
 import Main from '../main';
 
-const Page = () => {
+export default function Page() {
   return (
-    <Main>
-      御景の裏側で支えるスタッフの紹介をします
-    </Main>
+    <Main>御景の裏側で支えるスタッフの紹介をします</Main>
   );
-};
-
-export default Page;
+}

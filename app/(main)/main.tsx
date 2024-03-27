@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion';
 import Footer from './footer';
 
-const Main = ({
+export default function Main({
   children,
-}: { children: React.ReactNode }) => {
+}: { children: React.ReactNode }) {
   return (
     <>
       <motion.main
@@ -26,6 +26,4 @@ const Main = ({
       </motion.main>
     </>
   );
-};
-
-export default Main;
+}

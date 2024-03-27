@@ -6,7 +6,7 @@ import Summary from './summary';
 import Updated from './updated';
 import UpdatedAboutTokuse from './updatedAboutTokuse';
 
-const Page = () => {
+export default function Page() {
   return (
     <Main>
       <Banner
@@ -22,6 +22,4 @@ const Page = () => {
       <Improved />
     </Main>
   );
-};
-
-export default Page;
+}

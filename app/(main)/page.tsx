@@ -10,7 +10,7 @@ import Main from './main';
 
 export const runtime = 'edge';
 
-const Home = () => {
+export default function Home() {
   return (
     <Main>
       <div className="relative">
@@ -30,6 +30,4 @@ const Home = () => {
       <LetsJoin />
     </Main>
   );
-};
-
-export default Home;
+}

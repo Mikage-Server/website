@@ -1,11 +1,9 @@
 import { Headline1 } from '../../components/headline';
 
-const Intro = () => {
+export default function Intro() {
   return (
     <section>
-      <Headline1
-        label="御景サーバーへようこそ！"
-      />
+      <Headline1 label="御景サーバーへようこそ！" />
 
       <article className="px-6 md:px-12">
         <p>
@@ -18,6 +16,4 @@ const Intro = () => {
       </article>
     </section>
   );
-};
-
-export default Intro;
+}

@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import { Headline2, Headline3WithIndex } from '../../../components/headline';
+import {
+  Headline2,
+  Headline3WithIndex,
+} from '../../../components/headline';
 import { Underline1 } from '../../../components/underline';
 
-const Improved = () => {
+export default function Improved() {
   return (
     <section className="mt-32 md:mt-48">
-      <Headline2
-        label="改善/仕様変更"
-        id="improved"
-      />
+      <Headline2 label="改善/仕様変更" id="improved" />
 
       <article className="px-6 md:px-12">
         <div className="mt-10 md:mt-5">
@@ -101,6 +101,4 @@ const Improved = () => {
       </article>
     </section>
   );
-};
-
-export default Improved;
+}

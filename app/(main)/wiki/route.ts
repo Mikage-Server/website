@@ -2,6 +2,6 @@ import { redirect } from 'next/navigation';
 
 export const runtime = 'edge';
 
-export const GET = async (request: Request) => {
+export async function GET(request: Request) {
   redirect('https://wiki.mikage.click/');
-};
+}

@@ -20,7 +20,7 @@ const contents = [
   },
 ];
 
-const Slide = () => {
+export default function Slide() {
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-width: 1224px)',
   });
@@ -68,6 +68,4 @@ const Slide = () => {
       )}
     </section>
   );
-};
-
-export default Slide;
+}

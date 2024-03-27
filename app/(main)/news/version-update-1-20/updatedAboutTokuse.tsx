@@ -1,6 +1,9 @@
-import { Headline2, Headline3WithIndex } from '../../../components/headline';
+import {
+  Headline2,
+  Headline3WithIndex,
+} from '../../../components/headline';
 
-const Updated = () => {
+export default function Updated() {
   return (
     <section className="mt-32 md:mt-48">
       <Headline2
@@ -16,14 +19,10 @@ const Updated = () => {
           />
 
           <ul className="pl-5 list-disc">
-            <li>
-              これでサクサク相手をアップドラフト！
-            </li>
+            <li>これでサクサク相手をアップドラフト！</li>
           </ul>
         </div>
       </article>
     </section>
   );
-};
-
-export default Updated;
+}

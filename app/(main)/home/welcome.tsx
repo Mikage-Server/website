@@ -25,7 +25,7 @@ export default async function Welcome() {
   );
 }
 
-const WelcomeBoard = ({ status }: { status: Status }) => {
+function WelcomeBoard({ status }: { status: Status }) {
   return (
     <section className="w-2/3 h-full text-xl text-white font-medium bg-emerald-500 shadow-lg flex flex-row justify-between rounded-full">
       <div className="px-2 w-20 h-20 perfect-center">
@@ -68,9 +68,9 @@ const WelcomeBoard = ({ status }: { status: Status }) => {
       </div>
     </section>
   );
-};
+}
 
-const ClosedBoard = () => {
+function ClosedBoard() {
   return (
     <section className="w-2/3 h-full text-xl text-white font-medium bg-orange-500 shadow-lg flex flex-row justify-between rounded-full">
       <div className="px-2 w-20 h-20 perfect-center">
@@ -98,14 +98,14 @@ const ClosedBoard = () => {
       </div>
     </section>
   );
-};
+}
 
-const StrongText = ({
+function StrongText({
   children,
-}: { children: React.ReactNode }) => {
+}: { children: React.ReactNode }) {
   return (
     <span className="mx-1 text-2xl font-bold text-shadow-base">
       {children}
     </span>
   );
-};
+}

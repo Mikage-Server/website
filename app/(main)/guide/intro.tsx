@@ -2,13 +2,10 @@ import { Headline1 } from '../../components/headline';
 import Builder from './builder';
 import Miner from './miner';
 
-const Intro = () => {
+export default function Intro() {
   return (
     <section>
-      <Headline1
-        label="御景サーバーの遊び方"
-        id="intro"
-      />
+      <Headline1 label="御景サーバーの遊び方" id="intro" />
 
       <article className="px-6 md:px-12">
         御景特有の遊び方をご紹介します。
@@ -18,6 +15,4 @@ const Intro = () => {
       <Builder />
     </section>
   );
-};
-
-export default Intro;
+}

@@ -1,14 +1,13 @@
-import Link from 'next/link';
-import { Headline2, Headline3WithIndex } from '../../components/headline';
+import {
+  Headline2,
+  Headline3WithIndex,
+} from '../../components/headline';
 import { Underline1 } from '../../components/underline';
 
-const Miner = () => {
+export default function Miner() {
   return (
     <section className="mt-32">
-      <Headline2
-        label="採掘好きなクラフター"
-        id="miner"
-      />
+      <Headline2 label="採掘好きなクラフター" id="miner" />
 
       <article className="px-6 md:px-12">
         <div className="mt-10 md:mt-5">
@@ -19,14 +18,10 @@ const Miner = () => {
 
           <p>
             ロビーの
-            <Underline1>
-              ハローワーク
-            </Underline1>
+            <Underline1>ハローワーク</Underline1>
             に行くと、職業に就くことができます。
           </p>
-          <p>
-            採掘が好きな君は、Minerがオススメ！
-          </p>
+          <p>採掘が好きな君は、Minerがオススメ！</p>
         </div>
 
         <div className="mt-32">
@@ -77,6 +72,4 @@ const Miner = () => {
       </article>
     </section>
   );
-};
-
-export default Miner;
+}

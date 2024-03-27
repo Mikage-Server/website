@@ -1,7 +1,7 @@
 import { Headline1 } from '../../components/headline';
 import { Underline1 } from '../../components/underline';
 
-const Summary = () => {
+export default function Summary() {
   return (
     <section>
       <Headline1
@@ -17,6 +17,4 @@ const Summary = () => {
       </article>
     </section>
   );
-};
-
-export default Summary;
+}

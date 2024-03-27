@@ -5,7 +5,12 @@ interface Props {
   author: string;
 }
 
-const Banner = ({ label, bannerImage, published, author }: Props) => {
+export default function Banner({
+  label,
+  bannerImage,
+  published,
+  author,
+}: Props) {
   return (
     <section className="mb-10 md:mb-20 w-full h-[20rem] bg-neutral-800 justify-end relative overflow-hidden">
       <img
@@ -30,6 +35,4 @@ const Banner = ({ label, bannerImage, published, author }: Props) => {
       </div>
     </section>
   );
-};
-
-export default Banner;
+}

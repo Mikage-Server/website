@@ -2,19 +2,14 @@ import Link from 'next/link';
 import { Headline2 } from '../../components/headline';
 import { Underline1 } from '../../components/underline';
 
-const WhatToDo = () => {
+export default function WhatToDo() {
   return (
     <section className="mt-32 md:mt-48">
-      <Headline2
-        label="遊び方ガイド"
-        id="how-to-play"
-      />
+      <Headline2 label="遊び方ガイド" id="how-to-play" />
 
       <article className="px-6 md:px-12">
         <div className="p-5 my-8 w-full md:w-2/3 border-2 border-gray-300 rounded-xl">
-          <p>
-            Q. 参加したけど何すればいいの？
-          </p>
+          <p>Q. 参加したけど何すればいいの？</p>
           <p>
             {'A. '}
             <Underline1>
@@ -45,6 +40,4 @@ const WhatToDo = () => {
       </article>
     </section>
   );
-};
-
-export default WhatToDo;
+}

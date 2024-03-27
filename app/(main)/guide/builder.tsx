@@ -1,8 +1,10 @@
-import Link from 'next/link';
-import { Headline2, Headline3WithIndex } from '../../components/headline';
+import {
+  Headline2,
+  Headline3WithIndex,
+} from '../../components/headline';
 import { Underline1 } from '../../components/underline';
 
-const Builder = () => {
+export default function Builder() {
   return (
     <section className="mt-32">
       <Headline2
@@ -19,14 +21,10 @@ const Builder = () => {
 
           <p>
             ロビーの
-            <Underline1>
-              ハローワーク
-            </Underline1>
+            <Underline1>ハローワーク</Underline1>
             に行くと、職業に就くことができます。
           </p>
-          <p>
-            建築が好きな君は、Builderがオススメ！
-          </p>
+          <p>建築が好きな君は、Builderがオススメ！</p>
         </div>
 
         <div className="mt-32">
@@ -82,14 +80,10 @@ const Builder = () => {
 
           <p>
             御景サーバーでは、
-            <Underline1>
-              /fly
-            </Underline1>
+            <Underline1>/fly</Underline1>
             でクリエイティブのように空を飛ぶことができます。
           </p>
-          <p>
-            飛びながら創造性を広げてください。
-          </p>
+          <p>飛びながら創造性を広げてください。</p>
           <p>
             （飛行は1秒あたり2㍆必要です。資金が底を尽きた場合は、強制的に降ろされます。）
           </p>
@@ -111,6 +105,4 @@ const Builder = () => {
       </article>
     </section>
   );
-};
-
-export default Builder;
+}

@@ -1,13 +1,10 @@
 import { Headline2 } from '../../components/headline';
 import { Underline1 } from '../../components/underline';
 
-const WhenTrouble = () => {
+export default function WhenTrouble() {
   return (
     <section className="mt-32 md:mt-48">
-      <Headline2
-        label="困ったときは"
-        id="when-trouble"
-      />
+      <Headline2 label="困ったときは" id="when-trouble" />
 
       <article className="px-6 md:px-12">
         <div className="my-8 w-full flex flex-col md:flex-row gap-10">
@@ -29,8 +26,7 @@ const WhenTrouble = () => {
                 「資金が底をつきました」
                 「マグマダイブして無一文になってしまった」
                 「匠に家を爆破された」
-                「何すればいいかわからない」
-                など
+                「何すればいいかわからない」 など
               </p>
 
               <p>
@@ -52,13 +48,12 @@ const WhenTrouble = () => {
             <div className="mt-5 px-3">
               <p>
                 <Underline1>
-                  /report コマンドを実行し、詳しく状況を教えてください。
+                  /report
+                  コマンドを実行し、詳しく状況を教えてください。
                 </Underline1>
               </p>
 
-              <p>
-                運営が通報内容を確認次第、対応します。
-              </p>
+              <p>運営が通報内容を確認次第、対応します。</p>
               <p>
                 運営が対応するまで、
                 <Underline1>
@@ -79,19 +74,16 @@ const WhenTrouble = () => {
               <p>
                 ご不便おかけして申し訳ございません。
                 <Underline1>
-                  /report コマンドを実行し、詳しく内容を教えてください。
+                  /report
+                  コマンドを実行し、詳しく内容を教えてください。
                 </Underline1>
               </p>
 
-              <p>
-                運営が通報内容を確認次第、対応します。
-              </p>
+              <p>運営が通報内容を確認次第、対応します。</p>
             </div>
           </div>
         </div>
       </article>
     </section>
   );
-};
-
-export default WhenTrouble;
+}

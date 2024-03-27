@@ -6,7 +6,7 @@ import Rule from './rule';
 import WhatToDo from './whatToDo';
 import WhenTrouble from './whenTrouble';
 
-const Page = () => {
+export default function Page() {
   return (
     <Main>
       <Banner />
@@ -17,6 +17,4 @@ const Page = () => {
       <WhenTrouble />
     </Main>
   );
-};
-
-export default Page;
+}

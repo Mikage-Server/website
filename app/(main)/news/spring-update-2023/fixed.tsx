@@ -1,14 +1,12 @@
-import Link from 'next/link';
-import { Headline2, Headline3WithIndex } from '../../../components/headline';
-import { Underline1 } from '../../../components/underline';
+import {
+  Headline2,
+  Headline3WithIndex,
+} from '../../../components/headline';
 
-const Fixed = () => {
+export default function Fixed() {
   return (
     <section className="mt-32 md:mt-48">
-      <Headline2
-        label="修正された不具合"
-        id="fixed"
-      />
+      <Headline2 label="修正された不具合" id="fixed" />
 
       <article className="px-6 md:px-12">
         <div className="mt-10 md:mt-5">
@@ -31,9 +29,7 @@ const Fixed = () => {
           />
 
           <ul className="pl-5 list-disc">
-            <li>
-              増殖できるグリッチを修正。
-            </li>
+            <li>増殖できるグリッチを修正。</li>
           </ul>
         </div>
 
@@ -60,12 +56,8 @@ const Fixed = () => {
             <li>
               以下に該当するブロックは破壊できないよう仕様変更しました。
               <ul className="mt-2 pl-10 list-disc">
-                <li>
-                  WGまたはLWCの保護がかかったブロック
-                </li>
-                <li>
-                  中にアイテムが入っているブロック
-                </li>
+                <li>WGまたはLWCの保護がかかったブロック</li>
+                <li>中にアイテムが入っているブロック</li>
               </ul>
             </li>
             <li className="mt-3">
@@ -76,6 +68,4 @@ const Fixed = () => {
       </article>
     </section>
   );
-};
-
-export default Fixed;
+}

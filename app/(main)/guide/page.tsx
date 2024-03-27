@@ -1,8 +1,8 @@
-import Main from '../main';
 import Banner from '../banner';
+import Main from '../main';
 import Intro from './intro';
 
-const Page = () => {
+export default function Page() {
   return (
     <Main>
       <Banner
@@ -12,6 +12,4 @@ const Page = () => {
       <Intro />
     </Main>
   );
-};
-
-export default Page;
+}

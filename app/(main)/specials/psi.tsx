@@ -12,17 +12,19 @@ const psis = [
   {
     name: '瞬間移動',
     enName: 'Teleport',
-    description: '瞬間移動、その名の通り空間を移動する。3次元空間を更に複雑な階層に変換し事物の位置を変更するため、度々既存の事物に割り込んで移動することがある。',
+    description:
+      '瞬間移動、その名の通り空間を移動する。3次元空間を更に複雑な階層に変換し事物の位置を変更するため、度々既存の事物に割り込んで移動することがある。',
     wiki: 'https://wiki.mikage.click/d/%bd%d6%b4%d6%b0%dc%c6%b0%20%28Teleport%29',
-    icon: <SiCodemagic />
+    icon: <SiCodemagic />,
   },
   {
     name: '重力操作',
     enName: 'Gravity',
-    description: '重力操作、触れた存在や自身の重力場を操作を行い重力反転や増量が可能になる能力。ただし能力の発動条件は触れる必要があるため弓矢などの投げる物には能力が発動しない。',
+    description:
+      '重力操作、触れた存在や自身の重力場を操作を行い重力反転や増量が可能になる能力。ただし能力の発動条件は触れる必要があるため弓矢などの投げる物には能力が発動しない。',
     wiki: 'https://wiki.mikage.click/d/%bd%c5%ce%cf%c1%e0%ba%ee%20%28Gravity%29',
-    icon: <SiCodemagic />
-  }
+    icon: <SiCodemagic />,
+  },
 ];
 
 interface ButtonProps {
@@ -32,9 +34,9 @@ interface ButtonProps {
   index: number;
   active: boolean;
   onClick: (index: number) => void;
-};
+}
 
-const Psi = () => {
+export default function Psi() {
   const [selecting, setSelecting] = useState<number>(0);
 
   const handleChange = useCallback((index: number) => {
@@ -43,31 +45,39 @@ const Psi = () => {
 
   return (
     <section className="mt-32">
-      <Headline2
-        label="超能力"
-        id="psi"
-      />
+      <Headline2 label="超能力" id="psi" />
 
       <article className="px-6 md:px-12">
         <blockquote className="mb-8 p-5 text-gray-700 bg-gray-200 rounded-lg">
           超能力は、通常の人間にはできないことを実現できる特殊な能力のこと。
           例えば「手を触れずに物を動かす」、「人の心を読み取る」「壁の向こう側・箱の中の物が何かを隔壁越しに言い当てる」などの能力がある。
-          （<a href="https://ja.wikipedia.org/wiki/%E8%B6%85%E8%83%BD%E5%8A%9B">
+          （
+          <a href="https://ja.wikipedia.org/wiki/%E8%B6%85%E8%83%BD%E5%8A%9B">
             Wikipediaより引用
-          </a>）
+          </a>
+          ）
         </blockquote>
 
         <p>
           御景の世界では、現実空間で言われている超能力と同じように、
           通常のプレイヤーにはできない
-          <Underline1>特殊な能力を使うことができます。</Underline1>
+          <Underline1>
+            特殊な能力を使うことができます。
+          </Underline1>
         </p>
         <p>
           様々な種類の超能力があり、それぞれの超能力にはそれぞれの特徴があります。
         </p>
         <p className="mt-5">
-          また、<Underline1>初めて世界に参加したときから、何かの超能力が割り当てられ</Underline1>、
-          プレイヤー<Underline1>それぞれに割り当てられる超能力は異なる</Underline1>ので、他のプレイヤーと協力しながらサバイバルをしましょう！
+          また、
+          <Underline1>
+            初めて世界に参加したときから、何かの超能力が割り当てられ
+          </Underline1>
+          、 プレイヤー
+          <Underline1>
+            それぞれに割り当てられる超能力は異なる
+          </Underline1>
+          ので、他のプレイヤーと協力しながらサバイバルをしましょう！
         </p>
       </article>
 
@@ -94,9 +104,16 @@ const Psi = () => {
       </div>
     </section>
   );
-};
+}
 
-const Button = ({ name, enName, icon, index, active, onClick }: ButtonProps) => {
+function Button({
+  name,
+  enName,
+  icon,
+  index,
+  active,
+  onClick,
+}: ButtonProps) {
   return (
     <li className="p-3 w-full h-24">
       <button
@@ -105,15 +122,15 @@ const Button = ({ name, enName, icon, index, active, onClick }: ButtonProps) => 
             ? 'w-full h-full text-white bg-blue-900 outline outline-4 outline-offset-4 outline-blue-400 flex flex-row rounded-xl transition-all ease-in duration-100 relative'
             : 'w-full h-full text-white bg-blue-900 outline outline-4 outline-offset-4 outline-none flex flex-row rounded-xl transition-all ease-in duration-100 relative'
         }
-        onClick={() => { onClick(index); }}
+        onClick={() => {
+          onClick(index);
+        }}
       >
         <div className="w-32 h-full text-4xl text-blue-500 perfect-center absolute md:static top-0 -left-10 md:inset-auto">
           {icon}
         </div>
         <div className="w-full h-full text-left font-bold flex flex-col justify-center absolute md:static left-7 md:inset-auto">
-          <h3 className="text-xl tracking-wide">
-            {name}
-          </h3>
+          <h3 className="text-xl tracking-wide">{name}</h3>
           <span className="text-base tracking-wide">
             {enName}
           </span>
@@ -121,9 +138,9 @@ const Button = ({ name, enName, icon, index, active, onClick }: ButtonProps) => 
       </button>
     </li>
   );
-};
+}
 
-const ComingSoon = () => {
+function ComingSoon() {
   return (
     <li className="p-3 w-full h-24">
       <button className="w-full h-full text-gray-700 bg-gray-300 flex flex-row rounded-xl relative">
@@ -136,9 +153,9 @@ const ComingSoon = () => {
       </button>
     </li>
   );
-};
+}
 
-const Detail = ({ selecting }: { selecting: number }) => {
+function Detail({ selecting }: { selecting: number }) {
   const psi = psis[selecting];
 
   return (
@@ -147,9 +164,7 @@ const Detail = ({ selecting }: { selecting: number }) => {
 
       <div className="p-6 w-full h-[40%] overflow-y-auto">
         <h3 className="text-3xl flex flex-row">
-          <div className="text-blue-500">
-            {psi.icon}
-          </div>
+          <div className="text-blue-500">{psi.icon}</div>
           <div className="pl-5 text-blue-900 font-bold">
             {psi.name}
             <span className="pl-10 text-gray-500 font-medium">
@@ -160,9 +175,7 @@ const Detail = ({ selecting }: { selecting: number }) => {
 
         <div className="my-3 w-full h-2 bg-blue-900 rounded-full" />
 
-        <p>
-          {psi.description}
-        </p>
+        <p>{psi.description}</p>
         <p className="mt-3 text-right">
           <Link
             href={psi.wiki}
@@ -174,6 +187,4 @@ const Detail = ({ selecting }: { selecting: number }) => {
       </div>
     </div>
   );
-};
-
-export default Psi;
+}

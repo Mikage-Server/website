@@ -1,13 +1,9 @@
 import { Headline2 } from '../../../components/headline';
-import { Underline1 } from '../../../components/underline';
 
-const Summary = () => {
+export default function Summary() {
   return (
     <section>
-      <Headline2
-        label="概要"
-        id="summary"
-      />
+      <Headline2 label="概要" id="summary" />
 
       <article className="px-6 md:px-12">
         <p>
@@ -19,6 +15,4 @@ const Summary = () => {
       </article>
     </section>
   );
-};
-
-export default Summary;
+}

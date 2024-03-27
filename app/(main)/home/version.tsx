@@ -1,4 +1,4 @@
-const Version = () => {
+export default function Version() {
   return (
     <section className="col-span-5 md:mr-10">
       <img
@@ -12,6 +12,4 @@ const Version = () => {
       </div>
     </section>
   );
-};
-
-export default Version;
+}

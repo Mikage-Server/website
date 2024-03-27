@@ -1,17 +1,12 @@
 import { Headline2 } from '../../../components/headline';
 
-const Summary = () => {
+export default function Summary() {
   return (
     <section>
-      <Headline2
-        label="概要"
-        id="summary"
-      />
+      <Headline2 label="概要" id="summary" />
 
       <article className="px-6 md:px-12">
-        <p>
-          夏だ！海だ！1.20アップデートだ！
-        </p>
+        <p>夏だ！海だ！1.20アップデートだ！</p>
         <p>
           1.19と1.20の要素が見られるようになったのに加え、皆さんも領域を保護できるようになりましたよ。
         </p>
@@ -21,6 +16,4 @@ const Summary = () => {
       </article>
     </section>
   );
-};
-
-export default Summary;
+}

@@ -2,13 +2,10 @@ import Link from 'next/link';
 import { AiFillPicture } from 'react-icons/ai';
 import { Headline2 } from '../../components/headline';
 
-const WhatsNew = () => {
+export default function WhatsNew() {
   return (
     <section className="mt-32 md:mt-48">
-      <Headline2
-        label="最近のニュース"
-        id="whats-new"
-      />
+      <Headline2 label="最近のニュース" id="whats-new" />
 
       <article className="px-5 md:px-12">
         <div className="w-full h-[26rem] overflow-x-auto">
@@ -20,9 +17,9 @@ const WhatsNew = () => {
       </article>
     </section>
   );
-};
+}
 
-const Item = () => {
+function Item() {
   return (
     <li className="mx-5 w-72 h-full rounded-lg overflow-hidden shadow-lg">
       <Link href="/#">
@@ -35,7 +32,6 @@ const Item = () => {
           <h3 className="text-yellow-700 text-xl font-medium">
             テストニュース
           </h3>
-
           <div className="mt-5 text-gray-500">
             テストニュースの内容です。
             本当にテストニュースです。
@@ -44,9 +40,9 @@ const Item = () => {
       </Link>
     </li>
   );
-};
+}
 
-const ItemSpringUpdate2023 = () => {
+function ItemSpringUpdate2023() {
   return (
     <li className="mx-5 w-72 h-full rounded-lg overflow-hidden shadow-lg">
       <Link href="/news/spring-update-2023">
@@ -63,7 +59,6 @@ const ItemSpringUpdate2023 = () => {
           <h3 className="text-yellow-700 text-xl font-medium">
             春の大型アップデートが行われました！
           </h3>
-
           <div className="mt-5 text-gray-500">
             御景の新しい季節がやってきました！
             ロビー刷新、新要素も続々追加！そしていくつかのバランス調整、バグ修正諸々がありますよ。
@@ -72,9 +67,9 @@ const ItemSpringUpdate2023 = () => {
       </Link>
     </li>
   );
-};
+}
 
-const ItemVersionUpdate120 = () => {
+function ItemVersionUpdate120() {
   return (
     <li className="mx-5 w-72 h-full rounded-lg overflow-hidden shadow-lg">
       <Link href="/news/version-update-1-20">
@@ -91,7 +86,6 @@ const ItemVersionUpdate120 = () => {
           <h3 className="text-yellow-700 text-xl font-medium">
             1.20アップデートが行われました！
           </h3>
-
           <div className="mt-5 text-gray-500">
             夏だ！海だ！1.20アップデートだ！
             1.20の要素が見られるようになったのに加え、皆さんも領域を保護できるようになりましたよ。
@@ -100,7 +94,4 @@ const ItemVersionUpdate120 = () => {
       </Link>
     </li>
   );
-};
-
-
-export default WhatsNew;
+}

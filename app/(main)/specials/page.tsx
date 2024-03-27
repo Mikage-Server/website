@@ -1,9 +1,9 @@
-import Main from '../main';
 import Banner from '../banner';
-import Summary from './summary';
+import Main from '../main';
 import Psi from './psi';
+import Summary from './summary';
 
-const Page = () => {
+export default function Page() {
   return (
     <Main>
       <Banner
@@ -14,6 +14,4 @@ const Page = () => {
       <Psi />
     </Main>
   );
-};
-
-export default Page;
+}

@@ -49,7 +49,7 @@ export default async function Page() {
   );
 }
 
-const Footer = () => {
+function Footer() {
   return (
     <footer className="mt-10 px-5 py-3 w-full text-center text-gray-500 border-t-2 border-gray-300 flex flex-col md:flex-row">
       <div>
@@ -82,4 +82,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}

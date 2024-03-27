@@ -6,7 +6,7 @@ import Improved from './improved';
 import Summary from './summary';
 import Updated from './updated';
 
-const Page = () => {
+export default function Page() {
   return (
     <Main>
       <Banner
@@ -22,6 +22,4 @@ const Page = () => {
       <Fixed />
     </Main>
   );
-};
-
-export default Page;
+}

@@ -1,7 +1,10 @@
-import { Headline2, Headline3WithIndex } from '../../components/headline';
+import {
+  Headline2,
+  Headline3WithIndex,
+} from '../../components/headline';
 import { Underline1 } from '../../components/underline';
 
-const HowToConnect = () => {
+export default function HowToConnect() {
   return (
     <section className="mt-32 md:mt-48">
       <Headline2
@@ -91,7 +94,8 @@ const HowToConnect = () => {
           <div className="w-full flex flex-col md:flex-row gap-10">
             <div className="w-full md:w-1/3">
               <p>
-                ① サーバーに初めて接続したプレイヤーは、次の場所にスポーンします。
+                ①
+                サーバーに初めて接続したプレイヤーは、次の場所にスポーンします。
               </p>
 
               <img
@@ -103,7 +107,8 @@ const HowToConnect = () => {
 
             <div className="w-full md:w-1/3">
               <p>
-                ② それぞれのウーパールーパーを右クリックして、チュートリアルを開始します。
+                ②
+                それぞれのウーパールーパーを右クリックして、チュートリアルを開始します。
               </p>
 
               <img
@@ -115,7 +120,8 @@ const HowToConnect = () => {
 
             <div className="w-full md:w-1/3">
               <p>
-                ③ チュートリアルを最後まで行い、オオカミを右クリックして、チュートリアルを終了します。
+                ③
+                チュートリアルを最後まで行い、オオカミを右クリックして、チュートリアルを終了します。
               </p>
 
               <img
@@ -137,9 +143,7 @@ const HowToConnect = () => {
           <p>
             村人に手持ちの昆布を渡すと、お初キットと交換することができます。
           </p>
-          <p>
-            お初キットは3種類の中から選べます。
-          </p>
+          <p>お初キットは3種類の中から選べます。</p>
 
           <img
             src="/newbie/newbie-kit.webp"
@@ -176,9 +180,7 @@ const HowToConnect = () => {
             id="lets-survival"
           />
 
-          <p>
-            ここは色々なワールドに行けるロビーです。
-          </p>
+          <p>ここは色々なワールドに行けるロビーです。</p>
           <p>
             まずは資源ワールドに行って、資源を集めましょう！
           </p>
@@ -192,6 +194,4 @@ const HowToConnect = () => {
       </article>
     </section>
   );
-};
-
-export default HowToConnect;
+}

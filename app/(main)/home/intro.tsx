@@ -1,12 +1,10 @@
 import { Headline1 } from '../../components/headline';
 import { Underline1 } from '../../components/underline';
 
-const Intro = () => {
+export default function Intro() {
   return (
     <section className="mt-20 md:mt-40">
-      <Headline1
-        label="御景サーバーのサバイバル"
-      />
+      <Headline1 label="御景サーバーのサバイバル" />
 
       <article className="px-6 md:px-12">
         <p>
@@ -14,9 +12,7 @@ const Intro = () => {
         </p>
         <p>
           例えば、
-          <Underline1>
-            建築は飛びながら行いたい
-          </Underline1>
+          <Underline1>建築は飛びながら行いたい</Underline1>
           とか
           <Underline1>
             ダイナミックなツールを使って採掘したい
@@ -42,6 +38,4 @@ const Intro = () => {
       </article>
     </section>
   );
-};
-
-export default Intro;
+}

@@ -1,14 +1,12 @@
-import Link from 'next/link';
-import { Headline2, Headline3WithIndex } from '../../../components/headline';
-import { Underline1 } from '../../../components/underline';
+import {
+  Headline2,
+  Headline3WithIndex,
+} from '../../../components/headline';
 
-const Health = () => {
+export default function Health() {
   return (
     <section className="mt-32 md:mt-48">
-      <Headline2
-        label="定期的な健康維持活動"
-        id="health"
-      />
+      <Headline2 label="定期的な健康維持活動" id="health" />
 
       <article className="px-6 md:px-12">
         <div className="mt-10 md:mt-5">
@@ -39,6 +37,4 @@ const Health = () => {
       </article>
     </section>
   );
-};
-
-export default Health;
+}

@@ -1,13 +1,13 @@
-import { Headline2, Headline3WithIndex } from '../../../components/headline';
+import {
+  Headline2,
+  Headline3WithIndex,
+} from '../../../components/headline';
 import { Underline1 } from '../../../components/underline';
 
-const Updated = () => {
+export default function Updated() {
   return (
     <section className="mt-32 md:mt-48">
-      <Headline2
-        label="大きな変更内容"
-        id="updated"
-      />
+      <Headline2 label="大きな変更内容" id="updated" />
 
       <article className="px-6 md:px-12">
         <div className="mt-10 md:mt-5">
@@ -44,9 +44,7 @@ const Updated = () => {
             </li>
             <li className="mt-3">
               セントラルにアクセスする場合は
-              <Underline1>
-                /warp central
-              </Underline1>
+              <Underline1>/warp central</Underline1>
               を実行してください。
             </li>
           </ul>
@@ -89,9 +87,7 @@ const Updated = () => {
 
           <ul className="pl-5 list-disc">
             <li>
-              <Underline1>
-                /jobs browse
-              </Underline1>
+              <Underline1>/jobs browse</Underline1>
               で様々な職業に3つまで就くことが出来ます。各職業に指定されたアクションを行うと自動でお金が貯まります。
             </li>
           </ul>
@@ -117,9 +113,7 @@ const Updated = () => {
           />
 
           <ul className="pl-5 list-disc">
-            <li>
-              ぜひゲットして使ってみてね★
-            </li>
+            <li>ぜひゲットして使ってみてね★</li>
           </ul>
         </div>
 
@@ -130,9 +124,7 @@ const Updated = () => {
           />
 
           <ul className="pl-5 list-disc">
-            <li>
-              ぜひゲットして使ってみてね★
-            </li>
+            <li>ぜひゲットして使ってみてね★</li>
           </ul>
         </div>
 
@@ -186,6 +178,4 @@ const Updated = () => {
       </article>
     </section>
   );
-};
-
-export default Updated;
+}
