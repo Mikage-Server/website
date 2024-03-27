@@ -1,12 +1,12 @@
-import CrossPlay from './home/crossPlay';
-import Intro from './home/intro';
-import LetsJoin from './home/letsJoin';
-import ScrollDownAnimation from './home/scrollDownAnimation';
-import Slide from './home/slide';
-import Version from './home/version';
-import Welcome from './home/welcome';
-import WhatsNew from './home/whatsNew';
-import Main from './main';
+import Main from './Main';
+import CrossPlay from './home/CrossPlay';
+import Intro from './home/Intro';
+import LetsJoin from './home/LetsJoin';
+import ScrollDownAnimation from './home/ScrollDownAnimation';
+import Slide from './home/Slide';
+import Version from './home/Version';
+import Welcome from './home/Welcome';
+import WhatsNew from './home/WhatsNew';
 
 export const runtime = 'edge';
 

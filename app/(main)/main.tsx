@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Footer from './footer';
+import Footer from './Footer';
 
 export default function Main({
   children,

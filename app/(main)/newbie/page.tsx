@@ -1,10 +1,10 @@
-import Main from '../main';
-import Banner from './banner';
-import HowToParticipate from './howToParticipate';
-import Intro from './intro';
-import Rule from './rule';
-import WhatToDo from './whatToDo';
-import WhenTrouble from './whenTrouble';
+import Main from '../Main';
+import Banner from './Banner';
+import HowToParticipate from './HowToParticipate';
+import Intro from './Intro';
+import Rule from './Rule';
+import WhatToDo from './WhatToDo';
+import WhenTrouble from './WhenTrouble';
 
 export default function Page() {
   return (

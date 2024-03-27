@@ -1,7 +1,7 @@
 import {
   Headline2,
   Headline3WithIndex,
-} from '../../../components/headline';
+} from '../../../components/Headline';
 
 export default function Updated() {
   return (

@@ -5,8 +5,8 @@ import { useCallback, useState } from 'react';
 import type { ReactNode } from 'react';
 import { SiCodemagic } from 'react-icons/si';
 import { TbQuestionMark } from 'react-icons/tb';
-import { Headline2 } from '../../components/headline';
-import { Underline1 } from '../../components/underline';
+import { Headline2 } from '../../components/Headline';
+import { Underline1 } from '../../components/Underline';
 
 const psis = [
   {

@@ -1,7 +1,7 @@
-import Banner from '../banner';
-import Main from '../main';
-import Psi from './psi';
-import Summary from './summary';
+import Banner from '../Banner';
+import Main from '../Main';
+import Psi from './Psi';
+import Summary from './Summary';
 
 export default function Page() {
   return (

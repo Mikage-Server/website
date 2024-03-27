@@ -1,4 +1,4 @@
-import { Headline2 } from '../../components/headline';
+import { Headline2 } from '../../components/Headline';
 
 export default function CrossPlay() {
   return (

@@ -1,10 +1,10 @@
-import Main from '../../main';
-import Banner from '../banner';
-import Fixed from './fixed';
-import Health from './health';
-import Improved from './improved';
-import Summary from './summary';
-import Updated from './updated';
+import Main from '../../Main';
+import Banner from '../Banner';
+import Fixed from './Fixed';
+import Health from './Health';
+import Improved from './Improved';
+import Summary from './Summary';
+import Updated from './Updated';
 
 export default function Page() {
   return (

@@ -1,8 +1,8 @@
 import {
   Headline2,
   Headline3WithIndex,
-} from '../../../components/headline';
-import { Underline1 } from '../../../components/underline';
+} from '../../../components/Headline';
+import { Underline1 } from '../../../components/Underline';
 
 export default function Updated() {
   return (

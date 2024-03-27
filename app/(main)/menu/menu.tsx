@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Item from './Item';
-import Guide from './icons/guide';
-import Newbie from './icons/newbie';
-import Others from './icons/others';
-import Psi from './icons/psi';
-import Wiki from './icons/wiki';
+import Guide from './icons/Guide';
+import Newbie from './icons/Newbie';
+import Others from './icons/Others';
+import Psi from './icons/Psi';
+import Wiki from './icons/Wiki';
 
 export default function Menu() {
   const normals = [

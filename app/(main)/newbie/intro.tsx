@@ -1,4 +1,4 @@
-import { Headline1 } from '../../components/headline';
+import { Headline1 } from '../../components/Headline';
 
 export default function Intro() {
   return (

@@ -1,10 +1,10 @@
-import Main from '../../main';
-import Banner from '../banner';
-import Health from './health';
-import Improved from './improved';
-import Summary from './summary';
-import Updated from './updated';
-import UpdatedAboutTokuse from './updatedAboutTokuse';
+import Main from '../../Main';
+import Banner from '../Banner';
+import Health from './Health';
+import Improved from './Improved';
+import Summary from './Summary';
+import Updated from './Updated';
+import UpdatedAboutTokuse from './UpdatedAboutTokuse';
 
 export default function Page() {
   return (

@@ -1,6 +1,6 @@
-import { Headline1 } from '../../components/headline';
-import Builder from './builder';
-import Miner from './miner';
+import { Headline1 } from '../../components/Headline';
+import Builder from './Builder';
+import Miner from './Miner';
 
 export default function Intro() {
   return (

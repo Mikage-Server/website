@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { Headline2 } from '../../components/headline';
-import { Underline1 } from '../../components/underline';
+import { Headline2 } from '../../components/Headline';
+import { Underline1 } from '../../components/Underline';
 
 export default function WhatToDo() {
   return (

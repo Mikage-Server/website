@@ -1,5 +1,5 @@
-import { Headline2 } from '../../components/headline';
-import { Underline1 } from '../../components/underline';
+import { Headline2 } from '../../components/Headline';
+import { Underline1 } from '../../components/Underline';
 
 export default function WhenTrouble() {
   return (

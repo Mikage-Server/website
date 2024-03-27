@@ -3,7 +3,7 @@ import { MdOutlineReport } from 'react-icons/md';
 import fetchServerStatus, {
   type Status,
 } from '../../lib/fetchServerStatus';
-import Psi from '../menu/icons/psi';
+import Psi from '../menu/icons/Psi';
 
 export default async function Welcome() {
   const status = await fetchServerStatus();

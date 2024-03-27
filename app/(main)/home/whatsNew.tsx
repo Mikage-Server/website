@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { AiFillPicture } from 'react-icons/ai';
-import { Headline2 } from '../../components/headline';
+import { Headline2 } from '../../components/Headline';
 
 export default function WhatsNew() {
   return (

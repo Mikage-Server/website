@@ -1,6 +1,6 @@
-import Banner from '../banner';
-import Main from '../main';
-import Intro from './intro';
+import Banner from '../Banner';
+import Main from '../Main';
+import Intro from './Intro';
 
 export default function Page() {
   return (

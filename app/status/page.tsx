@@ -1,7 +1,7 @@
 import dayjs from '../dayjs';
 import fetchStatus from '../lib/fetchServerStatus';
-import Item from './item';
-import Overall from './overall';
+import Item from './Item';
+import Overall from './Overall';
 
 export const runtime = 'edge';
 
