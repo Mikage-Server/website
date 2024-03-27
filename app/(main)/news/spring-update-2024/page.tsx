@@ -1,5 +1,6 @@
 import Main from '../../Main';
 import Banner from '../Banner';
+import ComingSoon from './ComingSoon';
 import EndContents from './EndContents';
 import Fixed from './Fixed';
 import Kayui from './Kayui';
@@ -24,6 +25,7 @@ export default function Page() {
       <Kayui />
       <SmallChanges />
       <Fixed />
+      <ComingSoon />
     </Main>
   );
 }
