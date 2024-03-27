@@ -20,6 +20,7 @@ jobs:
     - name: Create .env.local (environment variables file)
       run: >
         node .github/createEnviron.mjs
+        --NEXT_PUBLIC_SITE_URL ${{ secrets.NEXT_PUBLIC_SITE_URL }}
         --NEXT_PUBLIC_API_URL ${{ secrets.NEXT_PUBLIC_API_URL }}
         --NEXT_PUBLIC_TWITTER_URL ${{ secrets.NEXT_PUBLIC_TWITTER_URL }}
         --NEXT_PUBLIC_JMS_VOTE_URL ${{ secrets.NEXT_PUBLIC_JMS_VOTE_URL }}
