@@ -53,6 +53,15 @@ export default function Fixed() {
 
           <div>S_Shotaさん、報告ありがとう！</div>
         </div>
+
+        <div className="mt-32">
+          <Headline3WithIndex
+            label="投票ガチャ（今までのもの）中にシュルカーボックスやGUIが開ける現象を修正"
+            index={6}
+          />
+
+          <div>mekameronさん、報告ありがとう！</div>
+        </div>
       </article>
     </section>
   );
