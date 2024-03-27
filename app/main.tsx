@@ -1,14 +1,12 @@
 'use client';
 
-import { useAtom } from 'jotai';
 import { motion } from 'framer-motion';
+import { useAtom } from 'jotai';
 import Footer from './footer';
-import LoginModal from './login/modal';
-import { isShowLoginModalAtom } from './atoms';
 
-const Main = ({ children }: { children: React.ReactNode }) => {
-  const [isShowLoginModal] = useAtom(isShowLoginModalAtom);
-
+const Main = ({
+  children,
+}: { children: React.ReactNode }) => {
   return (
     <>
       <motion.main
@@ -26,8 +24,6 @@ const Main = ({ children }: { children: React.ReactNode }) => {
         {children}
 
         <Footer />
-
-        {isShowLoginModal && <LoginModal />}
       </motion.main>
     </>
   );
