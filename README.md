@@ -5,7 +5,7 @@
 takara2314
 
 ## 前提
-- Node.js v20.12.0
+- Node.js v20+
 
 ## URL
 https://mikage.click/
