@@ -1,0 +1,29 @@
+name: Check quality
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.10.0
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Create .env.local (environment variables file)
+      run: >
+        node .github/createEnviron.mjs
+        --NEXT_PUBLIC_API_URL ${{ secrets.NEXT_PUBLIC_API_URL }}
+        --NEXT_PUBLIC_TWITTER_URL ${{ secrets.NEXT_PUBLIC_TWITTER_URL }}
+        --NEXT_PUBLIC_JMS_VOTE_URL ${{ secrets.NEXT_PUBLIC_JMS_VOTE_URL }}
+        --NEXT_PUBLIC_MONOCRAFT_VOTE_URL ${{ secrets.NEXT_PUBLIC_MONOCRAFT_VOTE_URL }}
+
+    - name: Build app for testing
+      run: npm run build
