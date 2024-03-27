@@ -1,26 +1,12 @@
 import Link from 'next/link';
-import { useCallback, useEffect, useState } from 'react';
-import fetchStatus, { type Status } from '../fetchStatus';
+import Item from './Item';
 import Guide from './icons/guide';
 import Newbie from './icons/newbie';
 import Others from './icons/others';
 import Psi from './icons/psi';
 import Wiki from './icons/wiki';
-import Item from './item';
-import SubmenuOthers from './submenu/others';
 
-interface Props {
-  submenuName: string;
-  setSubmenuName: (name: string) => void;
-}
-
-const Menu = ({ submenuName, setSubmenuName }: Props) => {
-  const [status, setStatus] = useState<Status | null>(null);
-
-  useEffect(() => {
-    fetchStatus().then((status) => setStatus(status));
-  }, []);
-
+export default function Menu() {
   const normals = [
     {
       href: '/newbie',
@@ -48,7 +34,7 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
       name: 'その他',
       nameSp: 'その他',
       icon: <Others className="w-9/12" />,
-      submenu: <SubmenuOthers status={status} />,
+      submenu: null,
     },
     {
       href: 'https://wiki.mikage.click/',
@@ -75,9 +61,6 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
               name={item.name}
               nameSp={item.nameSp}
               icon={item.icon}
-              submenu={item.submenu}
-              submenuName={submenuName}
-              setSubmenuName={setSubmenuName}
               key={item.href}
             />
           ))}
@@ -85,9 +68,9 @@ const Menu = ({ submenuName, setSubmenuName }: Props) => {
       </nav>
     </>
   );
-};
+}
 
-const Icon = ({ className }: { className?: string }) => {
+function Icon({ className }: { className?: string }) {
   return (
     <div
       className={`md:mb-10 w-12 md:w-20 h-12 md:h-20 ${className}`}
@@ -101,6 +84,4 @@ const Icon = ({ className }: { className?: string }) => {
       </Link>
     </div>
   );
-};
-
-export default Menu;
+}

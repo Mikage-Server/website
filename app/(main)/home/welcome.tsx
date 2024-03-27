@@ -1,21 +1,29 @@
 import Link from 'next/link';
-import { use } from 'react';
 import { MdOutlineReport } from 'react-icons/md';
-import fetchStatus, { Status } from '../fetchStatus';
+import fetchServerStatus, {
+  type Status,
+} from '../../lib/fetchServerStatus';
 import Psi from '../menu/icons/psi';
 
-const Welcome = () => {
-  const status = use(fetchStatus());
+export default async function Welcome() {
+  const status = await fetchServerStatus();
   const networks = status.networks;
 
-  const okNum = (networks.java.available ? 1 : 0) + (networks.bedrock.available ? 1 : 0) + (networks.vote.available ? 1 : 0);
+  const okNum =
+    (networks.java.available ? 1 : 0) +
+    (networks.bedrock.available ? 1 : 0) +
+    (networks.vote.available ? 1 : 0);
 
   return (
     <div className="-mt-10 w-full h-20 hidden md:flex md:flex-row justify-center absolute z-20">
-      {okNum !== 0 ? <WelcomeBoard status={status} /> : <ClosedBoard />}
+      {okNum !== 0 ? (
+        <WelcomeBoard status={status} />
+      ) : (
+        <ClosedBoard />
+      )}
     </div>
   );
-};
+}
 
 const WelcomeBoard = ({ status }: { status: Status }) => {
   return (
@@ -29,7 +37,9 @@ const WelcomeBoard = ({ status }: { status: Status }) => {
       <div className="flex flex-col justify-center">
         <p>
           キミも、
-          <StrongText>クリエイティブなサバイバル</StrongText>
+          <StrongText>
+            クリエイティブなサバイバル
+          </StrongText>
           を実現する
           <StrongText>特殊機能</StrongText>
           を使って、新しい生活を送ろう。
@@ -48,7 +58,10 @@ const WelcomeBoard = ({ status }: { status: Status }) => {
 
       <div className="px-2 h-full perfect-center">
         <Link href="/newbie">
-          <button className="px-10 w-full h-16 font-bold bg-blue-900 rounded-full shadow-lg">
+          <button
+            type="button"
+            className="px-10 w-full h-16 font-bold bg-blue-900 rounded-full shadow-lg"
+          >
             今すぐ参加する！
           </button>
         </Link>
@@ -69,17 +82,16 @@ const ClosedBoard = () => {
       </div>
 
       <div className="flex flex-col justify-center">
-        <p>
-          現在全てのサーバーで障害が発生しています。
-        </p>
-        <p>
-          復旧までお待ちください。
-        </p>
+        <p>現在全てのサーバーで障害が発生しています。</p>
+        <p>復旧までお待ちください。</p>
       </div>
 
       <div className="px-2 h-full perfect-center">
         <Link href="/status">
-          <button className="px-10 w-full h-16 font-bold bg-blue-900 rounded-full shadow-lg">
+          <button
+            type="button"
+            className="px-10 w-full h-16 font-bold bg-blue-900 rounded-full shadow-lg"
+          >
             ステータスを見る
           </button>
         </Link>
@@ -88,12 +100,12 @@ const ClosedBoard = () => {
   );
 };
 
-const StrongText = ({ children }: { children: React.ReactNode }) => {
+const StrongText = ({
+  children,
+}: { children: React.ReactNode }) => {
   return (
     <span className="mx-1 text-2xl font-bold text-shadow-base">
       {children}
     </span>
   );
 };
-
-export default Welcome;

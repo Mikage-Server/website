@@ -21,12 +21,10 @@ export interface PlayerNum {
   max: number;
 }
 
-const fetchStatus: () => Promise<Status> = async () => {
+export default async function fetchServerStatus(): Promise<Status> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/status`,
-    { 'cache': 'no-cache' }
+    { cache: 'no-cache' },
   );
-  return res.json();
-};
-
-export default fetchStatus;
+  return (await res.json()) as Status;
+}

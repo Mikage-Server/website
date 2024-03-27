@@ -1,11 +1,7 @@
 import type { Metadata } from 'next';
-import AnimatedView from './AnimatedView';
-import Menu from './menu/Menu';
 
-const siteName =
-  '御景サーバー / まるでクリエイティブなサバイバルができるMinecraft生活サーバー';
-const description =
-  'まるでクリエイティブなサバイバルができるMinecraft生活サーバー「御景（みかげ）サーバー」のウェブサイトです。';
+const siteName = '御景サーバー サーバーステータス';
+const description = '御景サーバーの状態を確認できます。';
 
 export const metadata: Metadata = {
   title: siteName,
@@ -48,10 +44,7 @@ export default function Layout({
         />
       </head>
 
-      <body>
-        <Menu />
-        <AnimatedView>{children}</AnimatedView>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

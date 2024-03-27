@@ -1,13 +1,12 @@
-import { use } from 'react';
 import dayjs from '../dayjs';
-import fetchStatus from '../fetchStatus';
-import Overall from './overall';
+import fetchStatus from '../lib/fetchServerStatus';
 import Item from './item';
+import Overall from './overall';
 
 export const runtime = 'edge';
 
-const Page = () => {
-  const status = use(fetchStatus());
+export default async function Page() {
+  const status = await fetchStatus();
 
   return (
     <main className="text-gray-900 w-[100svw] h-[100svh] bg-gray-50 flex flex-col items-center fixed top-0 overflow-x-hidden overflow-y-auto">
@@ -24,19 +23,31 @@ const Page = () => {
       </div>
 
       <ul className="p-5 mt-4 2xl:mt-8 w-full md:w-1/2">
-        <Item name="Java版" available={status.networks.java.available} />
-        <Item name="統合版" available={status.networks.bedrock.available} />
-        <Item name="投票" available={status.networks.vote.available} />
+        <Item
+          name="Java版"
+          available={status.networks.java.available}
+        />
+        <Item
+          name="統合版"
+          available={status.networks.bedrock.available}
+        />
+        <Item
+          name="投票"
+          available={status.networks.vote.available}
+        />
       </ul>
 
       <div>
-        最終確認: {dayjs(status.fetch_at).tz().format('YYYY年M月D日 H時m分s秒')}
+        最終確認:{' '}
+        {dayjs(status.fetch_at)
+          .tz()
+          .format('YYYY年M月D日 H時m分s秒')}
       </div>
 
       <Footer />
     </main>
   );
-};
+}
 
 const Footer = () => {
   return (
@@ -48,20 +59,27 @@ const Footer = () => {
       </div>
 
       <div className="mt-1 md:mt-auto md:ml-10">
-        <a href={process.env.NEXT_PUBLIC_TWITTER_URL} className="px-2">
+        <a
+          href={process.env.NEXT_PUBLIC_TWITTER_URL}
+          className="px-2"
+        >
           Twitter
         </a>
         /
-        <a href={process.env.NEXT_PUBLIC_JMS_VOTE_URL} className="px-2">
+        <a
+          href={process.env.NEXT_PUBLIC_JMS_VOTE_URL}
+          className="px-2"
+        >
           Japan Minecraft Servers
         </a>
         /
-        <a href={process.env.NEXT_PUBLIC_MONOCRAFT_VOTE_URL} className="px-2">
+        <a
+          href={process.env.NEXT_PUBLIC_MONOCRAFT_VOTE_URL}
+          className="px-2"
+        >
           monocraft
         </a>
       </div>
     </footer>
   );
 };
-
-export default Page;

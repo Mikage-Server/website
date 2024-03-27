@@ -1,12 +1,12 @@
-import Main from './main';
 import CrossPlay from './home/crossPlay';
 import Intro from './home/intro';
 import LetsJoin from './home/letsJoin';
+import ScrollDownAnimation from './home/scrollDownAnimation';
 import Slide from './home/slide';
 import Version from './home/version';
 import Welcome from './home/welcome';
 import WhatsNew from './home/whatsNew';
-import ScrollDownAnimation from './home/scrollDownAnimation';
+import Main from './main';
 
 const Home = () => {
   return (
@@ -29,6 +29,5 @@ const Home = () => {
     </Main>
   );
 };
-
 
 export default Home;
