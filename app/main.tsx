@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useAtom } from 'jotai';
 import Footer from './footer';
 
 const Main = ({
