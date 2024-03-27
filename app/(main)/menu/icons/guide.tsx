@@ -2,6 +2,7 @@ export default function Guide({
   className,
 }: { className: string }) {
   return (
+    // biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
     <svg
       className={className}
       xmlns="http://www.w3.org/2000/svg"

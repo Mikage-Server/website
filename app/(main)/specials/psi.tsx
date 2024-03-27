@@ -117,6 +117,7 @@ function Button({
   return (
     <li className="p-3 w-full h-24">
       <button
+        type="button"
         className={
           active
             ? 'w-full h-full text-white bg-blue-900 outline outline-4 outline-offset-4 outline-blue-400 flex flex-row rounded-xl transition-all ease-in duration-100 relative'
@@ -143,7 +144,10 @@ function Button({
 function ComingSoon() {
   return (
     <li className="p-3 w-full h-24">
-      <button className="w-full h-full text-gray-700 bg-gray-300 flex flex-row rounded-xl relative">
+      <button
+        type="button"
+        className="w-full h-full text-gray-700 bg-gray-300 flex flex-row rounded-xl relative"
+      >
         <div className="w-32 h-full text-4xl text-gray-500 absolute md:static perfect-center top-0 -left-12 md:inset-auto">
           <TbQuestionMark />
         </div>

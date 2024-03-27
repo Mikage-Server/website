@@ -2,6 +2,7 @@ export default function Newbie({
   className,
 }: { className: string }) {
   return (
+    // biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
     <svg
       className={className}
       viewBox="0 0 400 400"

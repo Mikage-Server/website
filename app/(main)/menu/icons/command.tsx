@@ -2,6 +2,7 @@ export default function Command({
   className,
 }: { className: string }) {
   return (
+    // biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
     <svg
       className={className}
       version="1.1"
