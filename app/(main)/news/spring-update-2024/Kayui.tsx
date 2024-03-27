@@ -21,7 +21,7 @@ export default function Kayui() {
           <ul className="pl-5 list-disc">
             <li>え！？税金なんてあったの！？</li>
             <li className="mt-3">
-              はい、8280万㍆貯まっていました...
+              はい、8280万5591㍆97㌸貯まっていました...
             </li>
           </ul>
         </div>
