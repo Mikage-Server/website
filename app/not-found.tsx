@@ -16,7 +16,10 @@ const NotFound = () => {
 
         <Link href="/">
           <div className="border-4 border-black">
-            <button className="px-10 py-5 text-2xl font-medium bg-gray-400 border-4 border-t-gray-300 border-l-gray-300 border-r-gray-600 border-b-gray-600">
+            <button
+              type="button"
+              className="px-10 py-5 text-2xl font-medium bg-gray-400 border-4 border-t-gray-300 border-l-gray-300 border-r-gray-600 border-b-gray-600"
+            >
               トップページに移動する
             </button>
           </div>
@@ -38,15 +41,24 @@ const Footer = () => {
       </div>
 
       <div className="mt-1">
-        <a href={process.env.NEXT_PUBLIC_TWITTER_URL} className="px-2">
+        <a
+          href={process.env.NEXT_PUBLIC_TWITTER_URL}
+          className="px-2"
+        >
           Twitter
         </a>
         /
-        <a href={process.env.NEXT_PUBLIC_JMS_VOTE_URL} className="px-2">
+        <a
+          href={process.env.NEXT_PUBLIC_JMS_VOTE_URL}
+          className="px-2"
+        >
           Japan Minecraft Servers
         </a>
         /
-        <a href={process.env.NEXT_PUBLIC_MONOCRAFT_VOTE_URL} className="px-2">
+        <a
+          href={process.env.NEXT_PUBLIC_MONOCRAFT_VOTE_URL}
+          className="px-2"
+        >
           monocraft
         </a>
       </div>
