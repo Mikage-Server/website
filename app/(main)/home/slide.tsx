@@ -1,24 +1,28 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import {
+  Autoplay,
+  Navigation,
+  Pagination,
+} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper';
 import 'swiper/swiper-bundle.css';
-import Link from 'next/link';
 import './slide.css';
 
 const contents = [
   {
     title: '御景サーバー',
     href: '/#',
-    imageDir: '/home/slides/mikage/'
-  }
+    imageDir: '/home/slides/mikage/',
+  },
 ];
 
 const Slide = () => {
   const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 1224px)'
+    query: '(min-width: 1224px)',
   });
 
   const [isPc, setIsPc] = useState<boolean | null>(false);
@@ -45,9 +49,15 @@ const Slide = () => {
         >
           {contents.map((content) => (
             <SwiperSlide key={content.title}>
-              <Link href={content.href} className="w-full h-full">
+              <Link
+                href={content.href}
+                className="w-full h-full"
+              >
                 <img
-                  src={content.imageDir + (isPc ? 'pc.webp' : 'sp.webp')}
+                  src={
+                    content.imageDir +
+                    (isPc ? 'pc.webp' : 'sp.webp')
+                  }
                   alt={content.title}
                   className="h-full object-cover"
                 />
