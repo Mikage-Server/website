@@ -9,7 +9,7 @@ export default function Tokuse() {
 
       <article className="px-6 md:px-12">
         <div className="mt-10 md:mt-5">
-          <ul className="pl-10 list-disc">
+          <ul className="pl-5 list-disc">
             <li>
               原木を切ると木材になる「薪割り職人」を追加。
             </li>
