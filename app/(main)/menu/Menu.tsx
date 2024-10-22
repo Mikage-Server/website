@@ -77,7 +77,7 @@ function Icon({ className }: { className?: string }) {
     >
       <Link href="/">
         <img
-          src="https://eu.mc-api.net/v3/server/favicon/play.mikage.click"
+          src={`https://eu.mc-api.net/v3/server/favicon/${process.env.NEXT_PUBLIC_SERVER_ADDRESS}`}
           alt="アイコン"
           className="w-full aspect-square bg-yellow-300"
         />

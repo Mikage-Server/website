@@ -1,6 +1,9 @@
 import Link from 'next/link';
 
 export default function LetsJoin() {
+  const serverAddressWithoutPort =
+    process.env.NEXT_PUBLIC_SERVER_ADDRESS?.split(':')[0];
+
   return (
     <section className="px-5 md:px-12 mt-32 md:mt-48 w-full h-64 text-yellow-700 text-xl md:text-2xl font-bold text-center tracking-wider bg-stripe-home perfect-center overflow-hidden">
       <p>
@@ -12,7 +15,7 @@ export default function LetsJoin() {
         <div className="px-5 md:px-10 py-2 text-white bg-blue-900 rounded-full shadow-lg">
           <h1 className="font-bold">今すぐ参加する！</h1>
           <span className="font-medium text-lg md:text-xl">
-            1.20 - 最新版 | play.mikage.click
+            1.20 - 最新版 | {serverAddressWithoutPort}
           </span>
         </div>
       </Link>

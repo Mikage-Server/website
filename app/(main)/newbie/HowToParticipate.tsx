@@ -38,7 +38,7 @@ export default function HowToConnect() {
                 IPアドレス
               </h2>
               <div className="py-1 w-full text-xl text-white text-center bg-blue-900 rounded-lg tracking-wider">
-                play.mikage.click
+                {process.env.NEXT_PUBLIC_SERVER_ADDRESS}
               </div>
             </div>
 

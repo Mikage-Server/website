@@ -37,7 +37,7 @@ function NotFoundLayout({
       <head>
         <link
           rel="icon"
-          href="https://eu.mc-api.net/v3/server/favicon/play.mikage.click"
+          href={`https://eu.mc-api.net/v3/server/favicon/${process.env.NEXT_PUBLIC_SERVER_ADDRESS}`}
         />
         <link
           rel="canonical"

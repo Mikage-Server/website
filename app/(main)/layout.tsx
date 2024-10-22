@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: description,
     images: [
       {
-        url: 'https://eu.mc-api.net/v3/server/favicon/play.mikage.click',
+        url: `https://eu.mc-api.net/v3/server/favicon/${process.env.NEXT_PUBLIC_SERVER_ADDRESS}`,
         width: 512,
         height: 512,
         alt: '御景サーバーのロゴ',
@@ -40,7 +40,7 @@ export default function Layout({
       <head>
         <link
           rel="icon"
-          href="https://eu.mc-api.net/v3/server/favicon/play.mikage.click"
+          href={`https://eu.mc-api.net/v3/server/favicon/${process.env.NEXT_PUBLIC_SERVER_ADDRESS}`}
         />
         <link
           rel="canonical"
