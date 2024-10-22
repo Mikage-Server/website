@@ -24,7 +24,7 @@ export interface PlayerNum {
 export default async function fetchServerStatus(): Promise<Status> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/status`,
-    { cache: 'no-cache' },
+    { next: { revalidate: 60 } },
   );
   return (await res.json()) as Status;
 }
