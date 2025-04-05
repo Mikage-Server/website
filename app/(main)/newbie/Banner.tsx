@@ -4,7 +4,7 @@ export default function Banner() {
       <img
         src="/newbie/banner.webp"
         alt="バナー"
-        className="w-full object-cover blur-sm"
+        className="w-full object-cover blur-xs"
       />
 
       <ServerInfo />
