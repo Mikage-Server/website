@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: Figtree, Noto Sans JP, Meiryo, sans-serif;
+}
 
 body {
     -webkit-tap-highlight-color: transparent;

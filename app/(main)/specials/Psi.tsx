@@ -121,7 +121,7 @@ function Button({
         className={
           active
             ? 'w-full h-full text-white bg-blue-900 outline outline-4 outline-offset-4 outline-blue-400 flex flex-row rounded-xl transition-all ease-in duration-100 relative'
-            : 'w-full h-full text-white bg-blue-900 outline outline-4 outline-offset-4 outline-none flex flex-row rounded-xl transition-all ease-in duration-100 relative'
+            : 'w-full h-full text-white bg-blue-900 outline outline-4 outline-offset-4 outline-hidden flex flex-row rounded-xl transition-all ease-in duration-100 relative'
         }
         onClick={() => {
           onClick(index);

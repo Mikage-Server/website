@@ -1,10 +1,11 @@
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 
 interface ItemProps {
   href: string;
   name: string;
   nameSp: string;
-  icon: JSX.Element;
+  icon: ReactNode;
 }
 
 export default function Item({

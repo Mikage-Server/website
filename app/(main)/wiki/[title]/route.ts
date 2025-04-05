@@ -3,16 +3,12 @@ import { redirect } from 'next/navigation';
 
 export const runtime = 'edge';
 
-export const GET = async (
-  request: Request,
-  {
-    params,
-  }: {
-    params: { title: string };
-  },
-) => {
+export async function GET(
+  _: Request,
+  { params }: { params: Promise<{ title: string }> },
+) {
   // タイトルを取得し、EUC-JPに変換
-  const title = params.title;
+  const title = (await params).title;
   const escaped = encodeEucJP(title);
 
   console.log('received:', title);
@@ -23,7 +19,7 @@ export const GET = async (
   );
 
   redirect(`https://wiki.mikage.click/d/${escaped}`);
-};
+}
 
 function encodeEucJP(str: string) {
   const arr = Encoding.stringToCode(str);

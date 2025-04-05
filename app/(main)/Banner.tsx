@@ -12,7 +12,7 @@ export default function Banner({
       <img
         src={bannerImage}
         alt="バナー"
-        className="w-full object-cover blur-sm"
+        className="w-full object-cover blur-xs"
       />
 
       <div className="pl-10 md:pl-20 w-full h-full flex flex-col justify-center absolute inset-0">
